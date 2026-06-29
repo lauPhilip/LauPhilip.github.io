@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Philip Lau | Tech Developer & Research Assistant Portfolio</title>
+    <title>Philip Lau | Portfolio</title>
     <!-- Modern tech & clean fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
@@ -496,21 +496,6 @@
             color: var(--accent-primary);
         }
 
-        footer {
-            text-align: center;
-            padding: 4rem 1.5rem;
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            border-top: 1px solid #262624;
-            margin-top: 5rem;
-
-                .skills-display-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-        gap: 1.5rem;
-        margin-bottom: 2rem;
-    }
     .icon-box {
         background: #262624;
         padding: 1.5rem 1rem;
@@ -518,6 +503,7 @@
         text-align: center;
         border-bottom: 3px solid var(--accent-primary);
         transition: transform 0.2s;
+        box-sizing: border-box; /* keeps sizing strictly inside grid parameters */
     }
     .icon-box:hover {
         transform: translateY(-3px);
@@ -589,6 +575,23 @@
         color: var(--accent-primary);
         font-weight: bold;
     }
+
+        footer {
+            text-align: center;
+            padding: 4rem 1.5rem;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            border-top: 1px solid #262624;
+            margin-top: 5rem;
+
+                .skills-display-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
         }
     </style>
 </head>
@@ -616,7 +619,7 @@
         <main class="main-content">
             <header>
                 <div class="header-title">> LAU<span>.</span></div>
-                <div class="subtitle">MSc Technology-Based Business Development</div>
+                <div class="subtitle">MSc in Engineering, Technology-Based Business Development <br> Bachelor of Engineering, Business Development</div>
             </header>
 
             <!-- ABOUT PROFILE -->
@@ -634,7 +637,7 @@
                         </p>
                         <div class="meta-tags">
                             <div><strong>Languages:</strong> Danish, English</div>
-                            <div><strong>Interests:</strong> Tech, Computer Games, LEGO, Olympic Weightlifting</div>
+                            <div><strong>Interests:</strong> Tech, Computer Games, Marvel, LEGO, Olympic Weightlifting</div>
                         </div>
                     </div>
                 </div>
@@ -660,14 +663,16 @@
             </section>
 
 <!-- CODING LANGUAGES SECTION -->
+<!-- CODING LANGUAGES SECTION -->
 <section id="tech-languages">
-    <h2 class="section-title"><span class="mono">03</span>Coding Languages</h2>
+    <h2 class="section-title"><span class="mono">03</span>Coding Languages & Tools</h2>
     
     <div style="margin-bottom: 2rem; color: #ced4da;">
         Tools and languages I build with every day:
     </div>
 
-    <div class="skills-display-grid">
+    <!-- Corrected Grid Container (Fixed CSS wrapping issue from image_c9c89a.png) -->
+    <div class="skills-display-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
         <div class="icon-box" style="border-color: #E34F26;">
             <i class="devicon-html5-plain colored"></i>
             <span>HTML</span>
@@ -692,21 +697,51 @@
             <i class="devicon-python-plain colored"></i>
             <span>Python</span>
         </div>
+        <!-- Databricks (With SVG Vector Layout) -->
+        <div class="icon-box" style="border-color: #FF6F00;">
+            <img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/databricks/default.svg" style="height: 2.5rem; width: 2.5rem; display: block; margin: 0 auto 0.5rem auto;" alt="Databricks">
+            <span>Databricks</span>
+        </div>
+        <!-- Weaviate Vector Database -->
+        <div class="icon-box" style="border-color: #00D689;">
+        <img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/weaviate/default.svg" style=" display: block; margin: 0 auto 0.5rem auto;" alt="Weaviate">
+            <span>Weaviate</span>
+        </div>
+        <!-- Microsoft Power Apps -->
+        <div class="icon-box" style="border-color: #742774;">
+<img width="48" height="48" src="https://img.icons8.com/fluency/48/microsoft-power-apps-2020.png" alt="microsoft-power-apps-2020"/>
+            <span>Power Apps</span>
+        </div>
+        <!-- Microsoft Power Automate -->
+        <div class="icon-box" style="border-color: #2563EB;">
+<img width="48" height="48" src="https://img.icons8.com/fluency/48/microsoft-power-automate-2020.png" alt="microsoft-power-automate-2020"/>
+            <span>Power Automate</span>
+        </div>
+        <!-- Microsoft SharePoint -->
+        <div class="icon-box" style="border-color: #0078D4;">
+<img width="48" height="48" src="https://img.icons8.com/fluency/48/microsoft-sharepoint-2019.png" alt="microsoft-sharepoint-2019"/>
+            <span>SharePoint</span>
+        </div>
+                <!-- C# -->
+        <div class="icon-box" style="border-color: #0078D4;">
+<i class="devicon-csharp-plain colored"></i>
+            <span>C#</span>
+        </div>
     </div>
 
     <div class="future-grid">
-        <!-- In Progress -->
+        <!-- In Progress Stack -->
         <div class="future-card" style="border-left: 3px solid var(--sky);">
-            <h4 style="color: var(--sky);">[~] Learning Right Now</h4>
+            <h4 style="color: var(--sky);">Learning Right Now</h4>
             <div class="tags">
                 <span class="tag" style="background: #171c24; color: #fff; border-color: #68217A;"><i class="devicon-csharp-plain colored"></i> C#</span>
                 <span class="tag" style="background: #171c24; color: #fff; border-color: #512BD4;"><i class="devicon-dot-net-plain colored"></i> .NET</span>
             </div>
         </div>
 
-        <!-- Todo List -->
+        <!-- Future Bucket List -->
         <div class="future-card" style="border-left: 3px solid var(--tangerine);">
-            <h4 style="color: var(--tangerine);">[+] On My Bucket List</h4>
+            <h4 style="color: var(--tangerine);">On My Bucket List</h4>
             <div class="tags">
                 <span class="tag">Terraform</span>
                 <span class="tag">Bicep</span>
@@ -715,6 +750,7 @@
                 <span class="tag">React + Native</span>
                 <span class="tag">Angular</span>
                 <span class="tag">Rust</span>
+                <span class="tag">Docker</span>
             </div>
         </div>
     </div>
