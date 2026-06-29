@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio | Source Code & Superpowers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0c0f12;
+            --card-bg: #171c24;
+            --primary-neon: #39ff14; /* Matrix Green */
+            --secondary-neon: #00ffff; /* Cyan */
+            --accent-hero: #ff0055; /* Hero Crimson */
+            --text-main: #f0f3f5;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Share Tech Mono', monospace;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            text-align: center;
+            padding: 5rem 2rem;
+            border-bottom: 4px dashed var(--primary-neon);
+            background: linear-gradient(180deg, #131921 0%, var(--bg-color) 100%);
+        }
+
+        h1 {
+            font-family: 'Bangers', cursive;
+            font-size: 4rem;
+            letter-spacing: 2px;
+            color: var(--accent-hero);
+            text-shadow: 3px 3px 0px var(--primary-neon);
+            margin: 0 0 1rem 0;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--secondary-neon);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        section h2 {
+            font-family: 'Bangers', cursive;
+            font-size: 2.5rem;
+            color: var(--primary-neon);
+            letter-spacing: 1px;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            border: 2px solid var(--text-main);
+            border-radius: 4px;
+            padding: 1.5rem;
+            box-shadow: 5px 5px 0px var(--secondary-neon);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 9px 9px 0px var(--accent-hero);
+            border-color: var(--primary-neon);
+        }
+
+        .project-card h3 {
+            font-size: 1.4rem;
+            margin-top: 0;
+            color: var(--secondary-neon);
+        }
+
+        .tags {
+            margin: 1rem 0;
+        }
+
+        .tag {
+            background: #222b35;
+            color: var(--primary-neon);
+            padding: 0.2rem 0.6rem;
+            font-size: 0.8rem;
+            border-radius: 3px;
+            margin-right: 0.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: transparent;
+            color: var(--text-main);
+            border: 2px solid var(--accent-hero);
+            padding: 0.5rem 1rem;
+            font-family: 'Share Tech Mono', monospace;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+            box-shadow: 3px 3px 0px var(--accent-hero);
+        }
+
+        .btn:hover {
+            background-color: var(--accent-hero);
+            color: #fff;
+            box-shadow: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem;
+            font-size: 0.9rem;
+            color: #556677;
+            border-top: 2px solid #171c24;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>> INITIALIZING_HERO_PORTFOLIO</h1>
+        <div class="subtitle">Software Developer // Multi-Threaded Problem Solver</div>
+    </header>
+
+    <div class="container">
+        <section id="projects">
+            <h2>Active Missions (Projects)</h2>
+            
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Project Gotham</h3>
+                    <p>A high-performance backend architecture built to handle massive data bursts and real-time processing pipelines.</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Clean Architecture</span>
+                    </div>
+                    <a href="#" class="btn">View Source</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Cerebro Core</h3>
+                    <p>An intelligent document processing framework powered by RAG, indexing data for quick retrieval and zero latency.</p>
+                    <div class="tags">
+                        <span class="tag">C#</span>
+                        <span class="tag">AI Engine</span>
+                    </div>
+                    <a href="#" class="btn">View Source</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>WebUI Nexus</h3>
+                    <p>A lightning-fast interface layout designed for maximum utility, minimizing friction for administrative workflows.</p>
+                    <div class="tags">
+                        <span class="tag">PHP</span>
+                        <span class="tag">WebUI</span>
+                    </div>
+                    <a href="#" class="btn">View Source</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>// Built with HTML, CSS, and pure willpower. Status: Fully Operational.</p>
+    </footer>
+
+</body>
+</html>
