@@ -3,178 +3,815 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Developer Portfolio | Source Code & Superpowers</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <title>Philip Lau | Tech Developer & Research Assistant Portfolio</title>
+    <!-- Modern tech & clean fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
+        /* Complete Color Palette from image_bee9e0.jpg */
         :root {
-            --bg-color: #0c0f12;
-            --card-bg: #171c24;
-            --primary-neon: #39ff14; /* Matrix Green */
-            --secondary-neon: #00ffff; /* Cyan */
-            --accent-hero: #ff0055; /* Hero Crimson */
-            --text-main: #f0f3f5;
+            --bg-color: #1D1D1B;       /* Muted Black */
+            --card-bg: #EAE4DA;        /* Seashell */
+            --accent-primary: #EAC119; /* Mustard Yellow */
+            --text-dark: #1D1D1B;      
+            --text-light: #EAE4DA;     
+            --text-muted: #a0a0a5;
+            
+            /* Extended palette colors mapped from image_bee9e0.jpg */
+            --lavender: #808BC5;
+            --tea: #245E55;
+            --pink-quartz: #EAA7C7;
+            --tangerine: #ED773C;
+            --sky: #9ED6DF;
+            --red-passion: #C63F3E;
         }
 
         body {
             background-color: var(--bg-color);
-            color: var(--text-main);
-            font-family: 'Share Tech Mono', monospace;
+            color: var(--text-light);
+            font-family: 'Plus Jakarta Sans', sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        .mono {
+            font-family: 'Share Tech Mono', monospace;
+        }
+
+        /* --- LAYOUT STRUCTURE WITH SIDEBAR TOC --- */
+        .page-layout {
+            display: grid;
+            grid-template-columns: 1fr;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        @media (min-width: 992px) {
+            .page-layout {
+                grid-template-columns: 280px 1fr;
+                gap: 3rem;
+            }
+        }
+
+        /* --- STICKY TABLE OF CONTENTS --- */
+        .toc-sidebar {
+            display: none;
+            position: var(--bg-color);
+        }
+
+        @media (min-width: 992px) {
+            .toc-sidebar {
+                display: block;
+                position: sticky;
+                top: 4rem;
+                height: calc(100vh - 8rem);
+                padding-top: 5rem;
+            }
+        }
+
+        .toc-title {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .toc-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .toc-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s, padding-left 0.2s;
+            display: block;
+        }
+
+        .toc-links a:hover {
+            color: var(--text-light);
+            padding-left: 6px;
+        }
+
+        .toc-links a::before {
+            content: "• ";
+            color: transparent;
+            transition: color 0.2s;
+        }
+        .toc-links a:hover::before {
+            color: var(--accent-primary);
         }
 
         header {
-            text-align: center;
-            padding: 5rem 2rem;
-            border-bottom: 4px dashed var(--primary-neon);
-            background: linear-gradient(180deg, #131921 0%, var(--bg-color) 100%);
+            padding: 5rem 0 3rem 0;
         }
 
-        h1 {
-            font-family: 'Bangers', cursive;
-            font-size: 4rem;
-            letter-spacing: 2px;
-            color: var(--accent-hero);
-            text-shadow: 3px 3px 0px var(--primary-neon);
-            margin: 0 0 1rem 0;
+        .header-title {
+            font-size: 3rem;
+            font-weight: 800;
+            margin: 0 0 0.5rem 0;
+            letter-spacing: -1px;
+        }
+
+        .header-title span {
+            color: var(--accent-primary);
         }
 
         .subtitle {
+            font-family: 'Share Tech Mono', monospace;
             font-size: 1.2rem;
-            color: var(--secondary-neon);
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 3rem 1.5rem;
-        }
-
-        section h2 {
-            font-family: 'Bangers', cursive;
-            font-size: 2.5rem;
-            color: var(--primary-neon);
+            color: var(--text-muted);
             letter-spacing: 1px;
-            margin-bottom: 2rem;
-            text-transform: uppercase;
         }
 
+        .main-content {
+            padding-bottom: 5rem;
+        }
+
+        section {
+            margin-bottom: 5rem;
+            scroll-margin-top: 4rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #333;
+            padding-bottom: 0.5rem;
+        }
+
+        .section-title span {
+            color: var(--accent-primary);
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 1.1rem;
+            font-weight: 400;
+            margin-right: 0.5rem;
+        }
+
+        .subsection-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin: 2rem 0 1.5rem 0;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* --- ABOUT PROFILE CARD --- */
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+            align-items: center;
+            background: #262624;
+            padding: 2.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-primary);
+        }
+
+        @media (min-width: 768px) {
+            .profile-grid {
+                grid-template-columns: 200px 1fr;
+            }
+        }
+
+        .avatar-zone img {
+            width: 100%;
+            max-width: 200px;
+            border-radius: 6px;
+            filter: grayscale(20%);
+        }
+
+        .profile-bio h2 {
+            margin: 0 0 0.5rem 0;
+            font-size: 2rem;
+        }
+
+        .profile-meta {
+            color: var(--accent-primary);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .profile-text {
+            color: #d1d1d6;
+        }
+
+        .meta-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .meta-tags strong {
+            color: var(--text-light);
+        }
+
+        /* --- HIGHLIGHT SECTION --- */
+        .highlight-card {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            background: #262624;
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--red-passion);
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .highlight-card {
+                grid-template-columns: 1fr 1.2fr;
+            }
+        }
+
+        .highlight-img-zone img {
+            width: 100%;
+            border-radius: 6px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+            display: block;
+        }
+
+        .highlight-text-zone h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .highlight-tagline {
+            font-family: 'Share Tech Mono', monospace;
+            color: var(--red-passion);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .highlight-grade {
+            display: inline-block;
+            margin-top: 1.5rem;
+            font-family: 'Share Tech Mono', monospace;
+            background: rgba(198, 63, 62, 0.15);
+            color: #ff8a89;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            border: 1px solid var(--red-passion);
+            font-weight: bold;
+        }
+
+        /* --- EXPERIENCE & EDUCATION TIMELINES --- */
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-item {
+                grid-template-columns: 220px 1fr;
+            }
+        }
+
+        .time-period {
+            font-family: 'Share Tech Mono', monospace;
+            color: var(--accent-primary);
+            font-size: 1.1rem;
+        }
+
+        .timeline-content h3 {
+            margin: 0 0 0.25rem 0;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .institution {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .timeline-content ul {
+            margin: 0;
+            padding-left: 1.2rem;
+            color: #d1d1d6;
+            font-size: 0.95rem;
+        }
+
+        .timeline-content li {
+            margin-bottom: 0.4rem;
+        }
+
+        /* --- PROJECTS MATRIX & EXPANDABLE SYSTEM --- */
         .project-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
+            margin-bottom: 3rem;
         }
 
         .project-card {
             background-color: var(--card-bg);
-            border: 2px solid var(--text-main);
-            border-radius: 4px;
+            color: var(--text-dark);
+            border-radius: 6px;
             padding: 1.5rem;
-            box-shadow: 5px 5px 0px var(--secondary-neon);
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border-top: 6px solid #ccc;
         }
 
         .project-card:hover {
-            transform: translate(-4px, -4px);
-            box-shadow: 9px 9px 0px var(--accent-hero);
-            border-color: var(--primary-neon);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(234, 228, 218, 0.1);
+        }
+
+        .p-work-on { border-color: var(--lavender); }
+        .p-pers-on { border-color: var(--sky); }
+        .p-work-fin { border-color: var(--tea); }
+        .p-pers-fin { border-color: var(--tangerine); }
+        .p-stack { border-color: var(--pink-quartz); }
+
+        .project-card summary {
+            list-style: none;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .project-card summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .project-header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
         }
 
         .project-card h3 {
-            font-size: 1.4rem;
-            margin-top: 0;
-            color: var(--secondary-neon);
+            margin: 0 0 0.5rem 0;
+            font-size: 1.3rem;
+            font-weight: 700;
+            padding-right: 1rem;
+        }
+
+        .expand-icon {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.85rem;
+            background: rgba(0,0,0,0.05);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            color: #555;
+        }
+
+        .project-card[open] .expand-icon {
+            background: var(--bg-color);
+            color: var(--accent-primary);
+        }
+
+        .project-card p {
+            font-size: 0.95rem;
+            margin: 0.5rem 0 1.5rem 0;
+            color: #3a3a3c;
+        }
+
+        .expanded-specs {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px dashed rgba(0, 0, 0, 0.15);
+            font-size: 0.9rem;
+            color: #2c2c2e;
+        }
+
+        .expanded-specs h4 {
+            margin: 0 0 0.5rem 0;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .tags {
-            margin: 1rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
         }
 
         .tag {
-            background: #222b35;
-            color: var(--primary-neon);
-            padding: 0.2rem 0.6rem;
+            font-family: 'Share Tech Mono', monospace;
+            background: #e2dbcf;
+            color: var(--text-dark);
+            padding: 0.2rem 0.5rem;
             font-size: 0.8rem;
             border-radius: 3px;
-            margin-right: 0.5rem;
+            border: 1px solid #c5bdaf;
         }
 
-        .btn {
-            display: inline-block;
-            background-color: transparent;
-            color: var(--text-main);
-            border: 2px solid var(--accent-hero);
-            padding: 0.5rem 1rem;
-            font-family: 'Share Tech Mono', monospace;
-            font-weight: bold;
+        .tag.learning {
+            background: transparent;
+            border: 1px dashed #8e887e;
+            color: #636366;
+        }
+
+        /* --- CONTACT BLOCK --- */
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            background: #262624;
+            padding: 2.5rem;
+            border-radius: 8px;
+        }
+
+        @media (min-width: 768px) {
+            .contact-layout {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-link {
+            color: var(--text-light);
             text-decoration: none;
-            cursor: pointer;
-            box-shadow: 3px 3px 0px var(--accent-hero);
+            font-size: 1.1rem;
+            transition: color 0.2s;
         }
 
-        .btn:hover {
-            background-color: var(--accent-hero);
-            color: #fff;
-            box-shadow: none;
+        .contact-link:hover {
+            color: var(--accent-primary);
+        }
+
+        .btn-modern {
+            display: inline-block;
+            background-color: var(--accent-primary);
+            color: var(--text-dark);
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 4px;
+            width: fit-content;
+            margin-top: 1rem;
+            transition: opacity 0.2s;
+        }
+
+        .btn-modern:hover {
+            opacity: 0.9;
+        }
+
+        .status-terminal {
+            font-family: 'Share Tech Mono', monospace;
+            background-color: #121211;
+            padding: 1.2rem;
+            border-radius: 4px;
+            color: #868e96;
+            font-size: 0.85rem;
+        }
+
+        .status-active {
+            color: var(--accent-primary);
         }
 
         footer {
             text-align: center;
-            padding: 3rem;
+            padding: 4rem 1.5rem;
+            font-family: 'Share Tech Mono', monospace;
             font-size: 0.9rem;
-            color: #556677;
-            border-top: 2px solid #171c24;
+            color: var(--text-muted);
+            border-top: 1px solid #262624;
+            margin-top: 5rem;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>> INITIALIZING_HERO_PORTFOLIO</h1>
-        <div class="subtitle">Software Developer // Multi-Threaded Problem Solver</div>
-    </header>
+    <div class="page-layout">
+        
+        <!-- SIDEBAR TOC NAVIGATION -->
+        <aside class="toc-sidebar">
+            <div class="toc-title">Navigation</div>
+            <ul class="toc-links">
+                <li><a href="#about">01. About Profile</a></li>
+                <li><a href="#highlights">02. Media Highlights</a></li>
+                <li><a href="#experience">03. Experience</a></li>
+                <li><a href="#education">04. Education</a></li>
+                <li><a href="#ongoing-projects">05. Ongoing Projects</a></li>
+                <li><a href="#finished-projects">06. Finished Projects</a></li>
+                <li><a href="#contact">07. Contact</a></li>
+            </ul>
+        </aside>
 
-    <div class="container">
-        <section id="projects">
-            <h2>Active Missions (Projects)</h2>
-            
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3>Project Gotham</h3>
-                    <p>A high-performance backend architecture built to handle massive data bursts and real-time processing pipelines.</p>
-                    <div class="tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">Clean Architecture</span>
+        <!-- MAIN SITE TIMELINE CONTENT -->
+        <main class="main-content">
+            <header>
+                <div class="header-title">> LAU<span>.</span></div>
+                <div class="subtitle">MSc Technology-Based Business Development</div>
+            </header>
+
+            <!-- ABOUT PROFILE -->
+            <section id="about">
+                <div class="profile-grid">
+                    <div class="avatar-zone">
+                        <!-- Referencing image_bdfe74.png verbatim -->
+                        <img src="image_bdfe74.png" alt="Philip Lau Pixel Avatar">
                     </div>
-                    <a href="#" class="btn">View Source</a>
+                    <div class="profile-bio">
+                        <h2>Philip Lau (Lau)</h2>
+                        <div class="profile-meta">Currently a Research Assistant @ Aarhus Universitet</div>
+                        <p class="profile-text">
+                            I am a passionate individual who puts full energy into bridging the gap between technical development and strategic management. I focus on implementing intelligent automation framework architectures and translating complex tech logic into clear business value.
+                        </p>
+                        <div class="meta-tags">
+                            <div><strong>Languages:</strong> Danish, English</div>
+                            <div><strong>Interests:</strong> Tech, Computer Games, LEGO, Olympic Weightlifting</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- HIGHLIGHTS SECTION -->
+            <section id="highlights">
+                <h2 class="section-title"><span class="mono">02</span>Featured Media</h2>
+                <div class="highlight-card">
+                    <div class="highlight-img-zone">
+                        <!-- Referencing article.jpeg verbatim -->
+                        <img src="article.jpg" alt="Local newsletter feature clipping">
+                    </div>
+                    <div class="highlight-text-zone">
+                        <h3>TBMI — Witt A/S</h3>
+                        <div class="highlight-tagline">// University project for real company mentioned in local newsletter</div>
+                        <p style="color: #d1d1d6;">
+                            Technological Business Model Innovation (TBMI): A formal business proposal evaluating advanced automation ecosystems and intelligent process enhancements. Engineered within the Customer Service Department environment utilizing targeted Power Automate flows and AI Builder structures.
+                        </p>
+                        <div class="highlight-grade">Project Metric: Received Grade 12 (A+)</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- EXPERIENCE SECTION -->
+            <section id="experience">
+                <h2 class="section-title"><span class="mono">03</span>Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="time-period">Jan 2026 — Present</div>
+                        <div class="timeline-content">
+                            <h3>Research Assistant</h3>
+                            <div class="institution">Aarhus Universitet, Dept. of Business Development and Technology (BTECH)</div>
+                            <ul>
+                                <li>Leading digital competency initiatives bridging academic frameworks with industry best practices.</li>
+                                <li>Engineered an internal hybrid RAG Customer Service Agent (BM25, Similarity Search, GraphRAG) evaluating technical document processing streams.</li>
+                                <li>Architected an open-source, transparent C#/.NET agentic literature review environment for the OSSYM 2026 conference in Berlin.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="time-period">Jan 2023 — Jan 2026</div>
+                        <div class="timeline-content">
+                            <h3>Student Worker — Digitalization</h3>
+                            <div class="institution">The LEGO Group, Mould Engineering Enabling & Technology</div>
+                            <ul>
+                                <li>Served as a citizen developer delivering 15+ Power Apps solutions and over 50 automated cloud processing streams.</li>
+                                <li>Shipped a structured RAG proof-of-concept parsing complex technical documentation for engineering units.</li>
+                                <li>Designed and scaled custom automated engineering newsletter systems delivering localized content metrics.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="time-period">Jul 2024 — Dec 2024</div>
+                        <div class="timeline-content">
+                            <h3>Student Instructor — Web Technologies</h3>
+                            <div class="institution">Aarhus Universitet</div>
+                            <ul>
+                                <li>Instructed undergraduate students in the course web technologies covering the languages: HTML, CSS, JavaScript, PHP, and MySQL.</li>
+                                <li>Recieved a 4.9 evaluation out of 5, on my ability to teach the material.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- EDUCATION SECTION -->
+            <section id="education">
+                <h2 class="section-title"><span class="mono">04</span>Education</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="time-period">2024 — 2025</div>
+                        <div class="timeline-content">
+                            <h3>MSc in Engineering Technology-Based Business Development</h3>
+                            <div class="institution">Aarhus Universitet</div>
+                            <ul>
+                                <li>Focus areas: Advanced Enterprise System Architectures, Python Machine Learning Frameworks, Digital Front-End & Back-End Solutions.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="time-period">2020 — 2023</div>
+                        <div class="timeline-content">
+                            <h3>Bachelor of Engineering Business Development (BDE)</h3>
+                            <div class="institution">Aarhus Universitet</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ONGOING PROJECTS -->
+            <section id="ongoing-projects">
+                <h2 class="section-title"><span class="mono">05</span>Ongoing Projects</h2>
+                
+                <div class="subsection-title"><span style="color: var(--lavender);">■</span> Work Projects</div>
+                <div class="project-grid">
+                    <details class="project-card p-work-on">
+                        <summary>
+                            <div class="project-header-flex">
+                                <h3>Modular Course Bots</h3>
+                                <span class="expand-icon">CLICK TO EXPAND</span>
+                            </div>
+                            <p>Developing dynamic, modular RAG deployment bots tailored to answer complex questions regarding academic syllabus documentation streams.</p>
+                        </summary>
+                        <div class="expanded-specs">
+                            <h4>Target Blueprint</h4>
+                            <p>Integrating scalable document chunking algorithms and context window handling parameters to allow individual professors to drop course material in on-demand.</p>
+                            <div class="tags">
+                                <span class="tag">Generative AI</span>
+                                <span class="tag">RAG</span>
+                                <span class="tag">Python</span>
+                            </div>
+                        </div>
+                    </details>
                 </div>
 
-                <div class="project-card">
-                    <h3>Cerebro Core</h3>
-                    <p>An intelligent document processing framework powered by RAG, indexing data for quick retrieval and zero latency.</p>
-                    <div class="tags">
-                        <span class="tag">C#</span>
-                        <span class="tag">AI Engine</span>
-                    </div>
-                    <a href="#" class="btn">View Source</a>
+                <div class="subsection-title"><span style="color: var(--sky);">■</span> Personal Projects</div>
+                <div class="project-grid">
+                    <details class="project-card p-pers-on">
+                        <summary>
+                            <div class="project-header-flex">
+                                <h3>Yoga Streaming Architecture</h3>
+                                <span class="expand-icon">CLICK TO EXPAND</span>
+                            </div>
+                            <p>Designing a dedicated streaming hub platform built to handle structured media distribution assets and minimal latency processing.</p>
+                        </summary>
+                        <div class="expanded-specs">
+                            <h4>Target Blueprint</h4>
+                            <p>Structuring clean decoupled cloud logic endpoints alongside a reactive dashboard front-end matrix layout.</p>
+                            <div class="tags">
+                                <span class="tag">Streaming Stack</span>
+                                <span class="tag">Media Pipelines</span>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="project-card p-pers-on">
+                        <summary>
+                            <div class="project-header-flex">
+                                <h3>Custom Voice Assistant Core</h3>
+                                <span class="expand-icon">CLICK TO EXPAND</span>
+                            </div>
+                            <p>Constructing a local voice ecosystem attempting to simulate high-utility virtual assistance parameters (J.A.R.V.I.S./FRIDAY configuration models).</p>
+                        </summary>
+                        <div class="expanded-specs">
+                            <h4>Target Blueprint</h4>
+                            <p>Prototyping wake-word keyword loops on edge hardware setups combined with asynchronous runtime task executions.</p>
+                            <div class="tags">
+                                <span class="tag">Voice Engine</span>
+                                <span class="tag">Python</span>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <!-- FINISHED PROJECTS -->
+            <section id="finished-projects">
+                <h2 class="section-title"><span class="mono">06</span>Finished Projects</h2>
+                
+                <div class="subsection-title"><span style="color: var(--tea);">■</span> Work Projects</div>
+                <div class="project-grid">
+                    <details class="project-card p-work-fin">
+                        <summary>
+                            <div class="project-header-flex">
+                                <h3>Hybrid RAG Hub (eiva Evaluation)</h3>
+                                <span class="expand-icon">CLICK TO EXPAND</span>
+                            </div>
+                            <p>Constructed a dual-retrieval pipeline syncing BM25 tracking mechanisms with semantic GraphRAG systems to map technical service logs.</p>
+                        </summary>
+                        <div class="expanded-specs">
+                            <h4>Project Summary</h4>
+                            <p>Successfully processed cross-department tech support records within secure thresholds, resulting in a drop in retrieval error rates.</p>
+                            <div class="tags">
+                                <span class="tag">GraphRAG</span>
+                                <span class="tag">BM25</span>
+                                <span class="tag">Python</span>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="project-card p-work-fin">
+                        <summary>
+                            <div class="project-header-flex">
+                                <h3>Agentic Literature Framework</h3>
+                                <span class="expand-icon">CLICK TO EXPAND</span>
+                            </div>
+                            <p>Shipped a production C#/.NET engine engineered to crawl, track, and map explicit literature review variables presented at OSSYM 2026.</p>
+                        </summary>
+                        <div class="expanded-specs">
+                            <h4>Project Summary</h4>
+                            <p>Provided complete pipeline transparency, demonstrating deterministic trace loops for algorithmic parsing runs.</p>
+                            <div class="tags">
+                                <span class="tag">C#</span>
+                                <span class="tag">.NET</span>
+                                <span class="tag">Agentic AI</span>
+                            </div>
+                        </div>
+                    </details>
                 </div>
 
-                <div class="project-card">
-                    <h3>WebUI Nexus</h3>
-                    <p>A lightning-fast interface layout designed for maximum utility, minimizing friction for administrative workflows.</p>
-                    <div class="tags">
-                        <span class="tag">PHP</span>
-                        <span class="tag">WebUI</span>
+                <div class="subsection-title"><span style="color: var(--tangerine);">■</span> Personal Projects</div>
+                <div class="project-grid">
+                    <details class="project-card p-pers-fin">
+                        <summary>
+                            <div class="project-header-flex">
+                                <h3>System Tooling Repository</h3>
+                                <span class="expand-icon">CLICK TO EXPAND</span>
+                            </div>
+                            <p>Consolidated codebase baseline for micro-utilities designed to optimize local folder sync logic patterns.</p>
+                        </summary>
+                        <div class="expanded-specs">
+                            <h4>Project Summary</h4>
+                            <p>Maintained clean branching structures and automated local release setups across target testing configurations.</p>
+                            <div class="tags">
+                                <span class="tag">Git</span>
+                                <span class="tag">Automation</span>
+                            </div>
+                        </div>
+                    </details>
+
+                    <!-- Tech Blueprint Weaponry (Color: Pink Quartz) -->
+                    <div class="project-card p-stack">
+                        <h3>Core Skill Matrix Blueprint</h3>
+                        <p>Established technical familiarity across key development environments and automation frameworks.</p>
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">C#</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">Git</span>
+                            <span class="tag learning">In-Progress: .NET</span>
+                            <span class="tag learning">Todo: Rust</span>
+                            <span class="tag learning">Todo: Terraform</span>
+                        </div>
                     </div>
-                    <a href="#" class="btn">View Source</a>
                 </div>
-            </div>
-        </section>
+            </section>
+
+            <!-- CONTACT INTERFACE -->
+            <section id="contact">
+                <h2 class="section-title"><span class="mono">07</span>Contact</h2>
+                <div class="contact-layout">
+                    <div class="contact-details">
+                        <a href="mailto:Philip15@live.dk" class="contact-link"><strong>Email:</strong> Philip15@live.dk</a>
+                        <a href="tel:+4551155435" class="contact-link"><strong>Phone:</strong> +45 51 15 54 35</a>
+                        <div class="contact-link"><strong>Location:</strong> Herning, Denmark</div>
+                        <a href="https://www.linkedin.com" target="_blank" class="btn-modern">Philip Lau | LinkedIn</a>
+                    </div>
+                    <div class="status-terminal">
+                        <div>> System status: Fully operational</div>
+                        <div>> RAG core indexing: Standby</div>
+                        <div class="status-active">> Ready to initialize communication pipeline...</div>
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
 
     <footer>
-        <p>// Built with HTML, CSS, and pure willpower. Status: Fully Operational.</p>
+        <p>// Clean Architecture Portfolio. Managed via GitHub Pages.</p>
     </footer>
 
 </body>
