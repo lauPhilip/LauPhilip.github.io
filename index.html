@@ -6,6 +6,7 @@
     <title>Philip Lau | Tech Developer & Research Assistant Portfolio</title>
     <!-- Modern tech & clean fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <style>
         /* Complete Color Palette from image_bee9e0.jpg */
         :root {
@@ -503,6 +504,91 @@
             color: var(--text-muted);
             border-top: 1px solid #262624;
             margin-top: 5rem;
+
+                .skills-display-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    .icon-box {
+        background: #262624;
+        padding: 1.5rem 1rem;
+        border-radius: 6px;
+        text-align: center;
+        border-bottom: 3px solid var(--accent-primary);
+        transition: transform 0.2s;
+    }
+    .icon-box:hover {
+        transform: translateY(-3px);
+    }
+    .icon-box i {
+        font-size: 2.5rem;
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+    .icon-box span {
+        font-size: 0.9rem;
+        font-weight: 600;
+        display: block;
+    }
+    .future-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    @media(min-width: 768px) {
+        .future-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .future-card {
+        background: #262624;
+        padding: 1.5rem;
+        border-radius: 6px;
+    }
+    .future-card h4 {
+        margin: 0 0 1rem 0;
+        font-family: 'Share Tech Mono', monospace;
+    }
+    .skills-columns {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    @media(min-width: 768px) {
+        .skills-columns { grid-template-columns: 1fr 1fr; }
+    }
+    .skills-list-box {
+        background: #262624;
+        padding: 2rem;
+        border-radius: 8px;
+    }
+    .skills-list-box h3 {
+        margin: 0 0 1.5rem 0;
+        font-size: 1.4rem;
+        color: var(--text-light);
+        border-bottom: 1px dashed #444;
+        padding-bottom: 0.5rem;
+    }
+    .skills-list-box ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    .skills-list-box li {
+        position: relative;
+        padding-left: 1.5rem;
+        color: #d1d1d6;
+    }
+    .skills-list-box li::before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        color: var(--accent-primary);
+        font-weight: bold;
+    }
         }
     </style>
 </head>
@@ -513,15 +599,17 @@
         <!-- SIDEBAR TOC NAVIGATION -->
         <aside class="toc-sidebar">
             <div class="toc-title">Navigation</div>
-            <ul class="toc-links">
-                <li><a href="#about">01. About Profile</a></li>
-                <li><a href="#highlights">02. Media Highlights</a></li>
-                <li><a href="#experience">03. Experience</a></li>
-                <li><a href="#education">04. Education</a></li>
-                <li><a href="#ongoing-projects">05. Ongoing Projects</a></li>
-                <li><a href="#finished-projects">06. Finished Projects</a></li>
-                <li><a href="#contact">07. Contact</a></li>
-            </ul>
+        <ul class="toc-links">
+            <li><a href="#about">01. About Profile</a></li>
+            <li><a href="#highlights">02. Media Highlights</a></li>
+            <li><a href="#tech-languages">03. Coding Languages</a></li>
+            <li><a href="#skills-matrix">04. Professional Skills</a></li>
+            <li><a href="#experience">05. Work History</a></li>
+            <li><a href="#education">06. Academic Route</a></li>
+            <li><a href="#ongoing-projects">07. Ongoing Projects</a></li>
+            <li><a href="#finished-projects">08. Finished Projects</a></li>
+            <li><a href="#contact">09. Get In Touch</a></li>
+        </ul>
         </aside>
 
         <!-- MAIN SITE TIMELINE CONTENT -->
@@ -570,6 +658,96 @@
                     </div>
                 </div>
             </section>
+
+<!-- CODING LANGUAGES SECTION -->
+<section id="tech-languages">
+    <h2 class="section-title"><span class="mono">03</span>Coding Languages</h2>
+    
+    <div style="margin-bottom: 2rem; color: #ced4da;">
+        Tools and languages I build with every day:
+    </div>
+
+    <div class="skills-display-grid">
+        <div class="icon-box" style="border-color: #E34F26;">
+            <i class="devicon-html5-plain colored"></i>
+            <span>HTML</span>
+        </div>
+        <div class="icon-box" style="border-color: #1572B6;">
+            <i class="devicon-css3-plain colored"></i>
+            <span>CSS</span>
+        </div>
+        <div class="icon-box" style="border-color: #F7DF1E;">
+            <i class="devicon-javascript-plain colored"></i>
+            <span>JavaScript</span>
+        </div>
+        <div class="icon-box" style="border-color: #00758F;">
+            <i class="devicon-mysql-plain colored"></i>
+            <span>MySQL</span>
+        </div>
+        <div class="icon-box" style="border-color: #777BB4;">
+            <i class="devicon-php-plain colored"></i>
+            <span>PHP</span>
+        </div>
+        <div class="icon-box" style="border-color: #3776AB;">
+            <i class="devicon-python-plain colored"></i>
+            <span>Python</span>
+        </div>
+    </div>
+
+    <div class="future-grid">
+        <!-- In Progress -->
+        <div class="future-card" style="border-left: 3px solid var(--sky);">
+            <h4 style="color: var(--sky);">[~] Learning Right Now</h4>
+            <div class="tags">
+                <span class="tag" style="background: #171c24; color: #fff; border-color: #68217A;"><i class="devicon-csharp-plain colored"></i> C#</span>
+                <span class="tag" style="background: #171c24; color: #fff; border-color: #512BD4;"><i class="devicon-dot-net-plain colored"></i> .NET</span>
+            </div>
+        </div>
+
+        <!-- Todo List -->
+        <div class="future-card" style="border-left: 3px solid var(--tangerine);">
+            <h4 style="color: var(--tangerine);">[+] On My Bucket List</h4>
+            <div class="tags">
+                <span class="tag">Terraform</span>
+                <span class="tag">Bicep</span>
+                <span class="tag">Gherkin</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">React + Native</span>
+                <span class="tag">Angular</span>
+                <span class="tag">Rust</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- HARD AND SOFT SKILLS SECTION -->
+<section id="skills-matrix">
+    <h2 class="section-title"><span class="mono">04</span>Professional Skills</h2>
+    
+    <div class="skills-columns">
+        <!-- Hard/Technical Skills -->
+        <div class="skills-list-box" style="border-top: 4px solid var(--lavender);">
+            <h3>Technical Capabilities</h3>
+            <ul>
+                <li><strong>Generative AI Ecosystems</strong> – Building and tuning search pipelines using RAG, GraphRAG, and vector similarity architectures.</li>
+                <li><strong>Application Automation</strong> – Building custom business dashboards, workflow rules, and low-code integrations using the Power Platform ecosystem.</li>
+                <li><strong>Cybersecurity Basics</strong> – Analyzing application architectural vulnerabilities using structured threat modeling blueprints.</li>
+                <li><strong>Data Analytics & Web Tech</strong> – Writing clean server-side code, styling user environments, and relational database scripting.</li>
+            </ul>
+        </div>
+
+        <!-- Soft Skills / Core Traits -->
+        <div class="skills-list-box" style="border-top: 4px solid var(--tea);">
+            <h3>Leadership & Strategy</h3>
+            <ul>
+                <li><strong>Bridging Tech and Business</strong> – Translating complex engineering limitations into functional, value-driven strategy roadmaps.</li>
+                <li><strong>Team Leadership & Management</strong> – Directing project workloads, handling operational shift handoffs, and resolving interpersonal issues smoothly.</li>
+                <li><strong>Stakeholder Communication</strong> – Presenting architectural progress reports and aligning technical requirements with multiple enterprise business divisions.</li>
+                <li><strong>Academic Instruction</strong> – Explaining complex computer concepts step-by-step and running clear developer learning workshops.</li>
+            </ul>
+        </div>
+    </div>
+</section>
 
             <!-- EXPERIENCE SECTION -->
             <section id="experience">
@@ -822,23 +1000,6 @@
                             </div>
                         </div>
                     </details>
-
-                    <!-- Tech Blueprint Weaponry (Color: Pink Quartz) -->
-                    <div class="project-card p-stack">
-                        <h3>Core Skill Matrix Blueprint</h3>
-                        <p>Established technical familiarity across key development environments and automation frameworks.</p>
-                        <div class="tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">C#</span>
-                            <span class="tag">PHP</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">SQL</span>
-                            <span class="tag">Git</span>
-                            <span class="tag learning">In-Progress: .NET</span>
-                            <span class="tag learning">Todo: Rust</span>
-                            <span class="tag learning">Todo: Terraform</span>
-                        </div>
-                    </div>
                 </div>
             </section>
 
