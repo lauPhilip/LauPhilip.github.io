@@ -1,4 +1,4 @@
-# Philip Lau | Technical Portfolio Ecosystem
+# Philip Lau | Portfolio
 
 This repository houses my personal developer portfolio, highlighting my work as a Technical Business Developer. The architecture is completely decoupled and modular, using a dynamic JSON-driven data engine to inject project showcases, industry certifications, and professional references on runtime.
 
