@@ -1,0 +1,9 @@
+{
+  "title": "Shrinkage Analysis Platform",
+  "short_desc": "Maintenance and lifecycle development of an enterprise Microsoft Power Platform request tool actively serving 35–50 weekly internal users.",
+  "blueprint_title": "AUTOMATION ARCHITECTURE & ROLE ISOLATION",
+  "blueprint_desc": "Managed the optimization of a production-grade Power Apps ecosystem split clean across user request portals and admin management dashboards. Built and maintained backend Power Automate flows to handle complex approvals, status routing, data logging, and automated notification emails to streamline weekly analysis request pipelines.",
+  "tags": ["Microsoft Power Platform", "Power Apps", "Power Automate", "Process Automation", "Enterprise Tools"],
+  "images": [],
+  "links": []
+}

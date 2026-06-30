@@ -1198,28 +1198,34 @@ function launchProjectModal(projectId) {
     const data = projectStateEngine[projectId];
     if (!data) return;
 
-    // 1. Process Images Content (Grid or Single Wrapper restricted to 350px max width, 200px max height)
+    // 1. Process Images Content (Spacious, responsive wrapper to prevent cropping)
     let imageContentHTML = '';
     if (data.images) {
         if (Array.isArray(data.images)) {
-            imageContentHTML = `<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.5rem;">`;
+            imageContentHTML = `<div style="display: flex; flex-direction: column; gap: 1.5rem; width: 100%; align-items: center; margin-top: 2rem;">`;
             data.images.forEach(imgSrc => {
-                imageContentHTML += `<img src="${imgSrc}" alt="Gallery Asset" style="width: 100%; max-width: 350px; height: 100%; max-height: 200px; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: block; object-fit: cover; margin: 0 auto;">`;
+                imageContentHTML += `
+                    <div style="width: 100%; display: flex; justify-content: center;">
+                        <img src="${imgSrc}" alt="Gallery Asset" style="width: 100%; max-width: 750px; height: auto; object-fit: contain; border-radius: 6px; box-shadow: 0 4px 20px rgba(0,0,0,0.12); border: 1px solid rgba(0,0,0,0.08); display: block;">
+                    </div>`;
             });
             imageContentHTML += `</div>`;
         } else if (typeof data.images === 'string') {
-            imageContentHTML = `<div style="margin-top: 1.5rem; display: flex; justify-content: center;"><img src="${data.images}" alt="Asset" style="width: 100%; max-width: 350px; height: 100%; max-height: 200px; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: block; object-fit: cover;"></div>`;
+            imageContentHTML = `
+                <div style="margin-top: 2rem; width: 100%; display: flex; justify-content: center;">
+                    <img src="${data.images}" alt="Asset" style="width: 100%; max-width: 750px; height: auto; object-fit: contain; border-radius: 6px; box-shadow: 0 4px 20px rgba(0,0,0,0.12); border: 1px solid rgba(0,0,0,0.08); display: block;">
+                </div>`;
         }
     }
 
-    // 2. Process Video Content (Restricted to 350px max width, 200px max height)
+    // 2. Process Video Content (Updated to match the wider, comfortable layout rules)
     let videoContentHTML = '';
     if (data.video) {
         videoContentHTML = `
-            <div style="margin-top: 2rem; border-top: 1px dashed rgba(0,0,0,0.15); padding-top: 1.5rem;">
+            <div style="margin-top: 2rem; border-top: 1px dashed rgba(0,0,0,0.15); padding-top: 1.5rem; width: 100%;">
                 <h4 style="font-family:'Share Tech Mono', monospace; font-size:1rem; margin:0 0 1rem 0; color:var(--tangerine); text-transform:uppercase;">🎥 SYSTEM DEMONSTRATION VIDEO</h4>
                 <div style="display: flex; justify-content: center;">
-                    <video controls style="width: 100%; max-width: 350px; max-height: 200px; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); background: #000;">
+                    <video controls style="width: 100%; max-width: 750px; height: auto; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); background: #000;">
                         <source src="${data.video}" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>

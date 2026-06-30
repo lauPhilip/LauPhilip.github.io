@@ -28,5 +28,25 @@
     "id": "project_mind_lego",
     "status": "finished",
     "category": "work"
+  },
+  {
+    "id": "project_shrinkage_analysis",
+    "status": "finished",
+    "category": "work"
+  },
+  {
+    "id": "project_sdlc_governance",
+    "status": "finished",
+    "category": "work"
+  },
+  {
+    "id": "project_mould_news_automation",
+    "status": "finished",
+    "category": "work"
+  },
+  {
+    "id": "project_genai_business_case",
+    "status": "finished",
+    "category": "work"
   }
 ]

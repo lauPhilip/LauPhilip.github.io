@@ -1,0 +1,11 @@
+{
+  "title": "Power Platform SDLC Governance Framework",
+  "short_desc": "Design and implementation of a custom process flow model applying strict software development lifecycle (SDLC) principles to citizen development environments.",
+  "blueprint_title": "GOVERNANCE MODEL & STAKEHOLDER ALIGNMENT",
+  "blueprint_desc": "Engineered an operational governance model to manage risk and maintain code quality across distributed citizen developer teams. Designed a custom process flow model that maps requirements gathering, environment isolation, testing, and deployment gates. Coordinated across several business stakeholders to balance rapid internal innovation with IT compliance and release management standards.",
+  "tags": ["SDLC", "Governance Model", "Power Platform", "Citizen Development", "Process Optimization", "Change Management"],
+  "images": [
+    "projects/project_sdlc_governance/software_sdlc_powerplatform.png"
+  ],
+  "links": []
+}

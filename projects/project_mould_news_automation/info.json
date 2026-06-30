@@ -1,0 +1,10 @@
+{
+  "title": "Dynamic Mould Engineering News Automation",
+  "short_desc": "An automated Power Platform communication ecosystem compiling and distributing multi-stream technical newsletters with nested data grids to 190+ weekly stakeholders.",
+  "blueprint_title": "MULTI-STREAM ARCHITECTURE & SUBSCRIPTION ENGINE",
+  "blueprint_desc": "Engineered a dual-app architecture featuring a Power Apps submission portal for engineering news and a dedicated subscription preference hub for end-users. Built a complex backend Power Automate scheduler that segments news data into 3 distinct content streams, dynamically compiles them into cleanly formatted nested HTML tables, and handles automated weekly distribution while enforcing real-time opt-in/opt-out subscription states.",
+  "tags": ["Power Apps", "Power Automate", "HTML Email Formatting", "Data Segmentation", "Mould Engineering"],
+  "images": [
+  ],
+  "links": []
+}
