@@ -997,6 +997,17 @@
     <div class="project-grid" id="grid-finished-personal"></div>
 </section>
 
+<!-- REFERENCES SECTION -->
+<section id="references" style="margin-bottom: 5rem;">
+    <h2 class="section-title"><span class="mono">09</span>References</h2>
+    <div style="color: var(--text-muted); margin-bottom: 2rem;">
+        Professional references from academic supervisors and industry managers:
+    </div>
+    
+    <!-- Dynamic JS Target Wrapper -->
+    <div id="reference-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem;"></div>
+</section>
+
 <!-- CONTACT INTERFACE -->
 <section id="contact">
     <h2 class="section-title"><span class="mono">10</span>Contact</h2>
@@ -1163,7 +1174,58 @@ function closeProjectModal(event) {
     document.getElementById('project-modal').style.display = 'none';
 }
 
-document.addEventListener("DOMContentLoaded", loadModularProjects);
+async function loadProfessionalReferences() {
+    try {
+        const response = await fetch('projects/references.json');
+        if (!response.ok) return;
+        const references = await response.json();
+
+        const gridContainer = document.getElementById('reference-grid');
+        if (!gridContainer) return;
+
+        references.forEach(ref => {
+            const cardHTML = `
+                <div style="background-color: var(--card-bg); color: var(--text-dark); border-radius: 6px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; border-top: 4px solid var(--accent-primary); box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <div>
+                        <!-- Company Header & Logo row -->
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; border-bottom: 1px dashed rgba(0,0,0,0.1); padding-bottom: 0.75rem;">
+                            <span style="font-family: 'Share Tech Mono', monospace; font-size: 0.9rem; letter-spacing: 1px; color: #555; text-transform: uppercase; font-weight: bold;">${ref.company}</span>
+                            <img src="${ref.logo}" alt="${ref.company} logo" style="height: 24px; width: auto; object-fit: contain;">
+                        </div>
+                        
+                        <!-- Person Name and Relationship -->
+                        <h3 style="margin: 0 0 0.25rem 0; font-size: 1.25rem; font-weight: 700;">${ref.person}</h3>
+                        <div style="font-family: 'Share Tech Mono', monospace; font-size: 0.85rem; color: var(--red-passion); text-transform: uppercase; font-weight: bold; margin-bottom: 1rem;">
+                            ${ref.relation}
+                        </div>
+                        
+                        <!-- Title & Corporate Alignment metadata -->
+                        <div style="font-size: 0.9rem; line-height: 1.4; color: #3a3a3c;">
+                            <strong>Title:</strong> ${ref.title}<br>
+                            <strong>Dept:</strong> ${ref.department}
+                        </div>
+                    </div>
+
+                    <!-- Direct Access Coordinates Connection Layer -->
+                    <div style="margin-top: 1.5rem; padding-top: 0.75rem; border-top: 1px solid rgba(0,0,0,0.05);">
+                        <a href="mailto:${ref.contact}" style="font-family: 'Share Tech Mono', monospace; font-size: 0.9rem; color: var(--text-dark); text-decoration: none; font-weight: bold; border-bottom: 1px dashed var(--accent-primary);">
+                            ✉️ ${ref.contact}
+                        </a>
+                    </div>
+                </div>
+            `;
+            gridContainer.insertAdjacentHTML('beforeend', cardHTML);
+        });
+    } catch (error) {
+        console.error("Reference generation error:", error);
+    }
+}
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    loadModularProjects(); 
+    loadProfessionalReferences(); 
+});
 </script>
 
 <!-- GLOBAL MODAL COMPONENT OVERLAY -->

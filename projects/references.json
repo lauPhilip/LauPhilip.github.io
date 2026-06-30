@@ -1,0 +1,20 @@
+[
+  {
+    "company": "The LEGO Group",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/2/24/LEGO_logo.svg",
+    "person": "Christina Nørhave Kjær",
+    "relation": "Former Manager",
+    "title": "Sr. Engineering Manager",
+    "department": "ME Enabling & Technology",
+    "contact": "noerhave@gmail.com"
+  },
+  {
+    "company": "Aarhus University",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/5/52/Aarhus_University_logo.svg",
+    "person": "Mads Kjærgaard Nielsen",
+    "relation": "Thesis Supervisor",
+    "title": "PhD Fellow",
+    "department": "Institute of Business Development and Technology",
+    "contact": "madskn@btech.au.dk"
+  }
+]
