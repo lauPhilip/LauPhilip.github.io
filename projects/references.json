@@ -16,5 +16,14 @@
     "title": "PhD Fellow",
     "department": "Institute of Business Development and Technology",
     "contact": "madskn@btech.au.dk"
+  },
+  {
+    "company": "Aarhus University",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/5/52/Aarhus_University_logo.svg",
+    "person": "Eva Sørum Poulsen",
+    "relation": "Manager",
+    "title": "Associate Professor",
+    "department": "Institute of Business Development and Technology",
+    "contact": "eva@btech.au.dk"
   }
 ]

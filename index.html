@@ -671,7 +671,6 @@
             </section>
 
 <!-- CODING LANGUAGES SECTION -->
-<!-- CODING LANGUAGES SECTION -->
 <section id="tech-languages">
     <h2 class="section-title"><span class="mono">03</span>Coding Languages & Tools</h2>
     
@@ -1047,12 +1046,40 @@
         </main>
     </div>
 
-    <footer>
-        <p>// Clean Architecture Portfolio. Managed via GitHub Pages.</p>
-    </footer>
+<footer>
+    <p>© 2026 Philip Lau. All rights reserved.<span id="latest-update" style="color: var(--text-muted); margin-left: 0.5rem;">Loading last update...</span></p>
+</footer>
 
 
     <script>
+
+async function loadLatestCommitDate() {
+    // Replace with your exact GitHub username and repository name
+    const username = "LauPhilip"; 
+    const repo = "LauPhilip.github.io"; 
+    
+    try {
+        const response = await fetch(`https://api.github.com/repos/${username}/${repo}/commits/master`);
+        if (!response.ok) throw new Error("API response error");
+        
+        const commitData = await response.json();
+        const commitDateString = commitData.commit.committer.date; // e.g., "2026-06-30T11:07:46Z"
+        
+        // Format the date neatly (e.g., "June 30, 2026")
+        const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+        const formattedDate = new Date(commitDateString).toLocaleDateString('en-US', dateOptions);
+        
+        const updateTarget = document.getElementById('latest-update');
+        if (updateTarget) {
+            updateTarget.textContent = `| Last updated: ${formattedDate}`;
+        }
+    } catch (error) {
+        console.warn("Could not fetch latest commit timestamp:", error);
+        // Fallback gracefully so it doesn't leave a broken loading message
+        const updateTarget = document.getElementById('latest-update');
+        if (updateTarget) updateTarget.style.display = 'none';
+    }
+}
 // Local container module to manage asynchronous JSON state matrices securely
 let projectStateEngine = {};
 
@@ -1224,8 +1251,9 @@ async function loadProfessionalReferences() {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    loadModularProjects(); 
-    loadProfessionalReferences(); 
+    loadModularProjects();
+    loadProfessionalReferences();
+    loadLatestCommitDate(); 
 });
 </script>
 
