@@ -997,6 +997,30 @@
     <div class="project-grid" id="grid-finished-personal"></div>
 </section>
 
+<!-- GITHUB ACTIVITY SECTION -->
+<section id="github-activity" style="margin-bottom: 5rem;">
+    <h2 class="section-title"><span class="mono">11</span>Git Activity</h2>
+    <div style="color: var(--text-muted); margin-bottom: 2rem;">
+        An automated tracking look at my latest repository commits and contributions:
+    </div>
+    
+    <!-- Clean Light Mode Container -->
+    <div style="width: 100%; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); background: #ffffff; border: 1px solid #e1e4e8; padding: 1.5rem; display: flex; flex-direction: column; align-items: flex-start;">
+        
+        <!-- Dynamic Header (Matches GitHub's typography style) -->
+        <div id="github-contribution-header" style="font-size: 1.3rem; font-weight: 400; color: #24292e; margin-bottom: 1rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;">
+            Loading contributions...
+        </div>
+
+        <!-- Contribution Grid Chart Image -->
+        <div style="width: 100%; display: flex; justify-content: center;">
+            <img src="https://ghchart.rshah.org/LauPhilip" 
+                 alt="Philip's GitHub Contribution Grid" 
+                 style="width: 100%; max-width: 780px; height: auto; display: block;">
+        </div>
+    </div>
+</section>
+
 <!-- REFERENCES SECTION -->
 <section id="references" style="margin-bottom: 5rem;">
     <h2 class="section-title"><span class="mono">10</span>References</h2>
@@ -1052,6 +1076,40 @@
 
 
     <script>
+async function fetchGitHubContributions() {
+    const username = "LauPhilip";
+    const currentYear = new Date().getFullYear(); // Automatically scales to 2026, 2027, etc.
+    const headerElement = document.getElementById("github-contribution-header");
+
+    try {
+        // Fetch your live contribution chart directly
+        const response = await fetch(`https://images.weserv.nl/?url=ghchart.rshah.org/${username}`);
+        if (!response.ok) throw new Error("Chart unreachable");
+        
+        const svgText = await response.text();
+        
+        // Use a regular expression to pull the exact contribution number text hidden inside the chart data
+        const match = svgText.match(/(\d+[\d,]*)\s+contributions/i);
+        let totalContributions = match ? match[1] : null;
+
+        // Fallback Strategy: If the chart text parsing fails, use a secondary global event counter
+        if (!totalContributions) {
+            const backupResponse = await fetch(`https://api.github.com/search/commits?q=author:${username}+author-date:${currentYear}-01-01..${currentYear}-12-31`);
+            const backupData = await backupResponse.json();
+            totalContributions = backupData.total_count || "View";
+        }
+
+        if (headerElement) {
+            headerElement.textContent = `${totalContributions} contributions in ${currentYear}`;
+        }
+    } catch (error) {
+        console.warn("GitHub activity counter switched to year fallback:", error);
+        // Completely dynamic fallback text without any hardcoded numbers
+        if (headerElement) {
+            headerElement.textContent = `My Repository Contributions in ${currentYear}`;
+        }
+    }
+}
 
 async function loadLatestCommitDate() {
     // Replace with your exact GitHub username and repository name
@@ -1253,7 +1311,8 @@ async function loadProfessionalReferences() {
 document.addEventListener("DOMContentLoaded", () => {
     loadModularProjects();
     loadProfessionalReferences();
-    loadLatestCommitDate(); 
+    loadLatestCommitDate();
+    fetchGitHubContributions();
 });
 </script>
 
