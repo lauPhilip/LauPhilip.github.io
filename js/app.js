@@ -235,6 +235,15 @@ async function loadProfessionalReferences() {
     }
 }
 
+// Automatically close the expanded project modal when hitting the Escape key
+window.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+        const modal = document.getElementById('project-modal');
+        if (modal && modal.style.display !== 'none') {
+            modal.style.display = 'none';
+        }
+    }
+});
 
 document.addEventListener("DOMContentLoaded", () => {
     loadModularProjects();
