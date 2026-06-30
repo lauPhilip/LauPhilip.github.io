@@ -1,5 +1,13 @@
 [
   {
+    "title": "Data Science Foundations: Fundamentals (2022)",
+    "issuer": "Kaggle",
+    "date": "2022",
+    "type": "Certification",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/52/LinkedIn_Learning_logo.png",
+    "link": "projects/certifications/data_science_foundations_fundamentals.png"
+  },
+  {
     "title": "Python Coder",
     "issuer": "Kaggle",
     "date": "2024",
