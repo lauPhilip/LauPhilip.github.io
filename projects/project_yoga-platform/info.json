@@ -1,0 +1,11 @@
+{
+  "title": "Online Yoga Platform",
+  "short_desc": "A dedicated home video streaming and routine management dashboard built to manage structured media streaming assets and track daily recovery metrics.",
+  "blueprint_title": "Yoga Platform for my girlfriend",
+  "blueprint_desc": "Designed to host and pipeline high-definition media playback layouts with minimal loading latency. Built with decoupled database backends to easily log video progression states alongside custom performance subroutines, providing an integrated space for organizing both mental consistency and training logs.",
+  "tags": ["Web Architecture", "Media Pipelines", "Database Scripting", "Frontend Design"],
+  "images": [
+    "projects/project_yoga-platform/LOGO.png"
+  ],
+  "links": []
+}

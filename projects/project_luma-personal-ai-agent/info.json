@@ -1,0 +1,14 @@
+{
+  "title": "L.U.M.A. V2: Universal Management Agent",
+  "short_desc": "A localized, high-performance engineering OS and personal assistant inspired by the F.R.I.D.A.Y. standard. Features asynchronous neural speech queuing, real-time HUD telemetry, and direct project tracking constraints.",
+  "blueprint_title": "SYSTEM ARCHITECTURE & MODULE BREAKDOWN",
+  "blueprint_desc": "Operates on a modular 'Nerve-Link' layout isolating core directories. The brain integrates an offline LLM interface via Ollama, a neural voice engine handling XTTS-v2 synthesis, and a real-time visual UI mapped using Pygame. Transitioned to a fluid YAML-native archive layout (projects.yaml, session.yaml, and persona.md) to manage context memory and custom behavioral adjustments cleanly.",
+  "tags": ["Python 3.11", "Ollama", "Pygame", "XTTS-v2", "Whisper-STT", "YAML", "AI Assistant","Engineering Management"],
+  "images": [
+    "projects/project_luma-personal-ai-agent/LUMA.png"
+  ],
+  "links": [
+    {"label":"voice","url":"https://www.behindthevoiceactors.com/movies/Avengers-Age-of-Ultron/FRIDAY/"},
+    {"label":"Github Repo","url":"https://github.com/lauPhilip/LUMA001"}
+  ]
+}

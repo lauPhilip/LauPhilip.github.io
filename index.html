@@ -1100,18 +1100,34 @@ function launchProjectModal(projectId) {
     const data = projectStateEngine[projectId];
     if (!data) return;
 
-    // Build the gallery layouts safely depending on data types passed
+    // 1. Process Images Content (Grid or Single Wrapper restricted to 350px max width, 200px max height)
     let imageContentHTML = '';
     if (data.images) {
         if (Array.isArray(data.images)) {
-            imageContentHTML = `<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">`;
+            imageContentHTML = `<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.5rem;">`;
             data.images.forEach(imgSrc => {
-                imageContentHTML += `<img src="${imgSrc}" alt="Gallery Asset" style="width:100%; height:auto; border-radius:6px; box-shadow:0 4px 12px rgba(0,0,0,0.15); display:block; object-fit:cover;">`;
+                imageContentHTML += `<img src="${imgSrc}" alt="Gallery Asset" style="width: 100%; max-width: 350px; height: 100%; max-height: 200px; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: block; object-fit: cover; margin: 0 auto;">`;
             });
             imageContentHTML += `</div>`;
         } else if (typeof data.images === 'string') {
-            imageContentHTML = `<div style="margin-top:1.5rem;"><img src="${data.images}" alt="Asset" style="width:100%; max-width:550px; border-radius:6px; box-shadow:0 4px 12px rgba(0,0,0,0.15); display:block; margin:0 auto;"></div>`;
+            imageContentHTML = `<div style="margin-top: 1.5rem; display: flex; justify-content: center;"><img src="${data.images}" alt="Asset" style="width: 100%; max-width: 350px; height: 100%; max-height: 200px; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: block; object-fit: cover;"></div>`;
         }
+    }
+
+    // 2. Process Video Content (Restricted to 350px max width, 200px max height)
+    let videoContentHTML = '';
+    if (data.video) {
+        videoContentHTML = `
+            <div style="margin-top: 2rem; border-top: 1px dashed rgba(0,0,0,0.15); padding-top: 1.5rem;">
+                <h4 style="font-family:'Share Tech Mono', monospace; font-size:1rem; margin:0 0 1rem 0; color:var(--tangerine); text-transform:uppercase;">🎥 SYSTEM DEMONSTRATION VIDEO</h4>
+                <div style="display: flex; justify-content: center;">
+                    <video controls style="width: 100%; max-width: 350px; max-height: 200px; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); background: #000;">
+                        <source src="${data.video}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        `;
     }
 
     const linksContentHTML = data.links && data.links.length > 0 ? 
@@ -1130,6 +1146,7 @@ function launchProjectModal(projectId) {
         </div>
 
         ${imageContentHTML}
+        ${videoContentHTML}
         ${linksContentHTML}
 
         <div class="tags" style="margin-top: 2rem; border-top: 1px dashed rgba(0,0,0,0.15); padding-top: 1.5rem;">
@@ -1137,7 +1154,6 @@ function launchProjectModal(projectId) {
         </div>
     `;
 
-    // Activate the hidden layout container smoothly using active layout display updates
     const modalElement = document.getElementById('project-modal');
     modalElement.style.display = 'flex';
 }

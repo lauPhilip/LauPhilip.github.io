@@ -1,0 +1,14 @@
+{
+  "title": "MIND: Mould Intelligent Navigation Database",
+  "short_desc": "A context-aware, enterprise-grade hybrid RAG chatbot designed to navigate complex engineering standards and technical manuals across global internal document repositories.",
+  "blueprint_title": "Project Description",
+  "blueprint_desc": "Designed as a dual-engine architecture to mitigate knowledge fragmentation in dense engineering documentation. Implements a hybrid information retrieval model fusing sparse lexical matching (Okapi BM25) for literal technical term precision with dense vector searches for abstract semantic similarity. The post-retrieval phase executes sequential query rewriting and adaptive cross-encoder reranking, outputting precise context-grounded text streams with front-end inline references directly mapped back to source context hashes. [SECURITY NOTICE: Core codebases, data verification pipelines, and empirical evaluations remain classified under strict corporate non-disclosure agreements.]",
+  "tags": ["BM25", "Similarity Search", "Reranker", "Query Rewriter", "Inline References", "Hybrid Retrieval", "NDA Protected"],
+  "images": [
+    "projects/project_mind_lego/mind.jpg"
+  ],
+  "video": "projects/project_mind_lego/demo_walkthrough.mp4",
+  "links": [
+    { "label": "Corporate Context Disclaimer", "url": "https://www.lego.com" }
+  ]
+}

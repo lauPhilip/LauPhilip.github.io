@@ -15,8 +15,18 @@
     "category": "work"
   },
   {
-    "id": "project_online_yoga_platform",
+    "id": "project_luma-personal-ai-agent",
     "status": "ongoing",
     "category": "personal"
+  },
+  {
+    "id": "project_yoga-platform",
+    "status": "ongoing",
+    "category": "personal"
+  },
+  {
+    "id": "project_mind_lego",
+    "status": "finished",
+    "category": "work"
   }
 ]
