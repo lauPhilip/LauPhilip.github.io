@@ -245,9 +245,55 @@ window.addEventListener('keydown', (event) => {
     }
 });
 
+async function loadDynamicCertifications() {
+    try {
+        const response = await fetch('projects/certifications.json');
+        if (!response.ok) return;
+        const certs = await response.json();
+
+        const gridContainer = document.getElementById('certifications-grid');
+        if (!gridContainer) return;
+
+        gridContainer.innerHTML = ''; // Clear loading state safely
+
+        certs.forEach(cert => {
+            const cardHTML = `
+                <a href="${cert.link}" target="_blank" style="text-decoration: none; color: inherit; display: block;">
+                    <div style="background-color: #262624; border: 1px solid #333; border-radius: 6px; padding: 1.25rem; display: flex; align-items: center; gap: 1.2rem; transition: transform 0.2s, border-color 0.2s; cursor: pointer;" 
+                         onmouseover="this.style.transform='translateY(-3px)'; this.style.borderColor='var(--accent-primary)';" 
+                         onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='#333';">
+                        
+                        <!-- Badge Image Box -->
+                        <div style="width: 65px; height: 65px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.02); border-radius: 4px; padding: 0.2rem; box-sizing: border-box;">
+                            <img src="${cert.image}" alt="${cert.title} badge" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                        </div>
+                        
+                        <!-- Text Metadata Block -->
+                        <div style="display: flex; flex-direction: column; justify-content: center;">
+                            <span style="font-family: 'Share Tech Mono', monospace; font-size: 0.8rem; color: var(--accent-primary); text-transform: uppercase; letter-spacing: 0.5px;">
+                                ${cert.issuer} • ${cert.type}
+                            </span>
+                            <h3 style="margin: 0.2rem 0; font-size: 1.05rem; font-weight: 600; color: var(--text-light); line-height: 1.3;">
+                                ${cert.title}
+                            </h3>
+                            <span style="font-size: 0.8rem; color: var(--text-muted);">
+                                Earned ${cert.date} <span style="color: var(--accent-primary); margin-left: 0.25rem;">[→ View]</span>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            `;
+            gridContainer.insertAdjacentHTML('beforeend', cardHTML);
+        });
+    } catch (error) {
+        console.error("Error generating certifications layout grid matrix:", error);
+    }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     loadModularProjects();
     loadProfessionalReferences();
     loadLatestCommitDate();
     fetchGitHubContributions();
+    loadDynamicCertifications();
 });
