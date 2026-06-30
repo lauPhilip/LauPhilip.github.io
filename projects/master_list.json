@@ -48,5 +48,10 @@
     "id": "project_genai_business_case",
     "status": "finished",
     "category": "work"
+  },
+  {
+    "id": "project_christmas_calendar",
+    "status": "finished",
+    "category": "personal"
   }
 ]

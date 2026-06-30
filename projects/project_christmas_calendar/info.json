@@ -1,0 +1,11 @@
+{
+  "title": "Power Apps Christmas Advent Calendar",
+  "short_desc": "An interactive, gamified workplace engagement calendar app featuring 24 dynamically unlocked daily doors, trivia triggers, and minigames.",
+  "blueprint_title": "GAMIFICATION ARCHITECTURE & TIME-LOCK LOGIC",
+  "blueprint_desc": "Designed and deployed a holiday engagement application inside Power Apps to boost community morale. Engineered custom conditional time-locking logic that evaluates the client system date to securely prevent users from previewing doors ahead of schedule. Programmed 24 distinct interface layouts embedding custom trivia pipelines, tracking logic, and responsive micro-minigames optimized for internal employee interactions.",
+  "tags": ["Power Apps", "Gamification", "UI/UX Design", "Expression Logic", "Employee Engagement"],
+  "images": [
+    "projects/project_christmas_calendar/advent_grid.png"
+  ],
+  "links": []
+}
