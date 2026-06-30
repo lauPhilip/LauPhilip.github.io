@@ -53,5 +53,10 @@
     "id": "project_christmas_calendar",
     "status": "finished",
     "category": "personal"
+  },
+  {
+    "id": "project_local_planning_strategy",
+    "status": "finished",
+    "category": "work"
   }
 ]
