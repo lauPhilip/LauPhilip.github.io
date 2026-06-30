@@ -1,0 +1,13 @@
+{
+  "title": "au-btech-literature-review-agent",
+  "short_desc": "An open-source agentic framework developed at Aarhus University to automate systematic literature reviews and deep research surveys while maintaining strict auditability, grounding, and reproducible citation loops.",
+  "blueprint_title": "THE VISION: REPRODUCIBLE RESEARCH WITHOUT HALLUCINATIONS",
+  "blueprint_desc": "Engineered a decoupled .NET 10 solution utilizing Mistral Large to parse and synthesize academic texts. To combat fabricated citations, the engine uses an isolated data capsule pattern that outputs a step-by-step process trace on every execution. It generates immediate, dual-column academic paper previews embedded with live empirical distribution graphs, mapping data points directly back to true source facts.",
+  "tags": ["C#", ".NET 10", "Mistral Large", "Agentic AI", "PRISMA 2020", "Open-Source"],
+  "images": [
+    "projects/project_au-btech-literature-review/diagram_literature-review.png"
+  ],
+  "links": [
+    { "label": "OSSYM 2026 Berlin", "url": "https://indico.cern.ch/event/1622016/" }
+  ]
+}

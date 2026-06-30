@@ -1,0 +1,27 @@
+{
+  "title": "AskEIVA: Customer Service Agent Platform",
+  "short_desc": "An enterprise-grade, AI-native knowledge platform engineered to automatically ingest, chunk, and index dense marine survey manuals and historical helpdesk tickets into a highly connected GraphRAG ecosystem.",
+  "blueprint_title": "THE LEAP: PYTHON PROTOTYPE TO ENTERPRISE .NET 10",
+  "blueprint_desc": "Successfully re-engineered a single-file Python prototype into a strictly decoupled C# Clean Architecture. By separating our core business logic from database boundaries, the system provides strict type-safety and background execution loops across four distinct layers (Domain, Application, Infrastructure with Weaviate vector operations, and a Blazor Interactive Server web interface).",
+  "tags": ["C#", ".NET 10", "Clean Architecture", "GraphRAG", "Weaviate Cloud", "Blazor"],
+  "images": [
+    "projects/project_ask_eiva/diagram_ask-eiva.png",
+    "projects/project_ask_eiva/chat-0.png",
+    "projects/project_ask_eiva/chat-1.png",
+    "projects/project_ask_eiva/chat-2.png",
+    "projects/project_ask_eiva/configuration-0.png",
+    "projects/project_ask_eiva/configuration-1.png",
+    "projects/project_ask_eiva/configuration-2.png",
+    "projects/project_ask_eiva/eval-0.png",
+    "projects/project_ask_eiva/eval-1.png",
+    "projects/project_ask_eiva/graphrag.png",
+    "projects/project_ask_eiva/home.png",
+    "projects/project_ask_eiva/login.png",
+    "projects/project_ask_eiva/register.png"
+  ],
+  "links": [
+    { "label": "EIVA official site", "url": "https://www.eiva.com/" },
+    {"label": "Github Repo", "url": "https://github.com/lauPhilip/AskEIVANet"}
+
+  ]
+}

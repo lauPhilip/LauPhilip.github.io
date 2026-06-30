@@ -341,11 +341,15 @@
             padding: 1.5rem;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
             border-top: 6px solid #ccc;
+            cursor: pointer; /* Signal click action to visitor */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .project-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(234, 228, 218, 0.1);
+            box-shadow: 0 8px 24px rgba(234, 228, 218, 0.15);
         }
 
         .p-work-on { border-color: var(--lavender); }
@@ -770,7 +774,7 @@
             <ul>
                 <li><strong>Generative AI Ecosystems</strong> – Building and tuning search pipelines using RAG, GraphRAG, and vector similarity architectures.</li>
                 <li><strong>Application Automation</strong> – Building custom business dashboards, workflow rules, and low-code integrations using the Power Platform ecosystem.</li>
-                <li><strong>Cybersecurity Basics</strong> – Analyzing application architectural vulnerabilities using structured threat modeling blueprints.</li>
+                <li><strong>Cybersecurity Basics</strong> – Analyzing application architectural vulnerabilities using structured threat modeling.</li>
                 <li><strong>Data Analytics & Web Tech</strong> – Writing clean server-side code, styling user environments, and relational database scripting.</li>
             </ul>
         </div>
@@ -781,7 +785,7 @@
             <ul>
                 <li><strong>Bridging Tech and Business</strong> – Translating complex engineering limitations into functional, value-driven strategy roadmaps.</li>
                 <li><strong>Team Leadership & Management</strong> – Directing project workloads, handling operational shift handoffs, and resolving interpersonal issues smoothly.</li>
-                <li><strong>Stakeholder Communication</strong> – Presenting architectural progress reports and aligning technical requirements with multiple enterprise business divisions.</li>
+                <li><strong>Stakeholder Communication</strong> – Presenting architectural progress reports and aligning technical requirements with multiple stakeholders.</li>
                 <li><strong>Academic Instruction</strong> – Explaining complex computer concepts step-by-step and running clear developer learning workshops.</li>
             </ul>
         </div>
@@ -798,9 +802,10 @@
                             <h3>Research Assistant</h3>
                             <div class="institution">Aarhus Universitet, Dept. of Business Development and Technology (BTECH)</div>
                             <ul>
-                                <li>Leading digital competency initiatives bridging academic frameworks with industry best practices.</li>
-                                <li>Engineered an internal hybrid RAG Customer Service Agent (BM25, Similarity Search, GraphRAG) evaluating technical document processing streams.</li>
-                                <li>Architected an open-source, transparent C#/.NET agentic literature review environment for the OSSYM 2026 conference in Berlin.</li>
+                                <li>Development of a Modular RAG course bot, that can answer on course material in the different programs both on bachelor and master's programs.</li>
+                                <li>Design and facilitation of a professional AI workshop utilizing the 33A AI Cards® methodology to teach Master’s students how to architect structured AI business cases and identify high-value automation opportunities</li>
+                                <li>In collaboration with the company eiva, developed a internal hybrid RAG Customer Service Agent that uses BM25, Similarity Search and a GraphRAG. With a knowledge base of large technical documentation and support tickets in freshdesk</li>
+                                <li>Architected an open-source, transparent C#/.NET agentic literature review environment for the OSSYM 2026 conference @ CODE university Berlin.</li>
                             </ul>
                         </div>
                     </div>
@@ -815,6 +820,12 @@
                                     <li>Application Lifecycle Management development and Integration for Power Platform (The 10th largest environment with The LEGO Group)</li>
                                     <li>Matured a proof-of-concept Retrieval-Augmented Generation (RAG) chatbot that searches across all core documentation and SharePoint articles for Element development, Mould Development, and Mould Construction-covering 331 engineers.</li>
                                     <li>Designed and scaled custom automated engineering newsletter systems delivering localized content metrics.</li>
+                                    <li>Facilitator of TDC, Specialist community (30-40 people)</li>
+                                    <li>Documentation of quality for rework (ISO 9001) for moulds for 10 months through Excel</li>
+                                    <li>Technical Product Owner of 50+ SharePoint Sites for Mould Engineering for 10 months</li>
+                                    <li>Machine learning initiative for Mould Designers with image processing</li>
+                                    <li>Managed a successful split of a large process related to form processing from 1 department to 2 departments</li>
+                                    <li>Developed and deployed digitalization-transition strategy for moving 50 cloud flows and 30 Power Apps</li>
                                 </ul>
                             </div>
                     </div>
@@ -826,7 +837,7 @@
                             <div class="institution">Aarhus Universitet</div>
                             <ul>
                                 <li>Instructed undergraduate students in the course web technologies covering the languages: HTML, CSS, JavaScript, PHP, and MySQL.</li>
-                                <li>Recieved a 4.9 evaluation out of 5, on my ability to teach the material.</li>
+                                <li>Recieved a student evaluation of 4.9 average from 1-5 on my ability to teach the material.</li>
                             </ul>
                         </div>
                     </div>
@@ -964,117 +975,27 @@
     </div>
 </section>
 
-            <!-- ONGOING PROJECTS -->
-            <section id="ongoing-projects">
-                <h2 class="section-title"><span class="mono">08</span>Ongoing Projects</h2>
-                
-                <div class="subsection-title"><span style="color: var(--lavender);">■</span> Work Projects</div>
-                <div class="project-grid">
-                    <details class="project-card p-work-on">
-                        <summary>
-                            <div class="project-header-flex">
-                                <h3>Modular Course Bots</h3>
-                                <span class="expand-icon">CLICK TO EXPAND</span>
-                            </div>
-                            <p>Developing dynamic, modular RAG deployment bots tailored to answer complex questions regarding academic syllabus documentation streams.</p>
-                        </summary>
-                        <div class="expanded-specs">
-                            <h4>Target Blueprint</h4>
-                            <p>Integrating scalable document chunking algorithms and context window handling parameters to allow individual professors to drop course material in on-demand.</p>
-                            <div class="tags">
-                                <span class="tag">Generative AI</span>
-                                <span class="tag">RAG</span>
-                                <span class="tag">Python</span>
-                            </div>
-                        </div>
-                    </details>
-                </div>
+<!-- ONGOING PROJECTS -->
+<section id="ongoing-projects">
+    <h2 class="section-title"><span class="mono">05</span>Ongoing Projects</h2>
+    
+    <div class="subsection-title"><span style="color: var(--lavender);">■</span> Work Projects</div>
+    <div class="project-grid" id="grid-ongoing-work"></div>
 
-                <div class="subsection-title"><span style="color: var(--sky);">■</span> Personal Projects</div>
-                <div class="project-grid">
-                    <details class="project-card p-pers-on">
-                        <summary>
-                            <div class="project-header-flex">
-                                <h3>Yoga Streaming Architecture</h3>
-                                <span class="expand-icon">CLICK TO EXPAND</span>
-                            </div>
-                            <p>Designing a dedicated streaming hub platform built to handle structured media distribution assets and minimal latency processing.</p>
-                        </summary>
-                        <div class="expanded-specs">
-                            <h4>Target Blueprint</h4>
-                            <p>Structuring clean decoupled cloud logic endpoints alongside a reactive dashboard front-end matrix layout.</p>
-                            <div class="tags">
-                                <span class="tag">Streaming Stack</span>
-                                <span class="tag">Media Pipelines</span>
-                            </div>
-                        </div>
-                    </details>
+    <div class="subsection-title"><span style="color: var(--sky);">■</span> Personal Projects</div>
+    <div class="project-grid" id="grid-ongoing-personal"></div>
+</section>
 
-                    <details class="project-card p-pers-on">
-                        <summary>
-                            <div class="project-header-flex">
-                                <h3>Custom Voice Assistant Core</h3>
-                                <span class="expand-icon">CLICK TO EXPAND</span>
-                            </div>
-                            <p>Constructing a local voice ecosystem attempting to simulate high-utility virtual assistance parameters (J.A.R.V.I.S./FRIDAY configuration models).</p>
-                        </summary>
-                        <div class="expanded-specs">
-                            <h4>Target Blueprint</h4>
-                            <p>Prototyping wake-word keyword loops on edge hardware setups combined with asynchronous runtime task executions.</p>
-                            <div class="tags">
-                                <span class="tag">Voice Engine</span>
-                                <span class="tag">Python</span>
-                            </div>
-                        </div>
-                    </details>
-                </div>
-            </section>
+<!-- FINISHED PROJECTS -->
+<section id="finished-projects">
+    <h2 class="section-title"><span class="mono">06</span>Finished Projects</h2>
+    
+    <div class="subsection-title"><span style="color: var(--tea);">■</span> Work Projects</div>
+    <div class="project-grid" id="grid-finished-work"></div>
 
-            <!-- FINISHED PROJECTS -->
-            <section id="finished-projects">
-                <h2 class="section-title"><span class="mono">09</span>Finished Projects</h2>
-                
-                <div class="subsection-title"><span style="color: var(--tea);">■</span> Work Projects</div>
-                <div class="project-grid">
-                    <details class="project-card p-work-fin">
-                        <summary>
-                            <div class="project-header-flex">
-                                <h3>Hybrid RAG Hub (eiva Evaluation)</h3>
-                                <span class="expand-icon">CLICK TO EXPAND</span>
-                            </div>
-                            <p>Constructed a dual-retrieval pipeline syncing BM25 tracking mechanisms with semantic GraphRAG systems to map technical service logs.</p>
-                        </summary>
-                        <div class="expanded-specs">
-                            <h4>Project Summary</h4>
-                            <p>Successfully processed cross-department tech support records within secure thresholds, resulting in a drop in retrieval error rates.</p>
-                            <div class="tags">
-                                <span class="tag">GraphRAG</span>
-                                <span class="tag">BM25</span>
-                                <span class="tag">Python</span>
-                            </div>
-                        </div>
-                    </details>
-
-                    <details class="project-card p-work-fin">
-                        <summary>
-                            <div class="project-header-flex">
-                                <h3>Agentic Literature Framework</h3>
-                                <span class="expand-icon">CLICK TO EXPAND</span>
-                            </div>
-                            <p>Shipped a production C#/.NET engine engineered to crawl, track, and map explicit literature review variables presented at OSSYM 2026.</p>
-                        </summary>
-                        <div class="expanded-specs">
-                            <h4>Project Summary</h4>
-                            <p>Provided complete pipeline transparency, demonstrating deterministic trace loops for algorithmic parsing runs.</p>
-                            <div class="tags">
-                                <span class="tag">C#</span>
-                                <span class="tag">.NET</span>
-                                <span class="tag">Agentic AI</span>
-                            </div>
-                        </div>
-                    </details>
-                </div>
-            </section>
+    <div class="subsection-title"><span style="color: var(--tangerine);">■</span> Personal Projects</div>
+    <div class="project-grid" id="grid-finished-personal"></div>
+</section>
 
 <!-- CONTACT INTERFACE -->
 <section id="contact">
@@ -1118,5 +1039,142 @@
         <p>// Clean Architecture Portfolio. Managed via GitHub Pages.</p>
     </footer>
 
+
+    <script>
+// Local container module to manage asynchronous JSON state matrices securely
+let projectStateEngine = {};
+
+async function loadModularProjects() {
+    try {
+        const response = await fetch('projects/master_list.json');
+        if (!response.ok) return;
+        const projectRegistry = await response.json();
+
+        const classMap = {
+            'ongoing_work': 'p-work-on', 'ongoing_personal': 'p-pers-on',
+            'finished_work': 'p-work-fin', 'finished_personal': 'p-pers-fin'
+        };
+
+        for (const item of projectRegistry) {
+            try {
+                const infoResponse = await fetch(`projects/${item.id}/info.json`);
+                if (!infoResponse.ok) continue;
+
+                const data = await infoResponse.json();
+                
+                // Store in memory mapping using IDs as data keys
+                projectStateEngine[item.id] = data;
+
+                const targetContainer = document.getElementById(`grid-${item.status}-${item.category}`);
+                const borderClass = classMap[`${item.status}_${item.category}`] || '';
+
+                if (!targetContainer) continue;
+
+                // Render clean, non-expanding overview items into main grid
+                const cardHTML = `
+                    <div class="project-card ${borderClass}" onclick="launchProjectModal('${item.id}')">
+                        <div class="project-header-flex">
+                            <h3 style="margin: 0 0 0.5rem 0; font-size: 1.3rem; font-weight: 700;">${data.title}</h3>
+                            <span class="expand-icon" style="font-family: 'Share Tech Mono', monospace; font-size: 0.85rem; background: rgba(0,0,0,0.05); padding: 0.2rem 0.5rem; border-radius: 4px; color: #555;">CLICK TO EXPAND</span>
+                        </div>
+                        <p style="font-size: 0.95rem; margin: 0.5rem 0 1.5rem 0; color: #3a3a3c;">${data.short_desc}</p>
+                        <div class="tags" style="margin-top: auto;">
+                            ${data.tags.map(tg => `<span class="tag">${tg}</span>`).join('')}
+                        </div>
+                    </div>
+                `;
+
+                targetContainer.insertAdjacentHTML('beforeend', cardHTML);
+
+            } catch (err) {
+                console.error(`Asset generation runtime parsing exception on target: ${item.id}`, err);
+            }
+        }
+    } catch (error) {
+        console.error("Critical failure during initialization loop operations:", error);
+    }
+}
+
+// Launches viewport modal containing expanded parameters cleanly isolated
+function launchProjectModal(projectId) {
+    const data = projectStateEngine[projectId];
+    if (!data) return;
+
+    // Build the gallery layouts safely depending on data types passed
+    let imageContentHTML = '';
+    if (data.images) {
+        if (Array.isArray(data.images)) {
+            imageContentHTML = `<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">`;
+            data.images.forEach(imgSrc => {
+                imageContentHTML += `<img src="${imgSrc}" alt="Gallery Asset" style="width:100%; height:auto; border-radius:6px; box-shadow:0 4px 12px rgba(0,0,0,0.15); display:block; object-fit:cover;">`;
+            });
+            imageContentHTML += `</div>`;
+        } else if (typeof data.images === 'string') {
+            imageContentHTML = `<div style="margin-top:1.5rem;"><img src="${data.images}" alt="Asset" style="width:100%; max-width:550px; border-radius:6px; box-shadow:0 4px 12px rgba(0,0,0,0.15); display:block; margin:0 auto;"></div>`;
+        }
+    }
+
+    const linksContentHTML = data.links && data.links.length > 0 ? 
+        `<div style="margin-top:1.5rem; display:flex; gap:1.2rem;">
+            ${data.links.map(lnk => `<a href="${lnk.url}" target="_blank" style="color:var(--red-passion); font-family:'Share Tech Mono', monospace; font-weight:600; text-decoration:underline;">[→ ${lnk.label}]</a>`).join('')}
+         </div>` : '';
+
+    // Standard structural modal component definition
+    document.getElementById('modal-body-content').innerHTML = `
+        <h2 style="font-size: 2rem; margin-top: 0; margin-bottom: 0.5rem; font-weight: 800; color: var(--text-dark);">${data.title}</h2>
+        <p style="font-size: 1.05rem; line-height: 1.6; color: #2c2c2e; margin-bottom: 2rem;">${data.short_desc}</p>
+        
+        <div style="border-top: 1px dashed rgba(0,0,0,0.15); padding-top: 1.5rem;">
+            <h4 style="font-family:'Share Tech Mono', monospace; font-size:1rem; margin:0 0 0.5rem 0; color:var(--tea); text-transform:uppercase;">${data.blueprint_title || 'BLUEPRINT SPECIFICATION'}</h4>
+            <p style="font-size: 0.95rem; line-height: 1.6; color: #3a3a3c; margin-bottom: 1.5rem;">${data.blueprint_desc}</p>
+        </div>
+
+        ${imageContentHTML}
+        ${linksContentHTML}
+
+        <div class="tags" style="margin-top: 2rem; border-top: 1px dashed rgba(0,0,0,0.15); padding-top: 1.5rem;">
+            ${data.tags.map(tg => `<span class="tag" style="background:#262624; color:var(--text-light); border-color:#444;">${tg}</span>`).join('')}
+        </div>
+    `;
+
+    // Activate the hidden layout container smoothly using active layout display updates
+    const modalElement = document.getElementById('project-modal');
+    modalElement.style.display = 'flex';
+}
+
+// Safely dismiss modal viewport when clicking context regions outward
+function closeProjectModal(event) {
+    document.getElementById('project-modal').style.display = 'none';
+}
+
+document.addEventListener("DOMContentLoaded", loadModularProjects);
+</script>
+
+<!-- GLOBAL MODAL COMPONENT OVERLAY -->
+<div id="project-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(29, 29, 27, 0.85); z-index: 9999; backdrop-filter: blur(4px); align-items: center; justify-content: center;" onclick="closeProjectModal(event)">
+    <!-- Custom Style Tags to hide scrollbar across WebKit (Chrome/Safari) and Firefox engines -->
+    <style>
+        .modal-card-content::-webkit-scrollbar {
+            display: none; /* Hides scrollbars on Chrome, Safari, and newer Opera setups */
+        }
+        .modal-card-content {
+            -ms-overflow-style: none;  /* Hides scrollbars on Internet Explorer and Edge */
+            scrollbar-width: none;  /* Hides scrollbars on Firefox */
+        }
+    </style>
+
+    <!-- Expanded Modal Card Panel (Width increased to max-width: 1050px) -->
+    <div class="modal-card-content" style="background-color: var(--card-bg); color: var(--text-dark); width: 95%; max-width: 1050px; max-height: 85vh; border-radius: 8px; overflow-y: auto; padding: 2.5rem; position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.5);" onclick="event.stopPropagation()">
+        
+        <!-- Close Button -->
+        <button onclick="document.getElementById('project-modal').style.display = 'none'" style="position: absolute; top: 1.5rem; right: 1.5rem; background: #262624; color: var(--text-light); border: none; font-family: 'Share Tech Mono', monospace; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; font-weight: bold; z-index: 10;">
+            [X] CLOSE
+        </button>
+
+        <!-- Dynamic Modal Targets Injection Slot -->
+        <div id="modal-body-content"></div>
+    </div>
+</div>
+</div>
 </body>
 </html>

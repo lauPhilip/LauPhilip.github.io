@@ -1,0 +1,12 @@
+{
+  "title": "au-btech-coursebot-platform",
+  "short_desc": "Coursebot is an AI-native platform designed for university staff to architect, deploy, and monitor specialized lecture bots. Built to bridge the gap between static lecture materials and active student inquiry, Coursebot allows educators to transform course syllabi into interactive, 'grounded' knowledge agents.",
+  "blueprint_title": "Project Description",
+  "blueprint_desc": "Coursebot is a reference implementation for an Agentic Educational Ecosystem. It demonstrates how modular AI agents can be managed within a university framework to provide real-time, pedagogically sound guidance to students.  The platform provides a centralized hub for: 1: Staff-Led Bot Architecture: Non-technical creation of lecture-specific agents, 2: Knowledge Grounding: Ensuring AI responses are strictly anchored to verified course DNA, 3: Interaction Observability: Real-time analytics into student lexical patterns and bot efficacy.",
+  "tags": ["Generative AI", "RAG", "PHP", "CSS"],
+  "images": 
+    "projects/project_au-btech-course-bot/diagram_course-bot.png",
+  "links": [
+    { "label": "GitHub Repo", "url": "https://github.com/lauPhilip/au-btech-coursebot-platform" }
+  ]
+}
