@@ -47,6 +47,25 @@
             scrollbar-width: none;  /* Hides scrollbars on Firefox */
         }
 
+        /* Header Text Cycler Animations */
+        .header-tagline-container {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+            min-height: 1.8rem; /* Prevents layout shifting when text changes */
+            color: var(--text-muted);
+        }
+
+        .dynamic-phrase {
+            font-weight: 800;
+            transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out;
+            opacity: 1;
+        }
+
+        .phrase-fade-out {
+            opacity: 0;
+        }
+
         @media (min-width: 992px) {
             .page-layout {
                 grid-template-columns: 280px 1fr;

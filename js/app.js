@@ -293,10 +293,43 @@ async function loadDynamicCertifications() {
     }
 }
 
+function initHeaderPhraseCycler() {
+    const phraseTarget = document.getElementById('dynamic-phrase-target');
+    if (!phraseTarget) return;
+
+    // The array starts with your landing dot, then moves into your value statements
+    const phrases = [
+        { text: ".", color: "var(--accent-primary)" },
+        { text: " is a Technical Business Developer", color: "var(--accent-primary)" },
+        { text: " creates value through technology", color: "var(--sky)" },
+        { text: " is a goal-oriented strategist", color: "var(--pink-quartz)" },
+        { text: " bridges tech and business logic", color: "var(--lavender)" },
+        { text: " eliminates shadow IT systems", color: "var(--tangerine)" }
+    ];
+
+    let currentIndex = 0;
+
+    setInterval(() => {
+        // Step 1: Fade out
+        phraseTarget.classList.add('phrase-fade-out');
+
+        // Step 2: Swap the content and branding color after fade out completes
+        setTimeout(() => {
+            currentIndex = (currentIndex + 1) % phrases.length;
+            phraseTarget.textContent = phrases[currentIndex].text;
+            phraseTarget.style.color = phrases[currentIndex].color;
+            
+            // Step 3: Fade back in
+            phraseTarget.classList.remove('phrase-fade-out');
+        }, 400); // Matches the 0.4s CSS transition time
+    }, 5000); // Cycles exactly every 5 seconds
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     loadModularProjects();
     loadProfessionalReferences();
     loadLatestCommitDate();
     fetchGitHubContributions();
     loadDynamicCertifications();
+    initHeaderPhraseCycler();
 });
