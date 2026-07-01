@@ -325,6 +325,56 @@ function initHeaderPhraseCycler() {
     }, 5000); // Cycles exactly every 5 seconds
 }
 
+function renderSkillsMatrix() {
+    const gridContainer = document.getElementById('skills-display-grid');
+    if (!gridContainer) return;
+
+    // A structured map of your entire core skill stack
+    const skills = [
+        { name: "HTML", color: "#E34F26", icon: "devicon-html5-plain colored" },
+        { name: "CSS", color: "#1572B6", icon: "devicon-css3-plain colored" },
+        { name: "JavaScript", color: "#F7DF1E", icon: "devicon-javascript-plain colored" },
+        { name: "MySQL", color: "#00758F", icon: "devicon-mysql-plain colored" },
+        { name: "SQLite", color: "#003B57", icon: "devicon-sqlite-plain colored" },
+        { name: "PHP", color: "#777BB4", icon: "devicon-php-plain colored" },
+        { name: "JSON", color: "#292929", img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/json/json-original.svg" },
+        { name: "Markdown", color: "#000000", img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/markdown/markdown-original.svg" },
+        { name: "Google Colab", color: "#F9AB00", img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecolab/googlecolab-original.svg" },
+        { name: "YAML", color: "#CB171E", img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/yaml/yaml-original.svg" },
+        { name: "Python", color: "#3776AB", icon: "devicon-python-plain colored" },
+        { name: "Streamlit", color: "#FF4B4B", img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/streamlit/streamlit-original.svg" },
+        { name: "Gemini", color: "#1A73E8", img: "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/gemini/default.svg" },
+        { name: "Mistral AI", color: "#FD5E53", img: "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/mistral/default.svg" },
+        { name: "GitHub", color: "#24292E", img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" },
+        { name: "Figma", color: "#F24E1E", icon: "devicon-figma-plain colored" },
+        { name: "Miro", color: "#FFD02F", img: "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/miro/default.svg" },
+        { name: "Jira", color: "#0052CC", img: "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/jira/default.svg" },
+        { name: "VS Code", color: "#007ACC", icon: "devicon-vscode-plain colored" },
+        { name: "Postman", color: "#FF6C37", img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" },
+        { name: "Databricks", color: "#FF6F00", img: "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/databricks/default.svg" },
+        { name: "Weaviate", color: "#00D689", img: "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/weaviate/default.svg" },
+        { name: "Power Apps", color: "#742774", img: "https://img.icons8.com/fluency/48/microsoft-power-apps-2020.png" },
+        { name: "Power Automate", color: "#2563EB", img: "https://img.icons8.com/fluency/48/microsoft-power-automate-2020.png" },
+        { name: "SharePoint", color: "#0078D4", img: "https://img.icons8.com/fluency/48/microsoft-sharepoint-2019.png" },
+        { name: "C#", color: "#0078D4", icon: "devicon-csharp-plain colored" }
+    ];
+
+    // Loop through array elements and build markup context dynamically
+    skills.forEach(skill => {
+        const visualElement = skill.icon 
+            ? `<i class="${skill.icon}"></i>`
+            : `<img src="${skill.img}" style="height: 2.5rem; width: 2.5rem; display: block; margin: 0 auto 0.5rem auto;" alt="${skill.name}">`;
+
+        const cardHTML = `
+            <div class="icon-box" style="border-color: ${skill.color};">
+                ${visualElement}
+                <span>${skill.name}</span>
+            </div>
+        `;
+        gridContainer.insertAdjacentHTML('beforeend', cardHTML);
+    });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     loadModularProjects();
     loadProfessionalReferences();
@@ -332,4 +382,5 @@ document.addEventListener("DOMContentLoaded", () => {
     fetchGitHubContributions();
     loadDynamicCertifications();
     initHeaderPhraseCycler();
+    renderSkillsMatrix(); 
 });
