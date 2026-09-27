@@ -20,11 +20,31 @@
   "languages": ["Danish", "English"],
   "interests": ["Tech", "Computer games", "Marvel", "LEGO", "Olympic weightlifting"],
   "avatar": "img/avatar.webp",
-  "stats": [
-    { "value": "15+", "label": "Power Apps shipped" },
-    { "value": "50+", "label": "Automated cloud flows" },
-    { "value": "331", "label": "Engineers served by RAG bot" },
-    { "value": "4.9/5", "label": "Teaching evaluation" }
+  "now": [
+    {
+      "kicker": "Building",
+      "title": "LUMA",
+      "text": "A local-first personal AI assistant — and the small language model behind it, written from scratch.",
+      "href": "#project/project_luma-personal-ai-agent"
+    },
+    {
+      "kicker": "Researching",
+      "title": "TraceableAI",
+      "text": "A traceable, PRISMA-compliant literature-review agent, headed for OSSYM 2026 in Berlin.",
+      "href": "#publications"
+    },
+    {
+      "kicker": "Supervising",
+      "title": "3 MSc projects",
+      "text": "Process diagrams from unstructured data, context engineering, and AI governance in a security firm.",
+      "href": "#experience"
+    },
+    {
+      "kicker": "Learning",
+      "title": "C# & .NET",
+      "text": "Clean Architecture and Blazor, shipped in AskEIVA and the literature-review agent.",
+      "href": "#skills"
+    }
   ],
   "contact": {
     "email": "philip15@live.dk",
