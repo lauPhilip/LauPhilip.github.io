@@ -14,10 +14,10 @@
           "AI adoption and governance — producing recommendations for the safe use of AI in a security firm."
         ]
       },
-      "Developing a modular RAG course bot that answers questions on course material across bachelor's and master's programmes.",
+      "Developing an AI course assistant that answers students' questions from the course material, for bachelor's and master's programmes.",
       "Designed and facilitated a professional AI workshop using the 33A AI Cards® methodology, teaching master's students to architect structured AI business cases and identify high-value automation opportunities.",
-      "In collaboration with EIVA, developed an internal hybrid RAG customer-service agent combining BM25, similarity search and GraphRAG over large technical documentation and Freshdesk support tickets.",
-      "Architected an open-source, transparent C#/.NET agentic literature-review environment for the OSSYM 2026 conference at CODE University, Berlin."
+      "Together with the company EIVA, built an internal AI assistant for customer service that finds answers in large technical manuals and past support tickets.",
+      "Designed an open-source AI tool that helps researchers review academic literature transparently, for the OSSYM 2026 conference at CODE University, Berlin."
     ]
   },
   {
@@ -25,16 +25,16 @@
     "title": "Student Worker — Digitalization",
     "org": "The LEGO Group — Mould Engineering Enabling & Technology",
     "points": [
-      "Citizen developer delivering 15+ Power Apps solutions and 50+ Power Automate cloud flows.",
-      "Application Lifecycle Management and integration for Power Platform (the 10th largest environment within The LEGO Group).",
-      "Matured a proof-of-concept RAG chatbot searching all core documentation and SharePoint articles for element, mould development and mould construction — covering 331 engineers.",
-      "Designed and scaled automated engineering newsletter systems delivering localized content metrics.",
+      "Built 15+ business apps (Power Apps) and 50+ automated workflows (Power Automate) as a citizen developer.",
+      "Managed how apps were built, tested and released on the Power Platform — in the 10th largest environment at The LEGO Group.",
+      "Took an AI chatbot from prototype towards a real product, searching all core documentation for element, mould development and mould construction — used by 331 engineers.",
+      "Built and scaled automated engineering newsletters, tailored to each reader's chosen topics.",
       "Facilitator of the TDC specialist community (30–40 people).",
       "Documented rework quality (ISO 9001) for moulds for 10 months.",
       "Technical Product Owner of 50+ SharePoint sites for Mould Engineering for 10 months.",
-      "Machine-learning initiative for mould designers using image processing.",
+      "Worked on a machine-learning initiative using image recognition to support mould designers.",
       "Managed the split of a large form-processing process from one department into two.",
-      "Developed and deployed a digitalization-transition strategy for moving 50 cloud flows and 30 Power Apps."
+      "Planned and carried out the move of 50 automated workflows and 30 apps as part of a digital transition."
     ]
   },
   {
