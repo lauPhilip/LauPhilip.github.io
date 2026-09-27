@@ -1,8 +1,9 @@
 {
   "title": "Digitalization Strategy for Local Planning",
-  "short_desc": "A comprehensive business case and stakeholder alignment initiative that successfully eliminated shadow IT and led to the adoption of a unified enterprise IT system.",
-  "blueprint_title": "STRATEGIC ALIGNMENT, PROTOTYPING & SYSTEM ADOPTION",
-  "blueprint_desc": "Conducted a deep-dive operational feasibility study and business case to centralize fragmented local planning workflows. Gathered diverse stakeholder requirements through targeted interviews, designed functional prototypes to validate alternative user journeys, and modeled financial impact scenarios. The resulting strategic roadmap successfully dismantled decentralized shadow IT processes and directly drove the executive adoption and deployment of a unified IT system architecture.",
+  "short_desc": "A business case that replaced scattered, home-made tools and workarounds (\"shadow IT\") with one shared, company-approved system.",
+  "blueprint_title": "How it came together",
+  "blueprint_desc": "I interviewed the people involved, mapped how planning was really being done, built simple prototypes to test different ways of working, and estimated the financial impact. The resulting plan convinced management to adopt one unified IT system instead of the patchwork of local solutions.",
+  "tech_notes": "Conducted a deep-dive operational feasibility study and business case to centralize fragmented local planning workflows. Gathered diverse stakeholder requirements through targeted interviews, designed functional prototypes to validate alternative user journeys, and modeled financial impact scenarios. The resulting strategic roadmap successfully dismantled decentralized shadow IT processes and directly drove the executive adoption and deployment of a unified IT system architecture.",
   "tags": [
     "Digitalization Strategy",
     "Business Case",
