@@ -1,29 +1,19 @@
 {
-  "title": "L.U.M.A. V2: Universal Management Agent",
-  "short_desc": "A localized, high-performance engineering OS and personal assistant inspired by the F.R.I.D.A.Y. standard. Features asynchronous neural speech queuing, real-time HUD telemetry, and direct project tracking constraints.",
-  "blueprint_title": "SYSTEM ARCHITECTURE & MODULE BREAKDOWN",
-  "blueprint_desc": "Operates on a modular 'Nerve-Link' layout isolating core directories. The brain integrates an offline LLM interface via Ollama, a neural voice engine handling XTTS-v2 synthesis, and a real-time visual UI mapped using Pygame. Transitioned to a fluid YAML-native archive layout (projects.yaml, session.yaml, and persona.md) to manage context memory and custom behavioral adjustments cleanly.",
-  "tags": [
-    "Python 3.11",
-    "Ollama",
-    "Pygame",
-    "XTTS-v2",
-    "Whisper-STT",
-    "YAML",
-    "AI Assistant",
-    "Engineering Management"
-  ],
+  "title": "LUMA: Personal AI Desktop Assistant",
+  "short_desc": "A local-first personal AI assistant with a matte green HUD. Wake it by voice (\"Luma\") or keyboard, then chat, pull up a live world feed, use the camera, run commands in its own terminal or control music — all from one desktop app.",
+  "blueprint_title": "Modules & architecture",
+  "blueprint_desc": "The frontend is a PyQt6 desktop app built around a central animated core and five modules on a bottom dock: World Feed (live TV stream, market ticker and chart, top story and headlines), Chat (voice or text, with draggable glass-style panels), Optic (live camera view), Terminal (Luma's own commands and skills) and Music (Spotify now-playing and playback control). Replies come from a local model via Ollama today; the long-term plan is to swap in LUMA Brain, a small language model I am building from scratch and training on my own data and Luma's tools. The source code is currently private.",
+  "tags": ["Python", "PyQt6", "Ollama", "Voice / wake word", "Local-first AI", "Spotify", "Desktop UI"],
+  "private": true,
   "images": [
-    "projects/project_luma-personal-ai-agent/luma.webp"
+    "projects/project_luma-personal-ai-agent/luma-idle.webp",
+    "projects/project_luma-personal-ai-agent/luma-chat.webp",
+    "projects/project_luma-personal-ai-agent/luma-world-feed.webp",
+    "projects/project_luma-personal-ai-agent/luma-terminal.webp",
+    "projects/project_luma-personal-ai-agent/luma-music.webp",
+    "projects/project_luma-personal-ai-agent/luma-optic.webp"
   ],
   "links": [
-    {
-      "label": "voice",
-      "url": "https://www.behindthevoiceactors.com/movies/Avengers-Age-of-Ultron/FRIDAY/"
-    },
-    {
-      "label": "Github Repo",
-      "url": "https://github.com/lauPhilip/LUMA001"
-    }
+    { "label": "Version 1 (public repo)", "url": "https://github.com/lauPhilip/LUMA001" }
   ]
 }
