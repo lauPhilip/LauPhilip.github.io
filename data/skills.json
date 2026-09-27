@@ -6,12 +6,18 @@
     { "name": "PHP", "group": "Languages & frameworks", "icon": "devicon:php/php-original" },
     { "name": "HTML", "group": "Languages & frameworks", "icon": "devicon:html5/html5-original" },
     { "name": "CSS", "group": "Languages & frameworks", "icon": "devicon:css3/css3-original" },
+    { "name": "SCSS", "group": "Languages & frameworks", "icon": "devicon:sass/sass-original" },
     { "name": "Laravel", "group": "Languages & frameworks", "icon": "devicon:laravel/laravel-original" },
+    { "name": "Vue", "group": "Languages & frameworks", "icon": "devicon:vuejs/vuejs-original" },
     { "name": "MySQL", "group": "Data", "icon": "devicon:mysql/mysql-original" },
     { "name": "SQLite", "group": "Data", "icon": "devicon:sqlite/sqlite-original" },
     { "name": "PostgreSQL", "group": "Data", "icon": "devicon:postgresql/postgresql-original" },
     { "name": "JSON", "group": "Data", "icon": "devicon:json/json-original" },
-    { "name": "JSONL", "group": "Data", "mono": "{}" },
+    {
+      "name": "JSONL",
+      "group": "Data",
+      "mono": "{}"
+    },
     { "name": "YAML", "group": "Data", "icon": "devicon:yaml/yaml-original" },
     { "name": "Markdown", "group": "Data", "icon": "devicon:markdown/markdown-original", "invert": true },
     { "name": "Databricks", "group": "Data", "icon": "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/databricks/default.svg" },
@@ -27,19 +33,20 @@
     { "name": "GitHub", "group": "Tools", "icon": "devicon:github/github-original", "invert": true },
     { "name": "VS Code", "group": "Tools", "icon": "devicon:vscode/vscode-original" },
     { "name": "Postman", "group": "Tools", "icon": "devicon:postman/postman-original" },
+    { "name": "REST APIs", "group": "Tools", "mono": "⇄" },
     { "name": "Figma", "group": "Tools", "icon": "devicon:figma/figma-original" },
     { "name": "Miro", "group": "Tools", "icon": "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/miro/default.svg" },
     { "name": "Jira", "group": "Tools", "icon": "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/jira/default.svg" }
   ],
   "learning": [
     "C#",
-    ".NET"
+    ".NET",
+    "TypeScript"
   ],
   "bucket_list": [
     "Terraform",
     "Bicep",
     "Gherkin",
-    "TypeScript",
     "React Native",
     "Angular",
     "Rust",
