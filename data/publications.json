@@ -1,0 +1,22 @@
+[
+  {
+    "year": "2026",
+    "type": "Paper",
+    "title": "TraceableAI — a traceable, PRISMA-compliant agentic literature-review environment",
+    "authors": "Philip Lau, Nidhi",
+    "venue": "OSSYM 2026 · Open Search Symposium, CODE University Berlin",
+    "status": "Upcoming",
+    "links": [
+      { "label": "Conference", "url": "https://indico.cern.ch/event/1622016/" },
+      { "label": "Code", "url": "https://github.com/lauPhilip/au-btech-literature-review-agent" }
+    ]
+  },
+  {
+    "year": "2026",
+    "type": "Workshop",
+    "title": "Architecting AI business cases with 33A AI Cards®",
+    "authors": "Philip Lau",
+    "venue": "Aarhus University, BTECH — master's students",
+    "links": []
+  }
+]
