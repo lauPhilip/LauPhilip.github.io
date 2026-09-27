@@ -41,6 +41,22 @@
 
   let DATA = {};
   let CV_OK = false;
+  /** Privacy-friendly event counting (GoatCounter). No-op until analytics is configured. */
+  const track = (name) => {
+    try { window.goatcounter?.count?.({ path: `event/${name}`, title: name, event: true }); } catch { /* ignore */ }
+  };
+  window.trackEvent = track;
+
+  function initAnalytics(cfg) {
+    const code = cfg?.goatcounter;
+    if (!code || /^(localhost|127\.|0\.0\.0\.0)/.test(location.hostname)) return;
+    const s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://gc.zgo.at/count.js';
+    s.dataset.goatcounter = `https://${code}.goatcounter.com/count`;
+    document.head.appendChild(s);
+  }
+
   const safe = (fn) => (...a) => { try { return fn(...a); } catch (e) { console.warn(e); } };
 
   /* ---------- theme ---------- */
@@ -170,6 +186,7 @@
       const a = $('#contact-email');
       a.textContent = c.email; a.href = `mailto:${c.email}`;
       $('#copy-email').addEventListener('click', async () => {
+        track('copy-email');
         const t = $('#copy-toast');
         try { await navigator.clipboard.writeText(c.email); t.textContent = 'Copied'; }
         catch { t.textContent = 'Press Ctrl+C'; }
@@ -185,7 +202,7 @@
     // CV button: only shown when the file actually exists.
     if (c.cv) {
       fetch(c.cv, { method: 'HEAD' }).then((r) => {
-        if (r.ok) { const b = $('#cv-btn'); b.href = c.cv; b.hidden = false; CV_OK = true; }
+        if (r.ok) { const b = $('#cv-btn'); b.href = c.cv; b.hidden = false; CV_OK = true; b.addEventListener('click', () => track('cv-download')); }
       }).catch(() => {});
     }
   }
@@ -407,6 +424,8 @@
     });
     reveal($('#projects'));
     routeFromHash();
+    window.Portfolio = { data: DATA, projects: P.list, openProject, openQuick, track };
+    window.dispatchEvent(new CustomEvent('portfolio:ready'));
   }
 
   /* ---------- project dialog ---------- */
@@ -435,6 +454,7 @@
       document.body.classList.add('modal-open');
     }
     if (push) history.replaceState(null, '', `#project/${p.id}`);
+    track(`project/${p.id}`);
   }
 
   function closeProject() {
@@ -543,6 +563,7 @@
 
   function openQuick({ push = true } = {}) {
     renderQuick();
+    track('quick-view');
     if (!quick.open) { quick.showModal(); document.body.classList.add('modal-open', 'quick-open'); }
     if (push) history.replaceState(null, '', '#quick');
   }
@@ -639,6 +660,7 @@
     const results = await Promise.allSettled(files.map((f) => getJSON(`data/${f}.json`)));
     const data = Object.fromEntries(files.map((f, i) => [f, results[i].status === 'fulfilled' ? results[i].value : null]));
     DATA = data;
+    initAnalytics(data.site?.analytics);
     results.forEach((r, i) => r.status === 'rejected' && console.warn(`data/${files[i]}.json`, r.reason));
 
     if (data.site) safe(renderSite)(data.site);
