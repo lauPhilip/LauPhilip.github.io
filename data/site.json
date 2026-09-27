@@ -17,8 +17,17 @@
   ],
   "bio": "I am a passionate individual who puts full energy into bridging the gap between technical development and strategic management. I like translating complex technology logic into clear business value.",
   "quote": "My engineering philosophy centers on creating functional digital artifacts that deliver measurable business value through the strategic application of technology and data.",
-  "languages": ["Danish", "English"],
-  "interests": ["Tech", "Computer games", "Marvel", "LEGO", "Olympic weightlifting"],
+  "languages": [
+    "Danish",
+    "English"
+  ],
+  "interests": [
+    "Tech",
+    "Computer games",
+    "Marvel",
+    "LEGO",
+    "Olympic weightlifting"
+  ],
   "avatar": "img/avatar.webp",
   "now": [
     {
@@ -54,7 +63,11 @@
     "github": "https://github.com/lauPhilip",
     "github_user": "lauPhilip",
     "cv": "assets/cv.pdf",
-    "repo_exclude": ["ai-version-old-1", "ai-version-old-2", "askEIVA"]
+    "repo_exclude": [
+      "ai-version-old-1",
+      "ai-version-old-2",
+      "askEIVA"
+    ]
   },
   "featured": {
     "title": "TBMI — Witt A/S",
@@ -74,5 +87,28 @@
       "title": "Long-term trajectory",
       "text": "Stepping into high-level technology strategy as a CTO or executive IT decision maker — mastering code early so every later decision sits at the intersection of people, technology and innovation."
     }
-  ]
+  ],
+  "quick": {
+    "headline": "Technical Business Developer who builds AI and automation that delivers business value.",
+    "looking_for": "Software Engineering · AI/LLM Development · Digitalization Engineering · Forward Deployed Engineering · Technical Project Management",
+    "highlights": [
+      "Built hybrid RAG and GraphRAG assistants in production settings — The LEGO Group (331 engineers) and EIVA.",
+      "Delivered 15+ Power Apps and 50+ Power Automate flows as a citizen developer at The LEGO Group.",
+      "MSc and BSc in Engineering from Aarhus University, both with a final grade of 12 (A+).",
+      "Research Assistant at Aarhus University: supervising 3 MSc projects and presenting an AI literature-review agent at OSSYM 2026.",
+      "Rated 4.9 / 5 by students as instructor in Web Technologies."
+    ],
+    "top_skills": [
+      "Python",
+      "C#",
+      ".NET",
+      "RAG / GraphRAG",
+      "LLMs",
+      "Power Platform",
+      "SQL",
+      "PHP",
+      "JavaScript",
+      "Stakeholder management"
+    ]
+  }
 }
