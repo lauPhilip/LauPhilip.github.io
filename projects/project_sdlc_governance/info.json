@@ -1,8 +1,9 @@
 {
-  "title": "Power Platform SDLC Governance Framework",
-  "short_desc": "Design and implementation of a custom process flow model applying strict software development lifecycle (SDLC) principles to citizen development environments.",
-  "blueprint_title": "GOVERNANCE MODEL & STAKEHOLDER ALIGNMENT",
-  "blueprint_desc": "Engineered an operational governance model to manage risk and maintain code quality across distributed citizen developer teams. Designed a custom process flow model that maps requirements gathering, environment isolation, testing, and deployment gates. Coordinated across several business stakeholders to balance rapid internal innovation with IT compliance and release management standards.",
+  "title": "Quality & Release Process for Low-Code Apps",
+  "short_desc": "A clear, step-by-step process for employees who build their own apps (\"citizen developers\") — from idea to release, safely and with quality checks along the way.",
+  "blueprint_title": "Why it was needed",
+  "blueprint_desc": "Many teams were building apps on the Power Platform without a shared way of working. I designed a model covering requirements, separate test and live environments, testing and release approvals, and agreed it with the stakeholders — so teams could keep innovating quickly while still meeting IT's rules.",
+  "tech_notes": "Engineered an operational governance model to manage risk and maintain code quality across distributed citizen developer teams. Designed a custom process flow model that maps requirements gathering, environment isolation, testing, and deployment gates. Coordinated across several business stakeholders to balance rapid internal innovation with IT compliance and release management standards.",
   "tags": [
     "SDLC",
     "Governance Model",
