@@ -1,12 +1,24 @@
 {
   "title": "LUMA Brain: A Language Model From Scratch",
-  "short_desc": "The brain behind LUMA — a small, fast language model I am building from the ground up, following Sebastian Raschka's \"Build a Large Language Model (From Scratch)\", to eventually run Luma locally on my own data and skills.",
-  "blueprint_title": "Approach",
-  "blueprint_desc": "Working chapter by chapter through the book to implement every piece myself instead of calling a hosted API: tokenization and data loading, self-attention and multi-head attention, the GPT-style transformer block, pretraining on unlabeled text, and fine-tuning for classification and instruction following. The goal is a lightweight model that is easy on CPU/GPU, trained on my own data and on Luma's tools and skills, so the assistant can answer and act fully offline. The source code is currently private.",
-  "tags": ["Python", "PyTorch", "Transformers", "Tokenization", "Pretraining", "Fine-tuning", "LLM"],
+  "short_desc": "The \"brain\" behind LUMA: a small AI language model I am building myself, step by step, so the assistant can one day run entirely on my own computer.",
+  "blueprint_title": "Why build it myself",
+  "blueprint_desc": "Instead of relying on a service like ChatGPT, I am learning how these models work from the inside by building one, following Sebastian Raschka's book \"Build a Large Language Model (From Scratch)\". The goal is a small, fast model trained on my own data and on LUMA's skills, so it works offline and keeps my data private. The code is private for now.",
+  "tech_notes": "Working chapter by chapter through the book to implement every piece myself instead of calling a hosted API: tokenization and data loading, self-attention and multi-head attention, the GPT-style transformer block, pretraining on unlabeled text, and fine-tuning for classification and instruction following. The goal is a lightweight model that is easy on CPU/GPU, trained on my own data and on Luma's tools and skills, so the assistant can answer and act fully offline. The source code is currently private.",
+  "tags": [
+    "Python",
+    "PyTorch",
+    "Transformers",
+    "Tokenization",
+    "Pretraining",
+    "Fine-tuning",
+    "LLM"
+  ],
   "private": true,
   "images": [],
   "links": [
-    { "label": "The book (Manning)", "url": "https://www.manning.com/books/build-a-large-language-model-from-scratch" }
+    {
+      "label": "The book (Manning)",
+      "url": "https://www.manning.com/books/build-a-large-language-model-from-scratch"
+    }
   ]
 }

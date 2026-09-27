@@ -1,9 +1,18 @@
 {
   "title": "LUMA: Personal AI Desktop Assistant",
-  "short_desc": "A local-first personal AI assistant with a matte green HUD. Wake it by voice (\"Luma\") or keyboard, then chat, pull up a live world feed, use the camera, run commands in its own terminal or control music — all from one desktop app.",
-  "blueprint_title": "Modules & architecture",
-  "blueprint_desc": "The frontend is a PyQt6 desktop app built around a central animated core and five modules on a bottom dock: World Feed (live TV stream, market ticker and chart, top story and headlines), Chat (voice or text, with draggable glass-style panels), Optic (live camera view), Terminal (Luma's own commands and skills) and Music (Spotify now-playing and playback control). Replies come from a local model via Ollama today; the long-term plan is to swap in LUMA Brain, a small language model I am building from scratch and training on my own data and Luma's tools. The source code is currently private.",
-  "tags": ["Python", "PyQt6", "Ollama", "Voice / wake word", "Local-first AI", "Spotify", "Desktop UI"],
+  "short_desc": "My personal AI assistant for the desktop. Say \"Luma\" to wake it, then chat, check the news and markets, use the camera, run commands or play music — all in one app.",
+  "blueprint_title": "What it can do",
+  "blueprint_desc": "LUMA has five tools on a bar at the bottom of the screen: a live news and markets feed, a chat window (by voice or text), a camera view, a command terminal and a music player connected to Spotify. It runs on my own computer rather than in the cloud, and will eventually use LUMA Brain — the language model I am building myself. The code is private for now.",
+  "tech_notes": "The frontend is a PyQt6 desktop app built around a central animated core and five modules on a bottom dock: World Feed (live TV stream, market ticker and chart, top story and headlines), Chat (voice or text, with draggable glass-style panels), Optic (live camera view), Terminal (Luma's own commands and skills) and Music (Spotify now-playing and playback control). Replies come from a local model via Ollama today; the long-term plan is to swap in LUMA Brain, a small language model I am building from scratch and training on my own data and Luma's tools. The source code is currently private.",
+  "tags": [
+    "Python",
+    "PyQt6",
+    "Ollama",
+    "Voice / wake word",
+    "Local-first AI",
+    "Spotify",
+    "Desktop UI"
+  ],
   "private": true,
   "images": [
     "projects/project_luma-personal-ai-agent/luma-idle.webp",
@@ -14,6 +23,9 @@
     "projects/project_luma-personal-ai-agent/luma-optic.webp"
   ],
   "links": [
-    { "label": "Version 1 (public repo)", "url": "https://github.com/lauPhilip/LUMA001" }
+    {
+      "label": "Version 1 (public repo)",
+      "url": "https://github.com/lauPhilip/LUMA001"
+    }
   ]
 }

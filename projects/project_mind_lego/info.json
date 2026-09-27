@@ -1,8 +1,9 @@
 {
-  "title": "MIND: Mould Intelligent Navigation Database",
-  "short_desc": "A context-aware, enterprise-grade hybrid RAG chatbot designed to navigate complex engineering standards and technical manuals across global internal document repositories.",
-  "blueprint_title": "Project Description",
-  "blueprint_desc": "Designed as a dual-engine architecture to mitigate knowledge fragmentation in dense engineering documentation. Implements a hybrid information retrieval model fusing sparse lexical matching (Okapi BM25) for literal technical term precision with dense vector searches for abstract semantic similarity. The post-retrieval phase executes sequential query rewriting and adaptive cross-encoder reranking, outputting precise context-grounded text streams with front-end inline references directly mapped back to source context hashes. [SECURITY NOTICE: Core codebases, data verification pipelines, and empirical evaluations remain classified under strict corporate non-disclosure agreements.]",
+  "title": "MIND: AI Search Assistant for LEGO Engineers",
+  "short_desc": "An AI chatbot that helps LEGO mould engineers find answers in large libraries of internal standards and technical manuals — and shows which document each answer comes from.",
+  "blueprint_title": "What it does",
+  "blueprint_desc": "Engineers were losing time hunting for information spread across many documents. MIND combines two kinds of search — exact matching for technical terms and meaning-based search for everyday questions — picks the most relevant passages, and writes a short answer with references back to the source. I took it from prototype towards a real product in my master's thesis, covering documentation used by 331 engineers. The code and results are covered by a non-disclosure agreement.",
+  "tech_notes": "Designed as a dual-engine architecture to mitigate knowledge fragmentation in dense engineering documentation. Implements a hybrid information retrieval model fusing sparse lexical matching (Okapi BM25) for literal technical term precision with dense vector searches for abstract semantic similarity. The post-retrieval phase executes sequential query rewriting and adaptive cross-encoder reranking, outputting precise context-grounded text streams with front-end inline references directly mapped back to source context hashes. [SECURITY NOTICE: Core codebases, data verification pipelines, and empirical evaluations remain classified under strict corporate non-disclosure agreements.]",
   "tags": [
     "BM25",
     "Similarity Search",
