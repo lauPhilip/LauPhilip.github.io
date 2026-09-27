@@ -223,7 +223,6 @@
         <p class="ask-note" id="ask-note">${cfg.endpoint ? 'AI answers based on this portfolio — they can occasionally be wrong.' : 'Answers are taken directly from this portfolio.'} For anything important, <a href="#contact">ask Philip directly</a>.</p>
       </div>
       <button class="ask-fab" type="button" id="ask-fab" aria-controls="ask-panel" aria-expanded="false">
-        <span class="ask-fab-dot" aria-hidden="true"></span>
         <svg aria-hidden="true"><use href="#i-spark"/></svg>
         <span>Ask Lau</span>
       </button>`;
