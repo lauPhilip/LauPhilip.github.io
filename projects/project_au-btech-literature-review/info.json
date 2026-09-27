@@ -1,8 +1,9 @@
 {
-  "title": "au-btech-literature-review-agent",
-  "short_desc": "An open-source agentic framework developed at Aarhus University to automate systematic literature reviews and deep research surveys while maintaining strict auditability, grounding, and reproducible citation loops.",
-  "blueprint_title": "THE VISION: REPRODUCIBLE RESEARCH WITHOUT HALLUCINATIONS",
-  "blueprint_desc": "Engineered a decoupled .NET 10 solution utilizing Mistral Large to parse and synthesize academic texts. To combat fabricated citations, the engine uses an isolated data capsule pattern that outputs a step-by-step process trace on every execution. It generates immediate, dual-column academic paper previews embedded with live empirical distribution graphs, mapping data points directly back to true source facts.",
+  "title": "TraceableAI: AI Literature Review Assistant",
+  "short_desc": "An open-source tool from Aarhus University that helps researchers work through large amounts of academic literature with AI — while showing exactly how every result was reached, so nothing is made up.",
+  "blueprint_title": "The problem it solves",
+  "blueprint_desc": "AI tools sometimes invent sources that don't exist, which makes them risky for research. This tool keeps a step-by-step record of everything the AI does, and every result links back to its original source so a researcher can check it. It follows PRISMA, the standard method for systematic literature reviews, and produces a ready-to-read paper preview with charts. It is headed for the OSSYM 2026 conference in Berlin.",
+  "tech_notes": "Engineered a decoupled .NET 10 solution utilizing Mistral Large to parse and synthesize academic texts. To combat fabricated citations, the engine uses an isolated data capsule pattern that outputs a step-by-step process trace on every execution. It generates immediate, dual-column academic paper previews embedded with live empirical distribution graphs, mapping data points directly back to true source facts.",
   "tags": [
     "C#",
     ".NET 10",

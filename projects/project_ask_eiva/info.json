@@ -1,8 +1,9 @@
 {
-  "title": "AskEIVA: Customer Service Agent Platform",
-  "short_desc": "An enterprise-grade, AI-native knowledge platform engineered to automatically ingest, chunk, and index dense marine survey manuals and historical helpdesk tickets into a highly connected GraphRAG ecosystem.",
-  "blueprint_title": "THE LEAP: PYTHON PROTOTYPE TO ENTERPRISE .NET 10",
-  "blueprint_desc": "Successfully re-engineered a single-file Python prototype into a strictly decoupled C# Clean Architecture. By separating our core business logic from database boundaries, the system provides strict type-safety and background execution loops across four distinct layers (Domain, Application, Infrastructure with Weaviate vector operations, and a Blazor Interactive Server web interface).",
+  "title": "AskEIVA: AI Support Assistant for EIVA",
+  "short_desc": "An AI assistant that helps EIVA's customer service team find answers fast, by searching the company's technical manuals and past support tickets.",
+  "blueprint_title": "What I did",
+  "blueprint_desc": "I first built a quick prototype in Python to prove the idea worked. I then rebuilt it as a robust, long-lasting application in C# and .NET, where the business logic, the database and the user interface are kept apart — making it easier to test, extend and hand over. The finished platform has a web interface for chatting with the assistant, configuring it and checking the quality of its answers.",
+  "tech_notes": "Successfully re-engineered a single-file Python prototype into a strictly decoupled C# Clean Architecture. By separating our core business logic from database boundaries, the system provides strict type-safety and background execution loops across four distinct layers (Domain, Application, Infrastructure with Weaviate vector operations, and a Blazor Interactive Server web interface).",
   "tags": [
     "C#",
     ".NET 10",
