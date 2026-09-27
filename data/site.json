@@ -6,10 +6,10 @@
   "availability_text": "Open to roles in software, AI & digitalization",
   "phrases": [
     "is a Technical Business Developer.",
-    "creates value through technology.",
-    "builds grounded AI systems.",
-    "bridges tech and business logic.",
-    "eliminates shadow IT."
+    "turns technology into business value.",
+    "builds AI people can trust.",
+    "bridges tech and business.",
+    "replaces workarounds with real systems."
   ],
   "degrees": [
     "MSc in Engineering, Technology-Based Business Development",
@@ -39,7 +39,7 @@
     {
       "kicker": "Researching",
       "title": "TraceableAI",
-      "text": "A traceable, PRISMA-compliant literature-review agent, headed for OSSYM 2026 in Berlin.",
+      "text": "An AI tool that helps researchers review literature — and shows its work, so nothing is made up. Headed for OSSYM 2026 in Berlin.",
       "href": "#publications"
     },
     {
@@ -51,7 +51,7 @@
     {
       "kicker": "Learning",
       "title": "C# & .NET",
-      "text": "Clean Architecture and Blazor, shipped in AskEIVA and the literature-review agent.",
+      "text": "Microsoft's main programming language and platform — already used to build AskEIVA and TraceableAI.",
       "href": "#skills"
     }
   ],
@@ -72,7 +72,7 @@
   "featured": {
     "title": "TBMI — Witt A/S",
     "kicker": "University project for a real company, featured in the local newspaper",
-    "text": "Technological Business Model Innovation (TBMI): a formal business proposal evaluating advanced automation ecosystems and intelligent process enhancements, engineered within the Customer Service Department using targeted Power Automate flows and AI Builder structures.",
+    "text": "A university project for Witt A/S: a business proposal showing how the customer service department could work smarter by automating routine tasks with Microsoft's Power Automate and AI Builder.",
     "badge": "Grade 12 (A+)",
     "image": "img/featured-article.webp"
   },
@@ -92,7 +92,7 @@
     "headline": "Technical Business Developer who builds AI and automation that delivers business value.",
     "looking_for": "Software Engineering · AI/LLM Development · Digitalization Engineering · Forward Deployed Engineering · Technical Project Management",
     "highlights": [
-      "Built hybrid RAG and GraphRAG assistants in production settings — The LEGO Group (331 engineers) and EIVA.",
+      "Built AI assistants that find answers in company documents — used by 331 engineers at The LEGO Group, and for EIVA's customer service.",
       "Delivered 15+ Power Apps and 50+ Power Automate flows as a citizen developer at The LEGO Group.",
       "MSc and BSc in Engineering from Aarhus University, both with a final grade of 12 (A+).",
       "Research Assistant at Aarhus University: supervising 3 MSc projects and presenting an AI literature-review agent at OSSYM 2026.",

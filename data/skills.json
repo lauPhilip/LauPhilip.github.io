@@ -56,10 +56,10 @@
     {
       "title": "Technical",
       "items": [
-        { "name": "Generative AI ecosystems", "text": "Building and tuning search pipelines with RAG, GraphRAG and vector-similarity architectures." },
+        { "name": "Generative AI", "text": "Building AI assistants that answer questions from an organisation's own documents and data." },
         { "name": "Application automation", "text": "Custom business dashboards, workflow rules and low-code integrations on the Power Platform." },
-        { "name": "Cybersecurity basics", "text": "Analysing application vulnerabilities with structured threat modelling." },
-        { "name": "Data & web tech", "text": "Clean server-side code, styled user interfaces and relational database scripting." }
+        { "name": "Cybersecurity basics", "text": "Spotting security weak points in applications early, using structured threat modelling." },
+        { "name": "Data & web", "text": "Building websites and web apps end to end — from the database to what the user sees." }
       ]
     },
     {
