@@ -223,7 +223,9 @@
     (sk.tools || []).forEach((t) => (groups[t.group || 'Other'] ??= []).push(t));
     html($('#tool-groups'), Object.entries(groups).map(([g, tools]) => `
       <div class="tool-group"><h3>${esc(g)}</h3><div class="tool-list">
-        ${tools.map((t) => `<span class="tool"><img src="${esc(iconUrl(t.icon))}" alt="" width="20" height="20" loading="lazy" decoding="async"${t.invert ? ' class="invert"' : ''} data-fallback="${esc(t.name.slice(0, 2))}">${esc(t.name)}</span>`).join('')}
+        ${tools.map((t) => `<span class="tool">${t.icon
+          ? `<img src="${esc(iconUrl(t.icon))}" alt="" width="20" height="20" loading="lazy" decoding="async"${t.invert ? ' class="invert"' : ''} data-fallback="${esc(t.mono || t.name.slice(0, 2))}">`
+          : `<span class="mono-icon" aria-hidden="true">${esc(t.mono || t.name.slice(0, 2))}</span>`}${esc(t.name)}</span>`).join('')}
       </div></div>`).join(''));
     // Replace broken icons with a neat monogram.
     $$('#tool-groups img').forEach((img) => img.addEventListener('error', () => {
@@ -291,7 +293,7 @@
           ${img ? `<img src="${esc(img)}" alt="" loading="lazy" decoding="async">` : `<div class="placeholder" aria-hidden="true">${esc(initials)}</div>`}
         </div>
         <div class="card-body">
-          <div class="card-meta"><span class="dot ${esc(p.status)}"></span>${esc(p.status)} · ${esc(p.category)}</div>
+          <div class="card-meta"><span class="dot ${esc(p.status)}"></span>${esc(p.status)} · ${esc(p.category)}${p.private ? '<span class="lock">Private code</span>' : ''}</div>
           <h3>${esc(p.title)}</h3>
           <p>${esc(p.short_desc)}</p>
           <div class="tags">${tags.slice(0, 4).map((t) => `<span class="tag">${esc(t)}</span>`).join('')}${tags.length > 4 ? `<span class="tag">+${tags.length - 4}</span>` : ''}</div>
@@ -391,7 +393,7 @@
     if (!p) return;
     P.current = idx;
     const imgs = p.images || [];
-    $('#modal-meta').textContent = `${p.status} · ${p.category} — ${idx + 1} / ${P.list.length}`;
+    $('#modal-meta').textContent = `${p.status} · ${p.category}${p.private ? ' · private code' : ''} — ${idx + 1} / ${P.list.length}`;
     html($('#modal-body'), `
       <h2 id="modal-title">${esc(p.title)}</h2>
       <p class="lead">${esc(p.short_desc)}</p>
