@@ -1,0 +1,12 @@
+{
+  "title": "LUMA Brain: A Language Model From Scratch",
+  "short_desc": "The brain behind LUMA — a small, fast language model I am building from the ground up, following Sebastian Raschka's \"Build a Large Language Model (From Scratch)\", to eventually run Luma locally on my own data and skills.",
+  "blueprint_title": "Approach",
+  "blueprint_desc": "Working chapter by chapter through the book to implement every piece myself instead of calling a hosted API: tokenization and data loading, self-attention and multi-head attention, the GPT-style transformer block, pretraining on unlabeled text, and fine-tuning for classification and instruction following. The goal is a lightweight model that is easy on CPU/GPU, trained on my own data and on Luma's tools and skills, so the assistant can answer and act fully offline. The source code is currently private.",
+  "tags": ["Python", "PyTorch", "Transformers", "Tokenization", "Pretraining", "Fine-tuning", "LLM"],
+  "private": true,
+  "images": [],
+  "links": [
+    { "label": "The book (Manning)", "url": "https://www.manning.com/books/build-a-large-language-model-from-scratch" }
+  ]
+}
