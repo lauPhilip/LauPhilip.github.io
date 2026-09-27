@@ -68,12 +68,15 @@
     <symbol id="i-menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></symbol>
     <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3Z"/></symbol>
     <symbol id="i-copy" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M9 9h10v11H9zM5 15V4h10"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M13 3 5 13.5h6L10 21l8-10.5h-6L13 3Z"/></symbol>
+    <symbol id="i-print" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M7 9V3h10v6M7 17H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2M7 14h10v7H7z"/></symbol>
   </svg>
 
   <!-- Mobile top bar -->
   <header class="topbar">
     <a href="#top" class="brand"><span class="brand-mark">PL</span><span>Philip Lau</span></a>
     <div class="topbar-actions">
+      <button class="quick-pill js-quick" type="button"><svg><use href="#i-bolt"/></svg>Quick view</button>
       <button class="icon-btn js-theme" type="button" aria-label="Toggle colour theme"><svg><use href="#i-moon"/></svg></button>
       <button class="icon-btn" id="menu-btn" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar"><svg><use href="#i-menu"/></svg></button>
     </div>
@@ -83,6 +86,7 @@
     <!-- Sidebar navigation -->
     <aside class="sidebar" id="sidebar">
       <a href="#top" class="brand brand-lg"><span class="brand-mark">PL</span><span>Philip Lau</span></a>
+      <button class="quick-pill quick-pill-lg js-quick" type="button"><svg><use href="#i-bolt"/></svg>Recruiter quick view</button>
       <nav aria-label="Sections">
         <ol class="toc" id="toc"></ol>
       </nav>
@@ -107,7 +111,8 @@
         <p class="hero-phrase" aria-live="polite"><span class="mono muted">Lau</span> <span id="phrase" class="phrase">is a Technical Business Developer.</span><span class="caret" aria-hidden="true"></span></p>
         <p class="hero-degrees" id="hero-degrees">MSc in Engineering, Technology-Based Business Development · Bachelor of Engineering, Business Development</p>
         <div class="hero-cta">
-          <a class="btn btn-primary" id="cv-btn" href="assets/cv.pdf" download hidden><svg><use href="#i-download"/></svg>Download CV</a>
+          <button class="btn btn-primary js-quick" type="button"><svg><use href="#i-bolt"/></svg>Quick view · 30 sec</button>
+          <a class="btn" id="cv-btn" href="assets/cv.pdf" download hidden><svg><use href="#i-download"/></svg>Download CV</a>
           <a class="btn" href="#contact">Get in touch</a>
           <a class="btn btn-ghost" href="#projects">See projects<svg><use href="#i-arrow"/></svg></a>
         </div>
@@ -245,6 +250,18 @@
       </div>
     </div>
     <div class="modal-body" id="modal-body"></div>
+  </dialog>
+
+  <!-- Recruiter quick view -->
+  <dialog class="modal quick" id="quick" aria-labelledby="quick-name">
+    <div class="modal-bar">
+      <span class="mono muted">Quick view</span>
+      <div class="modal-nav">
+        <button class="icon-btn" type="button" id="quick-print" aria-label="Print or save as PDF"><svg><use href="#i-print"/></svg></button>
+        <button class="icon-btn" type="button" id="quick-close" aria-label="Close"><svg><use href="#i-close"/></svg></button>
+      </div>
+    </div>
+    <div class="modal-body quick-body" id="quick-body"></div>
   </dialog>
 
   <noscript><p class="noscript">This portfolio loads its content with JavaScript. Please enable it, or reach me at philip15@live.dk.</p></noscript>

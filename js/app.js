@@ -39,6 +39,8 @@
     return v;
   }
 
+  let DATA = {};
+  let CV_OK = false;
   const safe = (fn) => (...a) => { try { return fn(...a); } catch (e) { console.warn(e); } };
 
   /* ---------- theme ---------- */
@@ -183,7 +185,7 @@
     // CV button: only shown when the file actually exists.
     if (c.cv) {
       fetch(c.cv, { method: 'HEAD' }).then((r) => {
-        if (r.ok) { const b = $('#cv-btn'); b.href = c.cv; b.hidden = false; }
+        if (r.ok) { const b = $('#cv-btn'); b.href = c.cv; b.hidden = false; CV_OK = true; }
       }).catch(() => {});
     }
   }
@@ -448,12 +450,105 @@
   }
 
   function routeFromHash() {
+    if (location.hash === '#quick') { if (!quick.open) openQuick({ push: false }); return; }
     const m = location.hash.match(/^#project\/(.+)$/);
     if (!m) return;
     const idx = P.list.findIndex((p) => p.id === decodeURIComponent(m[1]));
     if (idx >= 0) openProject(idx, { push: false });
   }
   addEventListener('hashchange', routeFromHash);
+
+
+  /* ---------- recruiter quick view ---------- */
+  const quick = $('#quick');
+
+  function renderQuick() {
+    const s = DATA.site || {};
+    const q = s.quick || {};
+    const c = s.contact || {};
+    const exp = DATA.experience || [];
+    const edu = DATA.education || [];
+    const featured = P.list.map((p, i) => ({ p, i })).filter((x) => x.p.featured).slice(0, 5);
+    const short = (u) => u.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
+
+    html($('#quick-body'), `
+      <div class="q-grid">
+        <aside class="q-side">
+          <div class="q-id">
+            <img src="${esc(s.avatar || 'img/avatar.webp')}" alt="" width="64" height="64">
+            <div>
+              <h2 id="quick-name">${esc(s.name)}</h2>
+              <div class="q-role">${esc(s.role)}</div>
+            </div>
+          </div>
+          ${s.availability_text ? `<span class="status-pill"><span class="pulse"></span><span>${esc(s.availability_text)}</span></span>` : ''}
+          <dl class="q-list">
+            ${c.email ? `<dt>Email</dt><dd><a href="mailto:${esc(c.email)}">${esc(c.email)}</a></dd>` : ''}
+            ${c.phone ? `<dt>Phone</dt><dd><a href="tel:${esc(c.phone.replace(/\s/g, ''))}">${esc(c.phone)}</a></dd>` : ''}
+            ${c.location ? `<dt>Location</dt><dd>${esc(c.location)}</dd>` : ''}
+            ${c.linkedin ? `<dt>LinkedIn</dt><dd><a href="${esc(safeUrl(c.linkedin))}" target="_blank" rel="noopener">${esc(short(c.linkedin))}</a></dd>` : ''}
+            ${c.github ? `<dt>GitHub</dt><dd><a href="${esc(safeUrl(c.github))}" target="_blank" rel="noopener">${esc(short(c.github))}</a></dd>` : ''}
+            ${s.languages?.length ? `<dt>Languages</dt><dd>${esc(s.languages.join(', '))}</dd>` : ''}
+          </dl>
+          <div class="q-actions">
+            ${c.email ? `<a class="btn btn-primary" href="mailto:${esc(c.email)}"><svg><use href="#i-mail"/></svg>Email me</a>` : ''}
+            ${CV_OK ? `<a class="btn" href="${esc(c.cv)}" download><svg><use href="#i-download"/></svg>CV</a>` : ''}
+          </div>
+          <h3 class="q-h">Education</h3>
+          <ul class="q-edu">
+            ${edu.map((e) => `<li><strong>${esc(e.title.replace(/\s*\(.*?\)\s*$/, ''))}</strong><span>${esc(e.org)} · ${esc(e.period)}${e.grade ? ` · <b>${esc(e.grade)}</b>` : ''}</span></li>`).join('')}
+          </ul>
+        </aside>
+
+        <div class="q-main">
+          ${q.headline ? `<p class="q-headline">${esc(q.headline)}</p>` : ''}
+          ${q.looking_for ? `<p class="q-looking"><span class="mono">Looking for</span> ${esc(q.looking_for)}</p>` : ''}
+
+          ${q.highlights?.length ? `<h3 class="q-h">Highlights</h3>
+          <ol class="q-highlights">${q.highlights.map((h) => `<li>${esc(h)}</li>`).join('')}</ol>` : ''}
+
+          <h3 class="q-h">Experience</h3>
+          <ul class="q-exp">
+            ${exp.map((e) => `<li><span class="mono">${esc(e.period)}</span><span><strong>${esc(e.title)}</strong> · ${esc(e.org.split(' — ')[0])}</span></li>`).join('')}
+          </ul>
+
+          ${featured.length ? `<h3 class="q-h">Key projects</h3>
+          <div class="q-projects">${featured.map(({ p, i }) => `
+            <button type="button" class="q-proj" data-idx="${i}">
+              <strong>${esc(p.short || p.title.split(':')[0])}</strong>
+              <span>${esc((p.tags || []).slice(0, 3).join(' · '))}</span>
+            </button>`).join('')}</div>` : ''}
+
+          ${q.top_skills?.length ? `<h3 class="q-h">Core skills</h3>
+          <div class="q-skills">${q.top_skills.map((t) => `<span class="chip">${esc(t)}</span>`).join('')}</div>` : ''}
+        </div>
+      </div>
+      <p class="q-foot">Want the detail? <button type="button" class="linklike" id="quick-more">Browse the full portfolio ↓</button></p>
+    `);
+    $('#quick-body').scrollTop = 0;
+  }
+
+  function openQuick({ push = true } = {}) {
+    renderQuick();
+    if (!quick.open) { quick.showModal(); document.body.classList.add('modal-open', 'quick-open'); }
+    if (push) history.replaceState(null, '', '#quick');
+  }
+
+  function initQuick() {
+    $$('.js-quick').forEach((b) => b.addEventListener('click', () => openQuick()));
+    $('#quick-close').addEventListener('click', () => quick.close());
+    $('#quick-print').addEventListener('click', () => window.print());
+    quick.addEventListener('click', (e) => {
+      if (e.target === quick) return quick.close();
+      if (e.target.closest('#quick-more')) return quick.close();
+      const proj = e.target.closest('.q-proj');
+      if (proj) { quick.close(); openProject(+proj.dataset.idx); }
+    });
+    quick.addEventListener('close', () => {
+      document.body.classList.remove('modal-open', 'quick-open');
+      if (location.hash === '#quick') history.replaceState(null, '', location.pathname);
+    });
+  }
 
   /* ---------- GitHub (live) ---------- */
   async function loadContributions() {
@@ -525,10 +620,12 @@
     initTheme();
     initNav();
     initModal();
+    initQuick();
 
     const files = ['site', 'experience', 'education', 'volunteering', 'skills', 'publications', 'certifications', 'references'];
     const results = await Promise.allSettled(files.map((f) => getJSON(`data/${f}.json`)));
     const data = Object.fromEntries(files.map((f, i) => [f, results[i].status === 'fulfilled' ? results[i].value : null]));
+    DATA = data;
     results.forEach((r, i) => r.status === 'rejected' && console.warn(`data/${files[i]}.json`, r.reason));
 
     if (data.site) safe(renderSite)(data.site);
