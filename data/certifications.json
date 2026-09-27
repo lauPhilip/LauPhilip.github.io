@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Data Science Foundations: Fundamentals",
+    "issuer": "LinkedIn Learning",
+    "date": "2022",
+    "type": "Certification",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/52/LinkedIn_Learning_logo.png",
+    "link": "projects/certifications/data_science_foundations_fundamentals.webp"
+  },
+  {
+    "title": "Python Coder",
+    "issuer": "Kaggle",
+    "date": "2024",
+    "type": "Badge",
+    "image": "projects/certifications/python-coder.webp",
+    "link": "projects/certifications/python-coder.webp"
+  },
+  {
+    "title": "Community Competitor",
+    "issuer": "Kaggle",
+    "date": "2024",
+    "type": "Badge",
+    "image": "projects/certifications/community-competitor.webp",
+    "link": "projects/certifications/community-competitor.webp"
+  }
+]

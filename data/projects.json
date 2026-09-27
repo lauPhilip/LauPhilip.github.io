@@ -1,0 +1,14 @@
+[
+  { "id": "project_au-btech-course-bot",        "status": "ongoing",  "category": "work", "featured": true },
+  { "id": "project_ask_eiva",                   "status": "ongoing",  "category": "work", "featured": true },
+  { "id": "project_au-btech-literature-review", "status": "ongoing",  "category": "work", "featured": true },
+  { "id": "project_luma-personal-ai-agent",     "status": "ongoing",  "category": "personal" },
+  { "id": "project_yoga-platform",              "status": "ongoing",  "category": "personal" },
+  { "id": "project_mind_lego",                  "status": "finished", "category": "work", "featured": true },
+  { "id": "project_shrinkage_analysis",         "status": "finished", "category": "work" },
+  { "id": "project_sdlc_governance",            "status": "finished", "category": "work" },
+  { "id": "project_mould_news_automation",      "status": "finished", "category": "work" },
+  { "id": "project_genai_business_case",        "status": "finished", "category": "work" },
+  { "id": "project_christmas_calendar",         "status": "finished", "category": "personal" },
+  { "id": "project_local_planning_strategy",    "status": "finished", "category": "work" }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "company": "The LEGO Group",
+    "person": "Christina Nørhave Kjær",
+    "relation": "Former Manager",
+    "title": "Sr. Engineering Manager",
+    "department": "ME Enabling & Technology",
+    "contact": "noerhave@gmail.com"
+  },
+  {
+    "company": "Aarhus University",
+    "person": "Mads Kjærgaard Nielsen",
+    "relation": "Thesis Supervisor",
+    "title": "PhD Fellow",
+    "department": "Dept. of Business Development and Technology",
+    "contact": "madskn@btech.au.dk"
+  },
+  {
+    "company": "Aarhus University",
+    "person": "Eva Sørum Poulsen",
+    "relation": "Manager",
+    "title": "Associate Professor",
+    "department": "Dept. of Business Development and Technology",
+    "contact": "eva@btech.au.dk"
+  }
+]
