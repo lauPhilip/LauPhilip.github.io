@@ -339,7 +339,11 @@ button.chip[aria-pressed="true"] { background: var(--text); color: var(--bg); bo
 .card-star { position: absolute; top: 12px; left: 12px; z-index: 1; font: 500 11px/1 var(--mono); padding: 5px 8px; border-radius: 999px; background: var(--bg); color: var(--text); border: 1px solid var(--line); display: inline-flex; gap: 5px; align-items: center; }
 .card-star svg { color: var(--accent); width: 11px; height: 11px; }
 .empty { color: var(--muted); padding: 32px 0; }
-.card.hide { display: none; }
+.card.hide, .card.capped { display: none; }
+.more-wrap { display: flex; justify-content: center; margin-top: 28px; }
+.more-wrap:has(> [hidden]) { display: none; }
+.more-btn svg { transform: rotate(90deg); transition: transform .3s var(--ease); }
+.more-btn[aria-expanded="true"] svg { transform: rotate(-90deg); }
 
 /* ---------- Publications ---------- */
 .pubs { list-style: none; margin: 0; padding: 0; }
@@ -473,6 +477,13 @@ button.chip[aria-pressed="true"] { background: var(--text); color: var(--bg); bo
 .modal-section { margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--line); }
 .modal-section h4 { font: 500 12px/1.4 var(--mono); color: var(--accent); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 12px; }
 .modal-section p { color: var(--text-2); max-width: 70ch; }
+.tech { margin-top: 20px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); }
+.tech summary { cursor: pointer; list-style: none; padding: 12px 16px; font: 500 12px/1.4 var(--mono); text-transform: uppercase; letter-spacing: .05em; display: flex; align-items: center; gap: 8px; }
+.tech summary::-webkit-details-marker { display: none; }
+.tech summary::before { content: "+"; display: inline-grid; place-items: center; width: 18px; height: 18px; border: 1px solid var(--line-strong); border-radius: 5px; }
+.tech[open] summary::before { content: "–"; }
+.tech summary .muted { text-transform: none; letter-spacing: 0; font-family: var(--sans); font-weight: 400; font-size: 13px; }
+.tech p { padding: 0 16px 16px; color: var(--text-2); font-size: 14.5px; }
 .modal .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 20px; }
 .modal-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
 .gallery { display: grid; gap: 16px; margin-top: 8px; }

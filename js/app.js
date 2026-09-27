@@ -292,7 +292,7 @@
   }
 
   /* ---------- projects ---------- */
-  const P = { list: [], filter: { status: 'all', category: 'all', q: '', tag: '' }, current: -1 };
+  const P = { list: [], filter: { status: 'all', category: 'all', q: '', tag: '' }, current: -1, cap: 4, expanded: false };
 
   function projectCard(p, idx) {
     const img = p.images?.[0];
@@ -319,16 +319,23 @@
     let shown = 0;
     $$('#project-grid .card').forEach((card) => {
       const p = P.list[+card.dataset.idx];
-      const hay = `${p.title} ${p.short_desc} ${p.blueprint_desc || ''} ${(p.tags || []).join(' ')}`.toLowerCase();
+      const hay = `${p.title} ${p.short_desc} ${p.blueprint_desc || ''} ${p.tech_notes || ''} ${(p.tags || []).join(' ')}`.toLowerCase();
       const ok = (status === 'all' || p.status === status)
         && (category === 'all' || p.category === category)
         && (!needle || hay.includes(needle))
         && (!tag || (p.tags || []).includes(tag));
-      card.classList.toggle('hide', !ok);
       if (ok) shown++;
+      card.classList.toggle('hide', !ok);
+      // Beyond the cap, matching cards stay hidden until "Show all" is pressed.
+      card.classList.toggle('capped', ok && !P.expanded && shown > P.cap);
     });
     $('#project-count').textContent = `${shown} of ${P.list.length} projects`;
     $('#project-empty').hidden = shown > 0;
+    const more = $('#project-more');
+    const extra = shown - P.cap;
+    more.hidden = extra <= 0;
+    more.setAttribute('aria-expanded', String(P.expanded));
+    more.querySelector('span').textContent = P.expanded ? 'Show fewer projects' : `Show ${extra} more project${extra === 1 ? '' : 's'}`;
   }
 
   function initFilters() {
@@ -350,6 +357,11 @@
       P.filter.tag = P.filter.tag === b.dataset.tag ? '' : b.dataset.tag;
       $$('button', e.currentTarget).forEach((x) => x.setAttribute('aria-pressed', String(x.dataset.tag === P.filter.tag)));
       applyFilters();
+    });
+    $('#project-more').addEventListener('click', () => {
+      P.expanded = !P.expanded;
+      applyFilters();
+      if (!P.expanded) $('#projects').scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' });
     });
     $('#clear-filters').addEventListener('click', () => {
       P.filter = { status: 'all', category: 'all', q: '', tag: '' };
@@ -412,6 +424,7 @@
       <div class="tags">${(p.tags || []).map((t) => `<span class="tag">${esc(t)}</span>`).join('')}</div>
       ${p.links?.length ? `<div class="modal-links">${p.links.map((l) => `<a class="btn" href="${esc(safeUrl(l.url))}" target="_blank" rel="noopener">${esc(l.label)}<svg><use href="#i-arrow"/></svg></a>`).join('')}</div>` : ''}
       ${p.blueprint_desc ? `<div class="modal-section"><h4>${esc(p.blueprint_title || 'Overview')}</h4><p>${esc(p.blueprint_desc)}</p></div>` : ''}
+      ${p.tech_notes ? `<details class="tech"><summary>Technical details <span class="muted">— for engineers</span></summary><p>${esc(p.tech_notes)}</p></details>` : ''}
       ${p.video ? `<div class="modal-section"><h4>Demo</h4><video controls preload="none" playsinline ${p.poster ? `poster="${esc(p.poster)}"` : ''}><source src="${esc(p.video)}" type="video/mp4"></video></div>` : ''}
       ${imgs.length ? `<div class="modal-section"><h4>Gallery${imgs.length > 1 ? ` · ${imgs.length}` : ''}</h4>
         <div class="gallery${imgs.length > 1 ? ' multi' : ''}">${imgs.map((src, i) => `<a href="${esc(src)}" target="_blank" rel="noopener"><img src="${esc(src)}" alt="${esc(p.title)} — image ${i + 1}" loading="lazy" decoding="async"></a>`).join('')}</div></div>` : ''}
