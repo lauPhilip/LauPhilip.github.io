@@ -14,7 +14,7 @@
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const esc = (v) => String(v ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-  const safeUrl = (u) => (/^(https?:|mailto:|tel:|[./]?[\w-])/i.test(u || '') && !/^javascript:/i.test(u) ? u : '#');
+  const safeUrl = (u) => (/^(https?:|mailto:|tel:|#|[./]?[\w-])/i.test(u || '') && !/^javascript:/i.test(u) ? u : '#');
   const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const html = (el, markup) => { if (el) el.innerHTML = markup; return el; };
 
@@ -99,7 +99,7 @@
     revealObserver ??= new IntersectionObserver((entries) => {
       entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); revealObserver.unobserve(e.target); } });
     }, { rootMargin: '0px 0px -8% 0px' });
-    $$('.section-head, .tl-item, .card, .pub, .goal, .cap, .cert, .ref, .repo, .feature, .tool-group, .gh-card, .quote, .lede', root)
+    $$('.section-head, .tl-item, .now-card, .card, .pub, .goal, .cap, .cert, .ref, .repo, .feature, .tool-group, .gh-card, .quote, .lede', root)
       .forEach((el, i) => {
         if (el.classList.contains('reveal')) return;
         el.classList.add('reveal');
@@ -134,7 +134,13 @@
     initPhrases(s.phrases);
     if (s.role) $('#hero-status span:last-child').textContent = s.role;
     if (s.degrees) $('#hero-degrees').textContent = s.degrees.join(' · ');
-    html($('#stats'), (s.stats || []).map((x) => `<div class="stat"><dt>${esc(x.value)}</dt><dd>${esc(x.label)}</dd></div>`).join(''));
+    html($('#now'), (s.now || []).map((n, i) => `
+      <a class="now-card" href="${esc(safeUrl(n.href || '#'))}">
+        <span class="now-kicker">${i === 0 ? '<span class="pulse"></span>' : ''}${esc(n.kicker)}</span>
+        <strong>${esc(n.title)}</strong>
+        <span class="now-text">${esc(n.text)}</span>
+        <span class="now-go" aria-hidden="true">→</span>
+      </a>`).join(''));
 
     $('#about-bio').textContent = s.bio || '';
     $('#about-quote').textContent = s.quote ? `“${s.quote}”` : '';
@@ -192,7 +198,11 @@
         <div>
           <h3>${esc(it.title)}${it.grade ? ` <span class="grade">${esc(it.grade)}</span>` : ''}</h3>
           <div class="tl-org">${esc(it.org)}</div>
-          ${pts.length ? `<ul class="tl-points">${pts.map((p, i) => `<li${i >= limit ? ' class="extra"' : ''}>${esc(p)}</li>`).join('')}</ul>` : ''}
+          ${pts.length ? `<ul class="tl-points">${pts.map((p, i) => {
+            const text = typeof p === 'string' ? p : p.text;
+            const sub = typeof p === 'object' && p.sub?.length ? `<ol class="tl-sub">${p.sub.map((x) => `<li>${esc(x)}</li>`).join('')}</ol>` : '';
+            return `<li${i >= limit ? ' class="extra"' : ''}>${esc(text)}${sub}</li>`;
+          }).join('')}</ul>` : ''}
           ${extra > 0 ? `<button type="button" class="linklike tl-more" data-more="${extra}">Show ${extra} more</button>` : ''}
           ${it.courses?.length ? `
             <details class="courses"><summary>${it.courses.length} courses</summary>
