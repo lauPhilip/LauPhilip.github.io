@@ -52,6 +52,22 @@ Images should be WebP, at most ~1600 px wide. Convert with e.g. `cwebp -q 82 in.
 - Live GitHub contribution calendar and most recently pushed repos (cached per session to respect API limits)
 - Lazy-loaded WebP images, deferred scripts, skeleton loaders, reduced-motion support, Open Graph/SEO metadata and print styles
 
+## Ask Lau (chat widget)
+
+The "Ask Lau" button in the bottom-right corner answers visitors' questions about the portfolio and always shows its sources. It works out of the box with **in-browser search** (`js/ask.js`): all content is split into small passages and ranked with BM25 keyword search plus a few synonyms — no server, no API key, no cost.
+
+To let an AI write the answers instead, deploy the optional Cloudflare Worker in `ask-worker/worker.js`:
+
+1. Create a free Cloudflare account → *Workers & Pages* → *Create Worker*, paste in `ask-worker/worker.js` and deploy.
+2. Under *Settings → Variables*, add the secret `MISTRAL_API_KEY` (or `ANTHROPIC_API_KEY` with `PROVIDER=anthropic` and a `MODEL`), plus `SITE_URL` and `ALLOWED_ORIGIN` = `https://lauphilip.github.io`.
+3. Put the Worker's URL in `data/site.json` → `"ask": { "endpoint": "https://…workers.dev" }`.
+
+The Worker only accepts a question from your own domain, loads the portfolio from the live site itself (so it can't be used as a free general chatbot), limits each visitor to 12 questions per 10 minutes, and keeps the API key off the website. If it is ever unreachable, the widget quietly falls back to search. Set `"enabled": false` to hide the widget.
+
+## Visitor statistics
+
+Privacy-friendly stats via [GoatCounter](https://www.goatcounter.com) — no cookies, no personal data, no consent banner needed. Create a free account (e.g. code `lauphilip`) and set `data/site.json` → `"analytics": { "goatcounter": "lauphilip" }`. Besides page views it counts these events (never the content of questions): `quick-view`, `cv-download`, `copy-email`, `ask-open`, `ask-question` and `project/<id>`. Visits from `localhost` are not counted.
+
 ## Running locally
 
 `fetch()` needs a web server, so opening `index.html` directly won't work:

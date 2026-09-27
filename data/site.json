@@ -110,5 +110,12 @@
       "JavaScript",
       "Stakeholder management"
     ]
+  },
+  "ask": {
+    "enabled": true,
+    "endpoint": "https://ask-lau.philip15.workers.dev"
+  },
+  "analytics": {
+    "goatcounter": ""
   }
 }
