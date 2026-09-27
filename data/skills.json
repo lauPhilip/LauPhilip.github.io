@@ -1,20 +1,24 @@
 {
   "tools": [
-    { "name": "Python", "group": "Languages", "icon": "devicon:python/python-original" },
-    { "name": "C#", "group": "Languages", "icon": "devicon:csharp/csharp-original" },
-    { "name": "JavaScript", "group": "Languages", "icon": "devicon:javascript/javascript-original" },
-    { "name": "PHP", "group": "Languages", "icon": "devicon:php/php-original" },
-    { "name": "HTML", "group": "Languages", "icon": "devicon:html5/html5-original" },
-    { "name": "CSS", "group": "Languages", "icon": "devicon:css3/css3-original" },
+    { "name": "Python", "group": "Languages & frameworks", "icon": "devicon:python/python-original" },
+    { "name": "C#", "group": "Languages & frameworks", "icon": "devicon:csharp/csharp-original" },
+    { "name": "JavaScript", "group": "Languages & frameworks", "icon": "devicon:javascript/javascript-original" },
+    { "name": "PHP", "group": "Languages & frameworks", "icon": "devicon:php/php-original" },
+    { "name": "HTML", "group": "Languages & frameworks", "icon": "devicon:html5/html5-original" },
+    { "name": "CSS", "group": "Languages & frameworks", "icon": "devicon:css3/css3-original" },
+    { "name": "Laravel", "group": "Languages & frameworks", "icon": "devicon:laravel/laravel-original" },
     { "name": "MySQL", "group": "Data", "icon": "devicon:mysql/mysql-original" },
     { "name": "SQLite", "group": "Data", "icon": "devicon:sqlite/sqlite-original" },
+    { "name": "PostgreSQL", "group": "Data", "icon": "devicon:postgresql/postgresql-original" },
     { "name": "JSON", "group": "Data", "icon": "devicon:json/json-original" },
+    { "name": "JSONL", "group": "Data", "mono": "{}" },
     { "name": "YAML", "group": "Data", "icon": "devicon:yaml/yaml-original" },
     { "name": "Markdown", "group": "Data", "icon": "devicon:markdown/markdown-original", "invert": true },
     { "name": "Databricks", "group": "Data", "icon": "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/databricks/default.svg" },
-    { "name": "Weaviate", "group": "AI", "icon": "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/weaviate/default.svg" },
+    { "name": "Weaviate", "group": "AI", "mono": "W" },
     { "name": "Gemini", "group": "AI", "icon": "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/gemini/default.svg" },
     { "name": "Mistral AI", "group": "AI", "icon": "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/mistral/default.svg" },
+    { "name": "Claude", "group": "AI", "icon": "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/claude/default.svg" },
     { "name": "Streamlit", "group": "AI", "icon": "devicon:streamlit/streamlit-original" },
     { "name": "Google Colab", "group": "AI", "icon": "devicon:googlecolab/googlecolab-original" },
     { "name": "Power Apps", "group": "Microsoft", "icon": "https://img.icons8.com/fluency/48/microsoft-power-apps-2020.png" },
@@ -27,8 +31,20 @@
     { "name": "Miro", "group": "Tools", "icon": "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/miro/default.svg" },
     { "name": "Jira", "group": "Tools", "icon": "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/jira/default.svg" }
   ],
-  "learning": ["C#", ".NET"],
-  "bucket_list": ["Terraform", "Bicep", "Gherkin", "TypeScript", "React Native", "Angular", "Rust", "Docker"],
+  "learning": [
+    "C#",
+    ".NET"
+  ],
+  "bucket_list": [
+    "Terraform",
+    "Bicep",
+    "Gherkin",
+    "TypeScript",
+    "React Native",
+    "Angular",
+    "Rust",
+    "Docker"
+  ],
   "capabilities": [
     {
       "title": "Technical",
