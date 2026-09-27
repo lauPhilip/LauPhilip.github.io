@@ -1,0 +1,58 @@
+{
+  "name": "Philip Lau",
+  "nickname": "Lau",
+  "role": "Research Assistant @ Aarhus University",
+  "available": true,
+  "availability_text": "Open to roles in software, AI & digitalization",
+  "phrases": [
+    "is a Technical Business Developer.",
+    "creates value through technology.",
+    "builds grounded AI systems.",
+    "bridges tech and business logic.",
+    "eliminates shadow IT."
+  ],
+  "degrees": [
+    "MSc in Engineering, Technology-Based Business Development",
+    "Bachelor of Engineering, Business Development"
+  ],
+  "bio": "I am a passionate individual who puts full energy into bridging the gap between technical development and strategic management. I like translating complex technology logic into clear business value.",
+  "quote": "My engineering philosophy centers on creating functional digital artifacts that deliver measurable business value through the strategic application of technology and data.",
+  "languages": ["Danish", "English"],
+  "interests": ["Tech", "Computer games", "Marvel", "LEGO", "Olympic weightlifting"],
+  "avatar": "img/avatar.webp",
+  "stats": [
+    { "value": "15+", "label": "Power Apps shipped" },
+    { "value": "50+", "label": "Automated cloud flows" },
+    { "value": "331", "label": "Engineers served by RAG bot" },
+    { "value": "4.9/5", "label": "Teaching evaluation" }
+  ],
+  "contact": {
+    "email": "philip15@live.dk",
+    "phone": "+45 51 15 54 35",
+    "location": "Herning, Denmark",
+    "linkedin": "https://www.linkedin.com/in/philip--lau/",
+    "github": "https://github.com/lauPhilip",
+    "github_user": "lauPhilip",
+    "cv": "assets/cv.pdf",
+    "repo_exclude": ["ai-version-old-1", "ai-version-old-2", "askEIVA"]
+  },
+  "featured": {
+    "title": "TBMI — Witt A/S",
+    "kicker": "University project for a real company, featured in the local newspaper",
+    "text": "Technological Business Model Innovation (TBMI): a formal business proposal evaluating advanced automation ecosystems and intelligent process enhancements, engineered within the Customer Service Department using targeted Power Automate flows and AI Builder structures.",
+    "badge": "Grade 12 (A+)",
+    "image": "img/featured-article.webp"
+  },
+  "goals": [
+    {
+      "horizon": "1–5 years",
+      "title": "Immediate horizons",
+      "text": "Breaking into the tech industry to write a lot of code, tackle diverse architectural challenges and build solid systems — in Software Engineering, AI/LLM Development, Digitalization Engineering, Forward Deployed Engineering or Technical Project Management."
+    },
+    {
+      "horizon": "5–15 years",
+      "title": "Long-term trajectory",
+      "text": "Stepping into high-level technology strategy as a CTO or executive IT decision maker — mastering code early so every later decision sits at the intersection of people, technology and innovation."
+    }
+  ]
+}

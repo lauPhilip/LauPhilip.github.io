@@ -1,0 +1,41 @@
+[
+  {
+    "period": "Jan 2026 — Present",
+    "current": true,
+    "title": "Research Assistant",
+    "org": "Aarhus University — Dept. of Business Development and Technology (BTECH)",
+    "points": [
+      "Headhunted by Associate Professor Eva Sørum Poulsen and Professor Mirko Pressor at BTECH for this temporary position.",
+      "Developing a modular RAG course bot that answers questions on course material across bachelor's and master's programmes.",
+      "Designed and facilitated a professional AI workshop using the 33A AI Cards® methodology, teaching master's students to architect structured AI business cases and identify high-value automation opportunities.",
+      "In collaboration with EIVA, developed an internal hybrid RAG customer-service agent combining BM25, similarity search and GraphRAG over large technical documentation and Freshdesk support tickets.",
+      "Architected an open-source, transparent C#/.NET agentic literature-review environment for the OSSYM 2026 conference at CODE University, Berlin."
+    ]
+  },
+  {
+    "period": "Jan 2023 — Jan 2026",
+    "title": "Student Worker — Digitalization",
+    "org": "The LEGO Group — Mould Engineering Enabling & Technology",
+    "points": [
+      "Citizen developer delivering 15+ Power Apps solutions and 50+ Power Automate cloud flows.",
+      "Application Lifecycle Management and integration for Power Platform (the 10th largest environment within The LEGO Group).",
+      "Matured a proof-of-concept RAG chatbot searching all core documentation and SharePoint articles for element, mould development and mould construction — covering 331 engineers.",
+      "Designed and scaled automated engineering newsletter systems delivering localized content metrics.",
+      "Facilitator of the TDC specialist community (30–40 people).",
+      "Documented rework quality (ISO 9001) for moulds for 10 months.",
+      "Technical Product Owner of 50+ SharePoint sites for Mould Engineering for 10 months.",
+      "Machine-learning initiative for mould designers using image processing.",
+      "Managed the split of a large form-processing process from one department into two.",
+      "Developed and deployed a digitalization-transition strategy for moving 50 cloud flows and 30 Power Apps."
+    ]
+  },
+  {
+    "period": "Jul 2024 — Dec 2024",
+    "title": "Student Instructor — Web Technologies",
+    "org": "Aarhus University",
+    "points": [
+      "Instructed undergraduate students in HTML, CSS, JavaScript, PHP and MySQL.",
+      "Received an average student evaluation of 4.9 / 5 on teaching the material."
+    ]
+  }
+]

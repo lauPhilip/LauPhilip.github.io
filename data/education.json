@@ -1,0 +1,55 @@
+[
+  {
+    "period": "2024 — 2025",
+    "title": "MSc in Engineering, Technology-Based Business Development (TBBD)",
+    "org": "Aarhus University",
+    "grade": "12 (A+)",
+    "points": [
+      "Design of Digital Enterprise (DDE) — specialization in automation, AI and digitalization."
+    ],
+    "courses": [
+      "Digital Back-End Solutions",
+      "Digital Front-End Solutions",
+      "Design of Digital Enterprise (DDE)",
+      "Python Fundamentals for Machine Learning",
+      "Technological Business Model Innovation",
+      "Technology Focus Project",
+      "Technology Specialisation 1 & 2",
+      "Business Development Project",
+      "Management of Technology",
+      "Master Thesis Project"
+    ]
+  },
+  {
+    "period": "2020 — 2023",
+    "title": "Bachelor of Engineering, Business Development (BDE)",
+    "org": "Aarhus University",
+    "grade": "12 (A+)",
+    "points": [
+      "Focus on business cases with digitalization."
+    ],
+    "courses": [
+      "Applied Mathematics",
+      "Advanced Web Development",
+      "Engineering Internship",
+      "Individual Technology Focus",
+      "Industry 3.0 — Industrial Plant Automation",
+      "Industry 4.0 — Internet of Things",
+      "Innovation Management",
+      "Introduction to 3D Print Additive Manufacturing",
+      "Market Analysis & Methodology",
+      "Marketing and Finance",
+      "Negotiation Tactics",
+      "Personal and Social Competences",
+      "Physics",
+      "Project Management",
+      "Quality Management",
+      "Strategic and Economic Analysis",
+      "Supply Chain Management",
+      "Technological Product Development",
+      "Technology-based Concept Development",
+      "Web Technologies",
+      "Bachelor's Project"
+    ]
+  }
+]
