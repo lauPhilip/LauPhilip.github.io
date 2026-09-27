@@ -1,499 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Philip Lau | Portfolio</title>
-    <!-- Modern tech & clean fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-    <!-- Robot Favicon -->
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
-<!-- STYLESHEET LINK -->
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Philip Lau — Technical Business Developer</title>
+  <meta name="description" content="Philip Lau — Technical Business Developer and Research Assistant at Aarhus University. Building grounded AI systems, RAG platforms and Power Platform solutions.">
+  <meta name="author" content="Philip Lau">
+  <meta name="theme-color" content="#FAFAF7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#111110" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Philip Lau — Technical Business Developer">
+  <meta property="og:description" content="Building grounded AI systems, RAG platforms and digital solutions that deliver business value.">
+  <meta property="og:url" content="https://lauphilip.github.io/">
+  <meta property="og:image" content="https://lauphilip.github.io/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://lauphilip.github.io/">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+
+  <!-- Apply saved / system theme before first paint (no flash) -->
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://api.github.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="preload" href="data/site.json" as="fetch" crossorigin>
+  <link rel="preload" href="data/projects.json" as="fetch" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Philip Lau",
+    "jobTitle": "Research Assistant",
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "Aarhus University" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Herning", "addressCountry": "DK" },
+    "url": "https://lauphilip.github.io/",
+    "sameAs": ["https://www.linkedin.com/in/philip--lau/", "https://github.com/lauPhilip"]
+  }
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <div class="page-layout">
-        
-        <!-- SIDEBAR TOC NAVIGATION -->
-        <aside class="toc-sidebar">
-            <div class="toc-title">Navigation</div>
-        <ul class="toc-links">
-            <li><a href="#about">01. About Profile</a></li>
-            <li><a href="#highlights">02. Media Highlights</a></li>
-            <li><a href="#tech-languages">03. Coding Languages</a></li>
-            <li><a href="#skills-matrix">04. Professional Skills</a></li>
-            <li><a href="#experience">05. Experinece</a></li>
-            <li><a href="#education">06. Education</a></li>
-            <li><a href="#volunteering">07. Volunteering</a></li>
-            <li><a href="#ongoing-projects">08. Ongoing Projects</a></li>
-            <li><a href="#finished-projects">09. Finished Projects</a></li>
-            <li><a href="#github-activity"">10. Github Activity</a></li>
-            <li><a href="#references">11. References</a></li>
-            <li><a href="#contact">12. Contact</a></li>
-        </ul>
-        </aside>
+  <!-- Icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.7 5.38-5.26 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 6.5A1.5 1.5 0 0 1 4.5 5h15A1.5 1.5 0 0 1 21 6.5v11a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5v-11Zm0 .5 9 6 9-6"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19.5h14"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7m0 0H9m8 0v8"/></symbol>
+    <symbol id="i-chev-l" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="m15 6-6 6 6 6"/></symbol>
+    <symbol id="i-chev-r" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="m9 6 6 6-6 6"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14Zm9 2-4-4"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm0-13v1.5m0 15V21M3 12h1.5m15 0H21M5.6 5.6l1.1 1.1m10.6 10.6 1.1 1.1M5.6 18.4l1.1-1.1M17.3 6.7l1.1-1.1"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5Z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3Z"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M9 9h10v11H9zM5 15V4h10"/></symbol>
+  </svg>
 
-        <!-- MAIN SITE TIMELINE CONTENT -->
-        <main class="main-content">
-        <header>
-            <div class="header-title">> LAU<span id="dynamic-phrase-target" class="dynamic-phrase">.</span></div>
-            
-            <div class="subtitle" style="margin-top: 1rem;">
-                MSc in Engineering, Technology-Based Business Development <br> 
-                Bachelor of Engineering, Business Development
-            </div>
-        </header>
-
-            <!-- ABOUT PROFILE -->
-            <section id="about">
-                <div class="profile-grid">
-                    <div class="avatar-zone">
-                        <!-- Referencing image_bdfe74.png verbatim -->
-                        <img src="img/image_bdfe74.png" alt="Philip Lau Pixel Avatar">
-                    </div>
-                    <div class="profile-bio">
-                        <h2>Philip Lau (Lau)</h2>
-                        <div class="profile-meta">Currently a Research Assistant @ Aarhus Universitet</div>
-                        <p class="profile-text">
-                            I am a passionate individual who puts full energy into bridging the gap between technical development and strategic management. I like translating complex technology logic into clear business value.
-                        </p>
-                        <div class="meta-tags">
-                            <div><strong>Languages:</strong> Danish, English</div>
-                            <div><strong>Interests:</strong> Tech, Computer Games, Marvel, LEGO, Olympic Weightlifting</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <div style="background: rgba(234, 193, 25, 0.05); border-left: 4px solid var(--accent-primary); padding: 1.5rem; margin: 3rem 0; border-radius: 4px;">
-    <p style="margin: 0; font-style: italic; color: var(--text-light); font-size: 1.1rem;">
-        "My engineering philosophy centers on creating functional digital artifacts that deliver measurable business value through the strategic application of technology and data."
-    </p>
-</div>
-
-            <!-- HIGHLIGHTS SECTION -->
-            <section id="highlights">
-                <h2 class="section-title"><span class="mono">02</span>Featured Media</h2>
-                <div class="highlight-card">
-                    <div class="highlight-img-zone">
-                        <!-- Referencing article.jpeg verbatim -->
-                        <img src="img/article.jpg" alt="Local newsletter feature clipping">
-                    </div>
-                    <div class="highlight-text-zone">
-                        <h3>TBMI - Witt A/S</h3>
-                        <div class="highlight-tagline">// University project for real company mentioned in local newsletter</div>
-                        <p style="color: #d1d1d6;">
-                            Technological Business Model Innovation (TBMI): A formal business proposal evaluating advanced automation ecosystems and intelligent process enhancements. Engineered within the Customer Service Department environment utilizing targeted Power Automate flows and AI Builder structures.
-                        </p>
-                        <div class="highlight-grade">Project Metric: Received Grade 12 (A+)</div>
-                    </div>
-                </div>
-            </section>
-
-<!-- CODING LANGUAGES SECTION -->
-<section id="tech-languages">
-    <h2 class="section-title"><span class="mono">03</span>Coding Languages & Tools</h2>
-    
-<div style="margin-bottom: 2rem; color: #ced4da;">
-    Tools and languages I build with every day:
-</div>
-
-<div id="skills-display-grid" class="skills-display-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;"></div>
-
-    <div class="future-grid">
-        <!-- In Progress Stack -->
-        <div class="future-card" style="border-left: 3px solid var(--sky);">
-            <h4 style="color: var(--sky);">Learning Right Now</h4>
-            <div class="tags">
-                <span class="tag" style="background: #171c24; color: #fff; border-color: #68217A;"><i class="devicon-csharp-plain colored"></i> C#</span>
-                <span class="tag" style="background: #171c24; color: #fff; border-color: #512BD4;"><i class="devicon-dot-net-plain colored"></i> .NET</span>
-            </div>
-        </div>
-
-        <!-- Future Bucket List -->
-        <div class="future-card" style="border-left: 3px solid var(--tangerine);">
-            <h4 style="color: var(--tangerine);">On My Bucket List</h4>
-            <div class="tags">
-                <span class="tag">Terraform</span>
-                <span class="tag">Bicep</span>
-                <span class="tag">Gherkin</span>
-                <span class="tag">TypeScript</span>
-                <span class="tag">React + Native</span>
-                <span class="tag">Angular</span>
-                <span class="tag">Rust</span>
-                <span class="tag">Docker</span>
-            </div>
-        </div>
+  <!-- Mobile top bar -->
+  <header class="topbar">
+    <a href="#top" class="brand"><span class="brand-mark">PL</span><span>Philip Lau</span></a>
+    <div class="topbar-actions">
+      <button class="icon-btn js-theme" type="button" aria-label="Toggle colour theme"><svg><use href="#i-moon"/></svg></button>
+      <button class="icon-btn" id="menu-btn" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar"><svg><use href="#i-menu"/></svg></button>
     </div>
-</section>
+  </header>
 
-<section id="certifications" style="margin-bottom: 5rem;">
-    <h2 class="section-title">Certifications & Badges</h2>
-    <div style="color: var(--text-muted); margin-bottom: 2rem;">
-        Verified credentials and technical specializations across data science and cloud automation environments:
+  <div class="layout">
+    <!-- Sidebar navigation -->
+    <aside class="sidebar" id="sidebar">
+      <a href="#top" class="brand brand-lg"><span class="brand-mark">PL</span><span>Philip Lau</span></a>
+      <nav aria-label="Sections">
+        <ol class="toc" id="toc"></ol>
+      </nav>
+      <div class="sidebar-foot">
+        <div class="sidebar-social">
+          <a class="icon-btn" href="https://github.com/lauPhilip" target="_blank" rel="noopener" aria-label="GitHub"><svg><use href="#i-github"/></svg></a>
+          <a class="icon-btn" href="https://www.linkedin.com/in/philip--lau/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg><use href="#i-linkedin"/></svg></a>
+          <a class="icon-btn" href="mailto:philip15@live.dk" aria-label="Email"><svg><use href="#i-mail"/></svg></a>
+          <button class="icon-btn js-theme" type="button" aria-label="Toggle colour theme"><svg><use href="#i-moon"/></svg></button>
+        </div>
+      </div>
+    </aside>
+
+    <main id="main" class="main">
+      <!-- HERO -->
+      <section class="hero" id="top" aria-label="Introduction">
+        <div class="hero-top">
+          <img class="avatar" id="hero-avatar" src="img/avatar.webp" alt="Portrait of Philip Lau" width="72" height="72" fetchpriority="high">
+          <span class="status-pill" id="hero-status"><span class="pulse"></span><span>Research Assistant @ Aarhus University</span></span>
+        </div>
+        <h1 class="hero-title">Philip Lau</h1>
+        <p class="hero-phrase" aria-live="polite"><span class="mono muted">Lau</span> <span id="phrase" class="phrase">is a Technical Business Developer.</span><span class="caret" aria-hidden="true"></span></p>
+        <p class="hero-degrees" id="hero-degrees">MSc in Engineering, Technology-Based Business Development · Bachelor of Engineering, Business Development</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" id="cv-btn" href="assets/cv.pdf" download hidden><svg><use href="#i-download"/></svg>Download CV</a>
+          <a class="btn" href="#contact">Get in touch</a>
+          <a class="btn btn-ghost" href="#projects">See projects<svg><use href="#i-arrow"/></svg></a>
+        </div>
+        <dl class="stats" id="stats"></dl>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" data-title="About">
+        <header class="section-head"><span class="num"></span><h2>About</h2></header>
+        <div class="about">
+          <p class="lede" id="about-bio"></p>
+          <blockquote class="quote" id="about-quote"></blockquote>
+          <dl class="facts" id="about-facts"></dl>
+          <div class="goals" id="about-goals"></div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section id="experience" data-title="Experience">
+        <header class="section-head"><span class="num"></span><h2>Experience</h2></header>
+        <ol class="timeline" id="experience-list"><li class="skeleton" style="height:180px"></li></ol>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" data-title="Projects">
+        <header class="section-head"><span class="num"></span><h2>Projects</h2><p class="section-sub">Work and personal builds — click any card for the full write-up.</p></header>
+        <div class="filters" role="search">
+          <div class="seg" role="group" aria-label="Filter by status" data-filter="status">
+            <button type="button" aria-pressed="true" data-value="all">All</button>
+            <button type="button" aria-pressed="false" data-value="ongoing">Ongoing</button>
+            <button type="button" aria-pressed="false" data-value="finished">Finished</button>
+          </div>
+          <div class="seg" role="group" aria-label="Filter by type" data-filter="category">
+            <button type="button" aria-pressed="true" data-value="all">All</button>
+            <button type="button" aria-pressed="false" data-value="work">Work</button>
+            <button type="button" aria-pressed="false" data-value="personal">Personal</button>
+          </div>
+          <label class="search">
+            <svg aria-hidden="true"><use href="#i-search"/></svg>
+            <input type="search" id="project-search" placeholder="Search projects or tags…" autocomplete="off" aria-label="Search projects">
+          </label>
+        </div>
+        <div class="tag-cloud" id="tag-cloud" aria-label="Popular tags"></div>
+        <p class="result-count mono" id="project-count" aria-live="polite"></p>
+        <div class="project-grid" id="project-grid">
+          <div class="skeleton card-skel"></div><div class="skeleton card-skel"></div><div class="skeleton card-skel"></div><div class="skeleton card-skel"></div>
+        </div>
+        <p class="empty" id="project-empty" hidden>No projects match that filter. <button type="button" class="linklike" id="clear-filters">Clear filters</button></p>
+      </section>
+
+      <!-- PUBLICATIONS -->
+      <section id="publications" data-title="Publications & talks">
+        <header class="section-head"><span class="num"></span><h2>Publications &amp; talks</h2></header>
+        <ul class="pubs" id="pub-list"></ul>
+      </section>
+
+      <!-- FEATURED -->
+      <section id="featured" data-title="Featured">
+        <header class="section-head"><span class="num"></span><h2>In the press</h2></header>
+        <article class="feature" id="feature"></article>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" data-title="Skills">
+        <header class="section-head"><span class="num"></span><h2>Skills &amp; tools</h2></header>
+        <div class="tool-groups" id="tool-groups"></div>
+        <div class="capabilities" id="capabilities"></div>
+        <div class="learning" id="learning"></div>
+      </section>
+
+      <!-- EDUCATION -->
+      <section id="education" data-title="Education">
+        <header class="section-head"><span class="num"></span><h2>Education</h2></header>
+        <ol class="timeline" id="education-list"></ol>
+      </section>
+
+      <!-- CERTIFICATIONS -->
+      <section id="certifications" data-title="Certifications">
+        <header class="section-head"><span class="num"></span><h2>Certifications</h2></header>
+        <div class="cert-grid" id="cert-grid"></div>
+      </section>
+
+      <!-- VOLUNTEERING -->
+      <section id="volunteering" data-title="Volunteering">
+        <header class="section-head"><span class="num"></span><h2>Volunteering</h2></header>
+        <ol class="timeline compact" id="volunteering-list"></ol>
+      </section>
+
+      <!-- GITHUB -->
+      <section id="github" data-title="Open source">
+        <header class="section-head"><span class="num"></span><h2>Github</h2><p class="section-sub" id="gh-sub">Live from GitHub.</p></header>
+        <div class="gh-card">
+          <div class="gh-head"><span id="gh-total" class="gh-total">Loading contributions…</span><a class="linklike mono" href="https://github.com/lauPhilip" target="_blank" rel="noopener">@lauPhilip ↗</a></div>
+          <div class="heatmap-wrap"><div class="heatmap" id="heatmap" role="img" aria-label="GitHub contribution calendar"></div></div>
+          <div class="heat-legend mono" aria-hidden="true">Less <i data-l="0"></i><i data-l="1"></i><i data-l="2"></i><i data-l="3"></i><i data-l="4"></i> More</div>
+        </div>
+        <div class="repo-grid" id="repo-grid"></div>
+      </section>
+
+      <!-- REFERENCES -->
+      <section id="references" data-title="References">
+        <header class="section-head"><span class="num"></span><h2>References</h2></header>
+        <div class="ref-grid" id="ref-grid"></div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" data-title="Contact" class="contact">
+        <header class="section-head"><span class="num"></span><h2>Contact</h2></header>
+        <p class="contact-big">Let's build something<br><em>useful</em> together.</p>
+        <p class="muted contact-sub">Open to new opportunities, digital strategy and automation work. The fastest way to reach me is email.</p>
+        <div class="contact-row">
+          <a class="contact-email" id="contact-email" href="mailto:philip15@live.dk">philip15@live.dk</a>
+          <button class="icon-btn" id="copy-email" type="button" aria-label="Copy email address"><svg><use href="#i-copy"/></svg></button>
+          <span class="toast mono" id="copy-toast" role="status"></span>
+        </div>
+        <dl class="facts contact-facts" id="contact-facts"></dl>
+      </section>
+
+      <footer class="footer mono">
+        <span>© <span id="year">2026</span> Philip Lau</span>
+        <span id="last-updated"></span>
+        <a href="#top" class="linklike">Back to top ↑</a>
+      </footer>
+    </main>
+  </div>
+
+  <!-- Project dialog -->
+  <dialog class="modal" id="project-modal" aria-labelledby="modal-title">
+    <div class="modal-bar">
+      <span class="mono muted" id="modal-meta"></span>
+      <div class="modal-nav">
+        <button class="icon-btn" type="button" id="modal-prev" aria-label="Previous project"><svg><use href="#i-chev-l"/></svg></button>
+        <button class="icon-btn" type="button" id="modal-next" aria-label="Next project"><svg><use href="#i-chev-r"/></svg></button>
+        <button class="icon-btn" type="button" id="modal-close" aria-label="Close"><svg><use href="#i-close"/></svg></button>
+      </div>
     </div>
-    
-    <div id="certifications-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;"></div>
-</section>
+    <div class="modal-body" id="modal-body"></div>
+  </dialog>
 
-<!-- HARD AND SOFT SKILLS SECTION -->
-<section id="skills-matrix">
-    <h2 class="section-title"><span class="mono">04</span>Professional Skills</h2>
-    
-    <div class="skills-columns">
-        <!-- Hard/Technical Skills -->
-        <div class="skills-list-box" style="border-top: 4px solid var(--lavender);">
-            <h3>Technical Capabilities</h3>
-            <ul>
-                <li><strong>Generative AI Ecosystems</strong> – Building and tuning search pipelines using RAG, GraphRAG, and vector similarity architectures.</li>
-                <li><strong>Application Automation</strong> – Building custom business dashboards, workflow rules, and low-code integrations using the Power Platform ecosystem.</li>
-                <li><strong>Cybersecurity Basics</strong> – Analyzing application architectural vulnerabilities using structured threat modeling.</li>
-                <li><strong>Data Analytics & Web Tech</strong> – Writing clean server-side code, styling user environments, and relational database scripting.</li>
-            </ul>
-        </div>
-
-        <!-- Soft Skills / Core Traits -->
-        <div class="skills-list-box" style="border-top: 4px solid var(--tea);">
-            <h3>Leadership & Strategy</h3>
-            <ul>
-                <li><strong>Bridging Tech and Business</strong> – Translating complex engineering limitations into functional, value-driven strategy roadmaps.</li>
-                <li><strong>Team Leadership & Management</strong> – Directing project workloads, handling operational shift handoffs, and resolving interpersonal issues smoothly.</li>
-                <li><strong>Stakeholder Communication</strong> – Presenting architectural progress reports and aligning technical requirements with multiple stakeholders.</li>
-                <li><strong>Academic Instruction</strong> – Explaining complex computer concepts step-by-step and running clear developer learning workshops.</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-            <!-- EXPERIENCE SECTION -->
-            <section id="experience">
-                <h2 class="section-title"><span class="mono">05</span>Experience</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="time-period">Jan 2026 - Present</div>
-                        <div class="timeline-content">
-                            <h3>Research Assistant</h3>
-                            <div class="institution">Aarhus Universitet, Dept. of Business Development and Technology (BTECH)</div>
-                            <ul>
-                                <li>Headhunted by Associate Professor Eva Sørum Poulsen and Professor Mirko Pressor at BTECH for this temporary position. </li>
-                                <li>Development of a Modular RAG course bot, that can answer on course material in the different programs both on bachelor and master's programs.</li>
-                                <li>Design and facilitation of a professional AI workshop utilizing the 33A AI Cards® methodology to teach Master’s students how to architect structured AI business cases and identify high-value automation opportunities</li>
-                                <li>In collaboration with the company eiva, developed a internal hybrid RAG Customer Service Agent that uses BM25, Similarity Search and a GraphRAG. With a knowledge base of large technical documentation and support tickets in freshdesk</li>
-                                <li>Architected an open-source, transparent C#/.NET agentic literature review environment for the OSSYM 2026 conference @ CODE university Berlin.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <div class="time-period">Jan 2023 - Jan 2026</div>
-                        <div class="timeline-content">
-                        <h3>Student Worker - Digitalization</h3>
-                                <div class="institution">The LEGO Group, Mould Engineering Enabling & Technology</div>
-                                <ul>
-                                    <li>Served as a citizen developer delivering 15+ Power Apps solutions and over 50 Power Automate Cloud flows.</li>
-                                    <li>Application Lifecycle Management development and Integration for Power Platform (The 10th largest environment with The LEGO Group)</li>
-                                    <li>Matured a proof-of-concept Retrieval-Augmented Generation (RAG) chatbot that searches across all core documentation and SharePoint articles for Element development, Mould Development, and Mould Construction-covering 331 engineers.</li>
-                                    <li>Designed and scaled custom automated engineering newsletter systems delivering localized content metrics.</li>
-                                    <li>Facilitator of TDC, Specialist community (30-40 people)</li>
-                                    <li>Documentation of quality for rework (ISO 9001) for moulds for 10 months through Excel</li>
-                                    <li>Technical Product Owner of 50+ SharePoint Sites for Mould Engineering for 10 months</li>
-                                    <li>Machine learning initiative for Mould Designers with image processing</li>
-                                    <li>Managed a successful split of a large process related to form processing from 1 department to 2 departments</li>
-                                    <li>Developed and deployed digitalization-transition strategy for moving 50 cloud flows and 30 Power Apps</li>
-                                </ul>
-                            </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="time-period">Jul 2024 - Dec 2024</div>
-                        <div class="timeline-content">
-                            <h3>Student Instructor - Web Technologies</h3>
-                            <div class="institution">Aarhus Universitet</div>
-                            <ul>
-                                <li>Instructed undergraduate students in the course web technologies covering the languages: HTML, CSS, JavaScript, PHP, and MySQL.</li>
-                                <li>Recieved a student evaluation of 4.9 average from 1-5 on my ability to teach the material.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-<!-- EDUCATION SECTION -->
-            <section id="education">
-                <h2 class="section-title"><span class="mono">06</span>Education</h2>
-                <div class="timeline">
-                    <!-- Master's Degree -->
-                    <div class="timeline-item">
-                        <div class="time-period">2024 - 2025</div>
-                        <div class="timeline-content">
-                            <h3>MSc in Engineering Technology-Based Business Development (TBBD)</h3>
-                            <div class="institution">Aarhus Universitet</div>
-                            <ul>
-                                <li>Grade: 12 (A+)</li>
-                                <li>Design of Digital Enterprise (DDE) -- with a specialization in automation, AI and digitalization</li>
-                            </ul>
-                            
-                            <!-- Expandable Master's Courses -->
-                            <details style="margin-top: 1rem; background: rgba(255,255,255,0.03); padding: 0.8rem; border-radius: 4px;">
-                                <summary style="cursor: pointer; font-family: 'Share Tech Mono', monospace; font-size: 0.9rem; color: var(--accent-primary);">
-                                    [+] VIEW MASTER'S COURSES
-                                </summary>
-                                <ul style="margin-top: 0.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 0.4rem; list-style: none; padding-left: 0;">
-                                    
-                                    <li style="font-size: 0.85rem; color: #adb5bd;">• Digital Back-End Solutions</li>
-                                    <li style="font-size: 0.85rem; color: #adb5bd;">• Digital Front-End Solutions</li>
-                                    <li style="font-size: 0.85rem; color: #adb5bd;">• Design of Digital Enterprise (DDE)</li>
-                                    <li style="font-size: 0.85rem; color: #adb5bd;">• Python Fundamentals for Machine Learning</li>
-                                    <li style="font-size: 0.85rem; color: #adb5bd;">• Technological Business Model Innovation</li>
-                                    <li style="font-size: 0.85rem; color: #adb5bd;">• Technology Focus Project</li>
-                                    <li style="font-size: 0.85rem; color: #adb5bd;">• Technology Specialisation 1 & 2</li>
-                                    <li style="font-size: 0.85rem; color: #adb5bd;">• Business Development Project</li>
-                                    <li style="font-size: 0.85rem; color: #adb5bd;">• Management of Technology</li>
-                                    <li style="font-size: 0.85rem; color: #adb5bd;">• Master Thesis Project</li>
-                                </ul>
-                            </details>
-                        </div>
-                    </div>
-                    
-                    <!-- Bachelor's Degree -->
-                    <div class="timeline-item">
-                        <div class="time-period">2020 - 2023</div>
-                        <div class="timeline-content">
-                            <h3>Bachelor of Engineering Business Development (BDE)</h3>
-                            <div class="institution">Aarhus Universitet</div>
-                            <ul>
-                            <li>Grade: 12 (A+)</li>
-                            <li>Focus on business cases with digitalization</li>
-                            </ul>
-                            
-                            <!-- Expandable Bachelor's Courses -->
-                            <details style="margin-top: 1rem; background: rgba(255,255,255,0.03); padding: 0.8rem; border-radius: 4px;">
-                                <summary style="cursor: pointer; font-family: 'Share Tech Mono', monospace; font-size: 0.9rem; color: var(--accent-primary);">
-                                    [+] VIEW BACHELOR'S COURSES
-                                </summary>
-                                <ul style="margin-top: 0.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 0.4rem; list-style: none; padding-left: 0;">
-                                    <li style="font-size: 0.85rem; color: #adb5bd;">• Applied Mathematics</li>
-                                    <li style="font-size: 0.85rem; color: #adb5bd;">• Advanced Web Development</li>
-                                    <li style="font-size: 0.85rem; color: #adb5bd;">• Engineering Internship</li>
-                                    <li style="font-size: 0.85rem; color: #adb5bd;">• Individual Technology Focus</li>
-                                    <li style="font-size: 0.85rem; color: #adb5bd;">• Industry 3.0 - Industrial Plant Automation</li>
-                                    <li style="font-size: 0.85rem; color: #adb5bd;">• Industry 4.0 - Internet of Things</li>
-                                    <li style="font-size: 0.85rem; color: #adb5bd;">• Innovation Management</li>
-                                    <li style="font-size: 0.85rem; color: #adb5bd;">• Introduction to 3D Print Additive Manufacturing</li>
-                                    <li style="font-size: 0.85rem; color: #adb5bd;">• Market Analysis & Methodology</li>
-                                    <li style="font-size: 0.85rem; color: #adb5bd;">• Marketing and Finance</li>
-                                    <li style="font-size: 0.85rem; color: #adb5bd;">• Negotiation Tactics</li>
-                                    <li style="font-size: 0.85rem; color: #adb5bd;">• Personal and Social Competences</li>
-                                    <li style="font-size: 0.85rem; color: #adb5bd;">• Physics</li>
-                                    <li style="font-size: 0.85rem; color: #adb5bd;">• Project Management</li>
-                                    <li style="font-size: 0.85rem; color: #adb5bd;">• Quality Management</li>
-                                    <li style="font-size: 0.85rem; color: #adb5bd;">• Strategic and Economic Analysis</li>
-                                    <li style="font-size: 0.85rem; color: #adb5bd;">• Supply Chain Management</li>
-                                    <li style="font-size: 0.85rem; color: #adb5bd;">• Technological Product Development</li>
-                                    <li style="font-size: 0.85rem; color: #adb5bd;">• Technology-based Concept Development</li>
-                                    <li style="font-size: 0.85rem; color: #adb5bd;">• Web Technologies</li>
-                                    <li style="font-size: 0.85rem; color: #adb5bd;">• Bachelor's Project</li>
-                                </ul>
-                            </details>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- VOLUNTEERING WORK SECTION -->
-<section id="volunteering">
-    <h2 class="section-title"><span class="mono">07</span>Volunteering Work</h2>
-    <div class="timeline">
-        <!-- Item 1 -->
-        <div class="timeline-item">
-            <div class="time-period">Feb 2024 - Jan 2026</div>
-            <div class="timeline-content">
-                <h3>Board Member for Education Committee (TBBD)</h3>
-                <div class="institution">Aarhus BSS - Aarhus University</div>
-                <ul>
-                    <li>Engaged in academic development initiatives to help shape course frameworks and curriculum strategies.</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Item 2 -->
-        <div class="timeline-item">
-            <div class="time-period">Oct 2021 - Jul 2022</div>
-            <div class="timeline-content">
-                <h3>Chair for IDA Event Herning</h3>
-                <div class="institution">IDA</div>
-                <ul>
-                    <li>Organized professional tech events and networking opportunities for engineering students in the local area.</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Item 3 -->
-        <div class="timeline-item">
-            <div class="time-period">Aug 2020 - Sep 2021</div>
-            <div class="timeline-content">
-                <h3>Volunteer</h3>
-                <div class="institution">IDA</div>
-                <ul>
-                    <li>Assisted with organizing student community events and supporting regional professional society activities.</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Item 4 -->
-        <div class="timeline-item">
-            <div class="time-period">Aug 2021</div>
-            <div class="timeline-content">
-                <h3>Team Lead for Tutorweek BDE 2021</h3>
-                <div class="institution">Aarhus BSS - Aarhus University</div>
-                <ul>
-                    <li>Managed a team of tutors to plan, coordinate, and run intro week onboarding events for new incoming students.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ONGOING PROJECTS -->
-<section id="ongoing-projects">
-    <h2 class="section-title"><span class="mono">08</span>Ongoing Projects</h2>
-    
-    <div class="subsection-title"><span style="color: var(--lavender);">■</span> Work Projects</div>
-    <div class="project-grid" id="grid-ongoing-work"></div>
-
-    <div class="subsection-title"><span style="color: var(--sky);">■</span> Personal Projects</div>
-    <div class="project-grid" id="grid-ongoing-personal"></div>
-</section>
-
-<!-- FINISHED PROJECTS -->
-<section id="finished-projects">
-    <h2 class="section-title"><span class="mono">09</span>Finished Projects</h2>
-    
-    <div class="subsection-title"><span style="color: var(--tea);">■</span> Work Projects</div>
-    <div class="project-grid" id="grid-finished-work"></div>
-
-    <div class="subsection-title"><span style="color: var(--tangerine);">■</span> Personal Projects</div>
-    <div class="project-grid" id="grid-finished-personal"></div>
-</section>
-
-<!-- GITHUB ACTIVITY SECTION -->
-<section id="github-activity" style="margin-bottom: 5rem;">
-    <h2 class="section-title"><span class="mono">10</span>Github Activity</h2>
-    <div style="color: var(--text-muted); margin-bottom: 2rem;">
-        An automated tracking look at my latest repository commits and contributions:
-    </div>
-    
-    <!-- Clean Light Mode Container -->
-    <div style="width: 100%; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); background: #ffffff; border: 1px solid #e1e4e8; padding: 1.5rem; display: flex; flex-direction: column; align-items: flex-start;">
-        
-        <!-- Dynamic Header (Matches GitHub's typography style) -->
-        <div id="github-contribution-header" style="font-size: 1.3rem; font-weight: 400; color: #24292e; margin-bottom: 1rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;">
-            Loading contributions...
-        </div>
-
-        <!-- Contribution Grid Chart Image -->
-        <div style="width: 100%; display: flex; justify-content: center;">
-            <img src="https://ghchart.rshah.org/LauPhilip" 
-                 alt="Philip's GitHub Contribution Grid" 
-                 style="width: 100%; max-width: 780px; height: auto; display: block;">
-        </div>
-    </div>
-</section>
-
-<!-- REFERENCES SECTION -->
-<section id="references" style="margin-bottom: 5rem;">
-    <h2 class="section-title"><span class="mono">11</span>References</h2>
-    <div style="color: var(--text-muted); margin-bottom: 2rem;">
-        Professional references from academic supervisors and industry managers:
-    </div>
-    
-    <!-- Dynamic JS Target Wrapper -->
-    <div id="reference-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem;"></div>
-</section>
-
-<section id="career-goals" style="margin-bottom: 5rem;">
-    <h2 class="section-title">Career Goals</h2>
-    
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; margin-top: 2rem;">
-        <div style="background: rgba(255, 255, 255, 0.01); border: 1px solid #333; padding: 2rem; border-radius: 6px;">
-            <h3 style="font-family: 'Share Tech Mono', monospace; color: var(--accent-primary); margin-top: 0; font-size: 1.2rem;">
-            IMMEDIATE HORIZONS (1-5 year plan)
-            </h3>
-            <p style="color: var(--text-light); font-size: 1.05rem; line-height: 1.6; margin-bottom: 0;">
-                My immediate focus is breaking into the tech industry to write a lot of code, tackle diverse architectural challenges, and build solid systems. I am actively targeting hands-on roles across the spectrum of <strong>Software Engineering, AI/LLM Development, Digitalization Engineering, Forward Deployed Engineering,</strong> or <strong>Technical Project Management</strong>.
-            </p>
-        </div>
-
-        <div style="background: rgba(255, 255, 255, 0.01); border: 1px solid #333; padding: 2rem; border-radius: 6px;">
-            <h3 style="font-family: 'Share Tech Mono', monospace; color: var(--sky); margin-top: 0; font-size: 1.2rem;">
-                LONG-TERM TRAJECTORY (5-15 year plan)
-            </h3>
-            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 0;">
-                My ultimate career goal is to step into high-level technology strategy as a <strong>CTO or Executive IT Decision Maker</strong>. I want to spend my early career mastering code and building digital solutions so that when I transition to steering organizational innovation, every decision I make sits perfectly at the intersection of <strong>people, technology, and innovation</strong>.
-            </p>
-        </div>
-    </div>
-</section>
-
-<!-- CONTACT INTERFACE -->
-<section id="contact">
-    <h2 class="section-title"><span class="mono">12</span>Contact</h2>
-    <div class="contact-layout" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; align-items: center;">
-        
-        <!-- Left Side: Clean Contact Details -->
-        <div class="contact-details" style="display: flex; flex-direction: column; gap: 1.2rem;">
-            <div style="color: var(--text-muted); margin-bottom: 0.5rem;">
-                I am always open to discussing new opportunities, digital strategies, or automation workflows. Feel free to reach out through any of the channels below:
-            </div>
-
-            <div class="contact-link" style="font-size: 1.1rem;">
-                <strong>Email:</strong> <a href="mailto:philip15@live.dk" style="color: var(--text-light); text-decoration: none; border-bottom: 1px dashed var(--accent-primary);">philip15@live.dk</a>
-            </div>
-
-            <div class="contact-link" style="font-size: 1.1rem; color: var(--text-light);">
-                <strong>Phone:</strong> +45 51 15 54 35
-            </div>
-
-            <div class="contact-link" style="font-size: 1.1rem; color: var(--text-light);">
-                <strong>Location:</strong> Herning, Denmark
-            </div>
-            
-            <a href="https://www.linkedin.com/in/philip--lau/" target="_blank" class="btn-modern" style="text-align: center; text-decoration: none; margin-top: 1rem;">
-                Connect on LinkedIn
-            </a>
-        </div>
-        
-        <!-- Right Side: Clean Proportional Graphic Box -->
-        <div style="border-radius: 6px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.3); width: 100%;">
-            <!-- Referencing image_cabf88.jpg verbatim -->
-            <img src="img/image_cabf88.jpg" alt="Lab workspace background banner" style="width: 100%; height: auto; display: block; filter: brightness(90%);">
-        </div>
-    </div>
-</section>
-        </main>
-    </div>
-
-<footer>
-    <p>© 2026 Philip Lau. All rights reserved.<span id="latest-update" style="color: var(--text-muted); margin-left: 0.5rem;">Loading last update...</span></p>
-</footer>
-
-<!-- GLOBAL MODAL COMPONENT OVERLAY -->
-<div id="project-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(29, 29, 27, 0.85); z-index: 9999; backdrop-filter: blur(4px); align-items: center; justify-content: center;" onclick="closeProjectModal(event)">
-    <!-- Expanded Modal Card Panel (Width increased to max-width: 1050px) -->
-    <div class="modal-card-content" style="background-color: var(--card-bg); color: var(--text-dark); width: 95%; max-width: 1050px; max-height: 85vh; border-radius: 8px; overflow-y: auto; padding: 2.5rem; position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.5);" onclick="event.stopPropagation()">
-        <!-- Close Button -->
-        <button onclick="document.getElementById('project-modal').style.display = 'none'" style="position: absolute; top: 1.5rem; right: 1.5rem; background: #262624; color: var(--text-light); border: none; font-family: 'Share Tech Mono', monospace; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; font-weight: bold; z-index: 10;">
-            [X] CLOSE
-        </button>
-        <!-- Dynamic Modal Targets Injection Slot -->
-        <div id="modal-body-content"></div>
-    </div>
-</div>
-
-<!-- JAVASCRIPT LINK -->
-    <script src="js/app.js"></script>
-</div>
+  <noscript><p class="noscript">This portfolio loads its content with JavaScript. Please enable it, or reach me at philip15@live.dk.</p></noscript>
 </body>
 </html>
