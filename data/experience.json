@@ -6,6 +6,14 @@
     "org": "Aarhus University — Dept. of Business Development and Technology (BTECH)",
     "points": [
       "Headhunted by Associate Professor Eva Sørum Poulsen and Professor Mirko Pressor at BTECH for this temporary position.",
+      {
+        "text": "Supervising three MSc in Engineering student projects:",
+        "sub": [
+          "Using unstructured data to generate process diagrams that support the PMO side of projects spanning disparate systems and cross-department collaboration.",
+          "A multivocal literature review of state-of-the-art context-engineering methods and their impact on researchers and practitioners.",
+          "AI adoption and governance — producing recommendations for the safe use of AI in a security firm."
+        ]
+      },
       "Developing a modular RAG course bot that answers questions on course material across bachelor's and master's programmes.",
       "Designed and facilitated a professional AI workshop using the 33A AI Cards® methodology, teaching master's students to architect structured AI business cases and identify high-value automation opportunities.",
       "In collaboration with EIVA, developed an internal hybrid RAG customer-service agent combining BM25, similarity search and GraphRAG over large technical documentation and Freshdesk support tickets.",
