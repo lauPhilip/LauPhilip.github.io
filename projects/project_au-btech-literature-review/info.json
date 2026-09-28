@@ -19,6 +19,10 @@
     {
       "label": "OSSYM 2026 Berlin",
       "url": "https://indico.cern.ch/event/1622016/"
+    },
+    {
+      "label": "GitHub Repo",
+      "url": "https://github.com/lauPhilip/au-btech-literature-review-agent"
     }
   ]
 }
