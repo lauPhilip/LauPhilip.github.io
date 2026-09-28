@@ -3,20 +3,22 @@
   "short_desc": "A platform where university teachers can set up their own AI chatbot for a course — without writing any code. Students can ask it questions, and it only answers from the course's own material.",
   "blueprint_title": "How it works",
   "blueprint_desc": "Teachers add their course material and create a bot for each course or lecture. The bot's answers are kept to that material, so students get guidance that matches what is actually taught. Teachers can also see what students are asking and how well the bot is helping — useful input for improving the teaching itself.",
-  "tech_notes": "Coursebot is a reference implementation for an Agentic Educational Ecosystem. It demonstrates how modular AI agents can be managed within a university framework to provide real-time, pedagogically sound guidance to students.  The platform provides a centralized hub for: 1: Staff-Led Bot Architecture: Non-technical creation of lecture-specific agents, 2: Knowledge Grounding: Ensuring AI responses are strictly anchored to verified course DNA, 3: Interaction Observability: Real-time analytics into student lexical patterns and bot efficacy.",
+  "tech_notes": "Coursebot is a reference implementation for an Agentic Educational Ecosystem. It demonstrates how modular AI agents can be managed within a university framework to provide real-time, pedagogically sound guidance to students.  The platform provides a centralized hub for: 1: Staff-Led Bot Architecture: Non-technical creation of lecture-specific agents, 2: Knowledge Grounding: Ensuring AI responses are strictly anchored to verified course DNA, 3: Interaction Observability: Real-time analytics into student lexical patterns and bot efficacy. Built with Laravel (PHP) and Vue, styled with SCSS. Developed against SQLite locally; runs on PostgreSQL. The source code is currently private.",
   "tags": [
-    "Generative AI",
-    "RAG",
+    "Laravel",
+    "Vue",
     "PHP",
-    "CSS"
+    "SCSS",
+    "PostgreSQL",
+    "SQLite (dev)",
+    "Generative AI",
+    "RAG"
   ],
   "images": [
-    "projects/project_au-btech-course-bot/diagram_course-bot.webp"
+    "projects/project_au-btech-course-bot/diagram_course-bot.webp",
+    "projects/project_au-btech-course-bot/coursebot-error-ok.webp",
+    "projects/project_au-btech-course-bot/coursebot-error-broken.webp"
   ],
-  "links": [
-    {
-      "label": "GitHub Repo",
-      "url": "https://github.com/lauPhilip/au-btech-coursebot-platform"
-    }
-  ]
+  "links": [],
+  "private": true
 }
