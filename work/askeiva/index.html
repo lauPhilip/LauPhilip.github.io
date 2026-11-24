@@ -59,7 +59,7 @@
 
 </div>
 
-<p class="tech-notes">I rewrote a single-file Python prototype as a C# solution with Clean Architecture in four layers. Domain holds the core types and rules. Application holds the use cases. Infrastructure talks to Weaviate Cloud for vector storage and search, and to the database. The web interface is Blazor Interactive Server. Long-running work runs as background services, outside the user&#x27;s request. The trade-off is more structure up front, in return for strict typing and code that is safer to change and hand over. The app includes evaluation screens for checking answer quality.</p>
+<p class="tech-notes">I rewrote a single-file Python prototype as a C# solution with Clean Architecture in four layers. Domain holds the core types and rules. Application holds the use cases. Infrastructure talks to Weaviate Cloud for vector storage and search, and to the database. The web interface is Blazor Interactive Server. Long-running work runs as background services, outside the user&#x27;s request. The trade-off is more structure up front, in return for strict typing and code that is safer to change and hand over. On top of vector search, a language model reads the manuals and tickets and pulls out entities, such as a drone and an underwater operation, and links them through the words that relate them. That graph lets the assistant follow related topics, not only similar wording. The app includes evaluation screens for checking answer quality.</p>
 <p class="tech-tags"><span class="sr-only">Technologies: </span>C#, .NET 10, Blazor, Weaviate, GraphRAG, Clean Architecture</p>
 </section>
 <section class="gallery" aria-labelledby="gallery-title">
