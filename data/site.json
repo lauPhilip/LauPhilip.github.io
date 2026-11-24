@@ -1,60 +1,28 @@
 {
   "name": "Philip Lau",
-  "nickname": "Lau",
-  "role": "Research Assistant @ Aarhus University",
+  "role": "Research Assistant, Aarhus University",
   "available": true,
-  "availability_text": "Open to roles in software, AI & digitalization",
-  "phrases": [
-    "is a Technical Business Developer.",
-    "turns technology into business value.",
-    "builds AI people can trust.",
-    "bridges tech and business.",
-    "replaces workarounds with real systems."
+  "availability_text": "Open to roles in software, AI and digitalization",
+  "headline": "I build AI assistants and automation that save people time on searching and routine work.",
+  "intro": "I built MIND, an AI assistant used by 331 engineers at the LEGO Group to search their technical documentation. I also built 15+ Power Apps and 50+ Power Automate flows there. Today I am a Research Assistant at Aarhus University, with an MSc in Engineering and a final grade of 12 (A+).",
+  "bio": [
+    "I joined the LEGO Group as an intern in 2022. Then I stayed three more years as a student worker in Mould Engineering. I built apps and automated workflows on the Power Platform and set up how they were tested and released. I also took MIND, an AI search assistant, from prototype towards a product.",
+    "Since January 2026 I have been a Research Assistant at Aarhus University. I build AI tools, including one with the company EIVA. I also supervise three MSc projects and teach master's students to build AI business cases.",
+    "My degrees are in business development. So I start with the problem and what it costs the business, and then I build the solution myself."
   ],
-  "degrees": [
-    "MSc in Engineering, Technology-Based Business Development",
-    "Bachelor of Engineering, Business Development"
-  ],
-  "bio": "I am a passionate individual who puts full energy into bridging the gap between technical development and strategic management. I like translating complex technology logic into clear business value.",
-  "quote": "My engineering philosophy centers on creating functional digital artifacts that deliver measurable business value through the strategic application of technology and data.",
+  "direction": "Next, I want to build AI and software full time, and over the years grow into shaping technology strategy.",
   "languages": [
     "Danish",
     "English"
   ],
   "interests": [
-    "Tech",
+    "Technology",
     "Computer games",
     "Marvel",
     "LEGO",
     "Olympic weightlifting"
   ],
   "avatar": "img/avatar.webp",
-  "now": [
-    {
-      "kicker": "Building",
-      "title": "LUMA",
-      "text": "A local-first personal AI assistant — and the small language model behind it, written from scratch.",
-      "href": "#project/project_luma-personal-ai-agent"
-    },
-    {
-      "kicker": "Researching",
-      "title": "TraceableAI",
-      "text": "An AI tool that helps researchers review literature — and shows its work, so nothing is made up. Headed for OSSYM 2026 in Berlin.",
-      "href": "#publications"
-    },
-    {
-      "kicker": "Supervising",
-      "title": "3 MSc projects",
-      "text": "Process diagrams from unstructured data, context engineering, and AI governance in a security firm.",
-      "href": "#experience"
-    },
-    {
-      "kicker": "Learning",
-      "title": "C# & .NET",
-      "text": "Microsoft's main programming language and platform — already used to build AskEIVA and TraceableAI.",
-      "href": "#skills"
-    }
-  ],
   "contact": {
     "email": "philip15@live.dk",
     "phone": "+45 51 15 54 35",
@@ -63,6 +31,7 @@
     "github": "https://github.com/lauPhilip",
     "github_user": "lauPhilip",
     "cv": "assets/cv.pdf",
+    "cv_available": false,
     "repo_exclude": [
       "ai-version-old-1",
       "ai-version-old-2",
@@ -70,52 +39,130 @@
     ]
   },
   "featured": {
-    "title": "TBMI — Witt A/S",
-    "kicker": "University project for a real company, featured in the local newspaper",
-    "text": "A university project for Witt A/S: a business proposal showing how the customer service department could work smarter by automating routine tasks with Microsoft's Power Automate and AI Builder.",
-    "badge": "Grade 12 (A+)",
-    "image": "img/featured-article.webp"
+    "title": "Business proposal for Witt A/S",
+    "text": "A university project for Witt A/S. The proposal showed how the customer service department could automate routine tasks with Microsoft Power Automate and AI Builder.",
+    "note": "Final grade 12 (A+). Featured in the local newspaper.",
+    "image": "img/featured-article.webp",
+    "label": "In the local newspaper"
   },
-  "goals": [
-    {
-      "horizon": "1–5 years",
-      "title": "Immediate horizons",
-      "text": "Breaking into the tech industry to write a lot of code, tackle diverse architectural challenges and build solid systems — in Software Engineering, AI/LLM Development, Digitalization Engineering, Forward Deployed Engineering or Technical Project Management."
-    },
-    {
-      "horizon": "5–15 years",
-      "title": "Long-term trajectory",
-      "text": "Stepping into high-level technology strategy as a CTO or executive IT decision maker — mastering code early so every later decision sits at the intersection of people, technology and innovation."
-    }
-  ],
   "quick": {
-    "headline": "Technical Business Developer who builds AI and automation that delivers business value.",
-    "looking_for": "Software Engineering · AI/LLM Development · Digitalization Engineering · Forward Deployed Engineering · Technical Project Management",
+    "headline": "Technical Business Developer who builds AI assistants and automation for engineering and business teams.",
+    "looking_for": [
+      "Software engineering",
+      "AI and LLM development",
+      "Digitalization engineering",
+      "Forward deployed engineering",
+      "Technical project management"
+    ],
     "highlights": [
-      "Built AI assistants that find answers in company documents — used by 331 engineers at The LEGO Group, and for EIVA's customer service.",
-      "Delivered 15+ Power Apps and 50+ Power Automate flows as a citizen developer at The LEGO Group.",
-      "MSc and BSc in Engineering from Aarhus University, both with a final grade of 12 (A+).",
-      "Research Assistant at Aarhus University: supervising 3 MSc projects and presenting an AI literature-review agent at OSSYM 2026.",
+      "Built MIND, an AI assistant used by 331 engineers at the LEGO Group to search their technical documentation.",
+      "Built 15+ Power Apps and 50+ Power Automate flows as a citizen developer at the LEGO Group.",
+      "Built AskEIVA with the company EIVA, an AI assistant that searches technical manuals and past support tickets for customer service.",
+      "Research Assistant at Aarhus University. Supervises AI-focused MSc in Engineering projects (currently 3), teaches AI business cases, and has the TraceableAI paper accepted at OSSYM 2026.",
+      "MSc in Engineering and BEng from Aarhus University, both with a final grade of 12 (A+).",
       "Rated 4.9 / 5 by students as instructor in Web Technologies."
     ],
     "top_skills": [
       "Python",
-      "C#",
-      ".NET",
-      "RAG / GraphRAG",
-      "LLMs",
+      "C# and .NET",
+      "RAG and LLM applications",
       "Power Platform",
       "SQL",
-      "PHP",
       "JavaScript",
+      "PHP",
+      "Business cases",
       "Stakeholder management"
     ]
   },
   "ask": {
     "enabled": true,
-    "endpoint": "https://ask-lau.philip15.workers.dev"
+    "endpoint": "https://ask-lau.philip15.workers.dev",
+    "title": "Ask about my work",
+    "intro": "The answer comes from the content on this site and links to where it found it.",
+    "placeholder_first": "Ask a question",
+    "placeholder": "Ask another question",
+    "note": "Answers are generated from this site and can be wrong."
   },
   "analytics": {
     "goatcounter": "lauphilip"
+  },
+  "updated": "November 2026",
+  "home": {
+    "hero_title": "Hi, I am Philip.",
+    "hero_lead": "I turn messy company knowledge into AI tools that people use every day.",
+    "hero_text": "I spent four years at the LEGO Group, where I built MIND, an AI assistant used by 331 engineers to search their technical documentation. Now I build AI tools for teaching and research at Aarhus University, and I am looking for my next role in software, AI or digitalization.",
+    "primary_cta": "Email me",
+    "secondary_cta": "My experience",
+    "projects_title": "What I have built lately",
+    "projects": [
+      "project_mind_lego",
+      "project_au-btech-literature-review",
+      "project_au-btech-open-door"
+    ],
+    "projects_link": "See all {count} projects",
+    "talk_image": "img/talk-ossym.webp",
+    "talk_alt": "Philip presenting TraceableAI on stage at CODE University Berlin",
+    "talk_caption": "Presenting TraceableAI at the Open Search Symposium in Berlin, 2026.",
+    "between_title": "Between business and code",
+    "between_text": "My degrees are in business development, so I start with the problem and what it costs. Then I build the solution myself. At the LEGO Group that meant 15+ apps and 50+ automated flows. At Aarhus University it means research tools, teaching and supervising three MSc projects on AI.",
+    "between_link": "Read my full experience",
+    "ask_title": "Have a question about my work?",
+    "ask_text": "Ask it here. The answer comes from the content on this site and links to where it found it.",
+    "ask_placeholder": "For example: what did Philip build at the LEGO Group?",
+    "ask_examples": [
+      "What did he build at LEGO?",
+      "Which programming languages does he use?",
+      "What is TraceableAI?"
+    ]
+  },
+  "contact_section": {
+    "title": "Hiring for software, AI or digitalization?",
+    "text": "I would like to hear about it. Email is the fastest way to reach me.",
+    "copy_label": "Copy address",
+    "copied_label": "Address copied"
+  },
+  "work": {
+    "title": "Work",
+    "intro": "{count_words} projects from industry, research and my own time. Each one says what I built and what came of it.",
+    "filters": [
+      {
+        "key": "all",
+        "label": "All"
+      },
+      {
+        "key": "industry",
+        "label": "Industry"
+      },
+      {
+        "key": "research",
+        "label": "Research and teaching"
+      },
+      {
+        "key": "personal",
+        "label": "Personal"
+      }
+    ],
+    "outro": "Want to know the person behind the projects? [Read about my experience](/about/) or [email me]({mailto})."
+  },
+  "about": {
+    "title": "About",
+    "lead": "I work where technology meets the business. I start with the problem and what it costs, build the smallest thing that solves it, and stay until people use it.",
+    "text": "Most of my work deals with knowledge that is hard to find, such as manuals, standards, course material and research papers. I turn it into tools that answer questions and show where each answer comes from.",
+    "references_note": "Contact details on request.",
+    "outro": "Seen enough? [Email me]({mailto}) or [look through my work](/work/)."
+  },
+  "not_found": {
+    "title": "Page not found",
+    "text": "This page does not exist, or it has moved. The work and the experience are still here.",
+    "links": [
+      {
+        "label": "Go to the home page",
+        "href": "/"
+      },
+      {
+        "label": "See all work",
+        "href": "/work/"
+      }
+    ]
   }
 }

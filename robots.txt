@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lauphilip.github.io/sitemap.xml

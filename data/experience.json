@@ -3,47 +3,58 @@
     "period": "Jan 2026 — Present",
     "current": true,
     "title": "Research Assistant",
-    "org": "Aarhus University — Dept. of Business Development and Technology (BTECH)",
+    "org": "Aarhus University, Dept. of Business Development and Technology (BTECH)",
     "points": [
-      "Headhunted by Associate Professor Eva Sørum Poulsen and Professor Mirko Pressor at BTECH for this temporary position.",
+      "Built AskEIVA with the company EIVA: an internal AI assistant that helps customer service find answers in large technical manuals and past support tickets.",
+      "Designed and built TraceableAI, an open-source tool for AI literature reviews where every citation can be checked. The paper is accepted at OSSYM 2026 at CODE University, Berlin.",
       {
-        "text": "Supervising three MSc in Engineering student projects:",
+        "text": "Supervise AI-focused MSc in Engineering projects, currently three:",
         "sub": [
-          "Using unstructured data to generate process diagrams that support the PMO side of projects spanning disparate systems and cross-department collaboration.",
-          "A multivocal literature review of state-of-the-art context-engineering methods and their impact on researchers and practitioners.",
-          "AI adoption and governance — producing recommendations for the safe use of AI in a security firm."
+          "Process diagrams generated from unstructured data, to support project management across separate systems and departments.",
+          "A multivocal literature review of current context-engineering methods and their impact on researchers and practitioners.",
+          "AI adoption and governance, with recommendations for the safe use of AI in a security firm."
         ]
       },
-      "Developing an AI course assistant that answers students' questions from the course material, for bachelor's and master's programmes.",
-      "Designed and facilitated a professional AI workshop using the 33A AI Cards® methodology, teaching master's students to architect structured AI business cases and identify high-value automation opportunities.",
-      "Together with the company EIVA, built an internal AI assistant for customer service that finds answers in large technical manuals and past support tickets.",
-      "Designed an open-source AI tool that helps researchers review academic literature transparently, for the OSSYM 2026 conference at CODE University, Berlin."
+      "As main developer, build Coursebot, an AI course assistant that answers students' questions from the course material, for bachelor's and master's programmes.",
+      "Built Open Door, an open-source browser game that teaches threat modelling to student teams, based on the CyPro method from Aarhus University.",
+      "Taught master's students to build structured AI business cases with the 33A AI Cards® method, in a workshop I designed and ran. They learned to find high-value automation opportunities.",
+      "Headhunted for this fixed-term position by Associate Professor Eva Sørum Poulsen and Professor Mirko Presser."
     ]
   },
   {
     "period": "Jan 2023 — Jan 2026",
-    "title": "Student Worker — Digitalization",
-    "org": "The LEGO Group — Mould Engineering Enabling & Technology",
+    "title": "Student Worker, Digitalization",
+    "org": "The LEGO Group, Mould Engineering Enabling & Technology",
     "points": [
-      "Built 15+ business apps (Power Apps) and 50+ automated workflows (Power Automate) as a citizen developer.",
-      "Managed how apps were built, tested and released on the Power Platform — in the 10th largest environment at The LEGO Group.",
-      "Took an AI chatbot from prototype towards a real product, searching all core documentation for element, mould development and mould construction — used by 331 engineers.",
-      "Built and scaled automated engineering newsletters, tailored to each reader's chosen topics.",
-      "Facilitator of the TDC specialist community (30–40 people).",
-      "Documented rework quality (ISO 9001) for moulds for 10 months.",
-      "Technical Product Owner of 50+ SharePoint sites for Mould Engineering for 10 months.",
-      "Worked on a machine-learning initiative using image recognition to support mould designers.",
+      "As main developer, built MIND, an AI assistant used by 331 engineers at the LEGO Group to search their technical documentation. The proof of concept was estimated to save 240 hours.",
+      "Built 15+ business apps in Power Apps and 50+ automated workflows in Power Automate as a citizen developer.",
+      "Managed how apps were built, tested and released on the Power Platform, in the 10th largest environment at the LEGO Group.",
+      "Planned and carried out the move of 50 automated workflows and 30 apps as part of a digital transition.",
       "Managed the split of a large form-processing process from one department into two.",
-      "Planned and carried out the move of 50 automated workflows and 30 apps as part of a digital transition."
+      "Served as Technical Product Owner for 50+ SharePoint sites in Mould Engineering for 10 months.",
+      "Documented rework quality for moulds under ISO 9001 for 10 months.",
+      "Built and scaled automated engineering newsletters, tailored to the topics each reader chose.",
+      "Contributed to a machine-learning initiative that used image recognition to support mould designers.",
+      "Facilitated the TDC specialist community of 30–40 people."
     ]
   },
   {
     "period": "Jul 2024 — Dec 2024",
-    "title": "Student Instructor — Web Technologies",
+    "title": "Student Instructor, Web Technologies",
     "org": "Aarhus University",
     "points": [
-      "Instructed undergraduate students in HTML, CSS, JavaScript, PHP and MySQL.",
-      "Received an average student evaluation of 4.9 / 5 on teaching the material."
+      "Rated 4.9 / 5 by students on average for teaching the material.",
+      "Taught undergraduate students HTML, CSS, JavaScript, PHP and MySQL."
+    ]
+  },
+  {
+    "period": "2022",
+    "title": "Engineering Intern",
+    "org": "The LEGO Group, Mould Engineering Prototypes",
+    "points": [
+      "Interviewed 7 local planners and mapped how local planning was done across many Excel sheets, each with its own way of working.",
+      "Wrote a 60-page business proposal with the economics, business case, user requirements and recommendations, and built a rapid prototype in Power Apps.",
+      "Presented a one-page brief to management. The LEGO Group later approved Kinaxis Maestro as a unified planning tool, a need my analysis helped document."
     ]
   }
 ]

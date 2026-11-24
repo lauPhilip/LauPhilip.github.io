@@ -1,15 +1,15 @@
 {
   "title": "Shrinkage Analysis Request Tool",
-  "short_desc": "An internal app used by 35–50 colleagues every week to request and follow shrinkage analyses of moulded parts. I maintained and improved it.",
-  "blueprint_title": "How it works",
-  "blueprint_desc": "Users submit requests in a simple app, while administrators manage them from a dashboard. Behind the scenes, automated flows handle approvals, status updates, record-keeping and email notifications — so requests move along without anyone having to chase them.",
-  "tech_notes": "Managed the optimization of a production-grade Power Apps ecosystem split clean across user request portals and admin management dashboards. Built and maintained backend Power Automate flows to handle complex approvals, status routing, data logging, and automated notification emails to streamline weekly analysis request pipelines.",
+  "short_desc": "An internal app that 35–50 colleagues use every week to request and follow shrinkage analyses of moulded parts. I maintained and improved it.",
+  "role": "Maintainer and developer",
+  "problem": "Requests for shrinkage analyses had to move through approvals and status updates without anyone chasing them.",
+  "built": "Users submit requests in a simple app, and administrators manage them from a dashboard. Automated flows handle approvals, status updates, record-keeping and email notifications.",
+  "result": "Used every week by 35–50 colleagues.",
+  "tech_notes": "Two Power Apps front ends: a request form for users and a dashboard for administrators. I built and maintained the Power Automate flows behind them. The flows route approvals, update status, log each request and send notification emails.",
   "tags": [
-    "Microsoft Power Platform",
     "Power Apps",
     "Power Automate",
-    "Process Automation",
-    "Enterprise Tools"
+    "Process automation"
   ],
   "images": [],
   "links": []

@@ -1,19 +1,20 @@
 {
   "title": "LUMA: Personal AI Desktop Assistant",
-  "short_desc": "My personal AI assistant for the desktop. Say \"Luma\" to wake it, then chat, check the news and markets, use the camera, run commands or play music — all in one app.",
-  "blueprint_title": "What it can do",
-  "blueprint_desc": "LUMA has five tools on a bar at the bottom of the screen: a live news and markets feed, a chat window (by voice or text), a camera view, a command terminal and a music player connected to Spotify. It runs on my own computer rather than in the cloud, and will eventually use LUMA Brain — the language model I am building myself. The code is private for now.",
-  "tech_notes": "The frontend is a PyQt6 desktop app built around a central animated core and five modules on a bottom dock: World Feed (live TV stream, market ticker and chart, top story and headlines), Chat (voice or text, with draggable glass-style panels), Optic (live camera view), Terminal (Luma's own commands and skills) and Music (Spotify now-playing and playback control). Replies come from a local model via Ollama today; the long-term plan is to swap in LUMA Brain, a small language model I am building from scratch and training on my own data and Luma's tools. The source code is currently private.",
+  "short_desc": "My personal AI assistant for the desktop. Say \"Luma\" to wake it. Then you can chat, check the news and markets, use the camera, run commands or play music.",
+  "role": "Personal project, sole developer",
+  "problem": "I wanted one assistant for chat, news, music and commands that runs on my own computer instead of in the cloud.",
+  "built": "LUMA has five tools on a bar at the bottom of the screen: a live news and markets feed, a chat window for voice or text, a camera view, a command terminal and a music player connected to Spotify.",
+  "result": "A working desktop app that answers with a local model today. Version 1 is public on GitHub. The current version is private.",
+  "tech_notes": "The frontend is a PyQt6 desktop app built around a central animated core and five modules on a bottom dock. World Feed shows a live TV stream, a market ticker and chart, a top story and headlines. Chat takes voice or text and uses draggable glass-style panels. Optic shows the live camera. Terminal runs Luma's own commands and skills. Music shows what is playing on Spotify and controls playback. Replies come from a local model through Ollama today. Later, I plan to swap in LUMA Brain, the small language model I am building from scratch. The source code is private.",
   "tags": [
     "Python",
     "PyQt6",
     "Ollama",
-    "Voice / wake word",
-    "Local-first AI",
+    "Voice and wake word",
+    "Local AI",
     "Spotify",
     "Desktop UI"
   ],
-  "private": true,
   "images": [
     "projects/project_luma-personal-ai-agent/luma-idle.webp",
     "projects/project_luma-personal-ai-agent/luma-chat.webp",
@@ -27,5 +28,6 @@
       "label": "Version 1 (public repo)",
       "url": "https://github.com/lauPhilip/LUMA001"
     }
-  ]
+  ],
+  "private": true
 }

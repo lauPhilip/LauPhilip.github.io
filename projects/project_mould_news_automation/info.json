@@ -1,15 +1,14 @@
 {
   "title": "Automated Engineering Newsletter",
-  "short_desc": "An automated weekly newsletter that gathers engineering news and sends it to 190+ colleagues — each receiving only the topics they signed up for.",
-  "blueprint_title": "How it works",
-  "blueprint_desc": "Colleagues submit news through a simple app, and readers pick their topics in another. Every week an automated flow sorts the news into three topic streams, builds a neatly formatted email and sends it out — respecting who has subscribed or unsubscribed.",
-  "tech_notes": "Engineered a dual-app architecture featuring a Power Apps submission portal for engineering news and a dedicated subscription preference hub for end-users. Built a complex backend Power Automate scheduler that segments news data into 3 distinct content streams, dynamically compiles them into cleanly formatted nested HTML tables, and handles automated weekly distribution while enforcing real-time opt-in/opt-out subscription states.",
+  "short_desc": "An automated weekly newsletter that gathers engineering news and sends it to 190+ colleagues. Each reader gets only the topics they signed up for.",
+  "problem": "Engineering news had to reach many colleagues, but not everyone wanted every topic.",
+  "built": "Colleagues submit news in a simple app, and readers pick their topics in another. Every week an automated flow sorts the news into three topic streams, builds a formatted email and sends it out.",
+  "result": "Sent every week to 190+ colleagues, each with their own topics.",
+  "tech_notes": "Two Power Apps: one for submitting news and one where readers manage their topics. A scheduled Power Automate flow runs weekly. It sorts the news into three topic streams, builds an HTML email from nested tables and sends it only to current subscribers.",
   "tags": [
     "Power Apps",
     "Power Automate",
-    "HTML Email Formatting",
-    "Data Segmentation",
-    "Mould Engineering"
+    "HTML email"
   ],
   "images": [],
   "links": []

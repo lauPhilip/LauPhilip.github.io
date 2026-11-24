@@ -1,16 +1,16 @@
 {
-  "title": "Generative AI Feasibility & Business Case",
-  "short_desc": "A business case on whether — and how — a global design department should start using generative AI, weighing costs, benefits and risks.",
-  "blueprint_title": "What we delivered",
-  "blueprint_desc": "Written as my bachelor's thesis together with Michael Wulff for The LEGO Group's Graphic Design Team. We looked at how generative AI could support the designers, compared different ways of introducing it, and weighed the time it could save against the cost and effort. The report ended with clear recommendations on legal risks, practical challenges in the organisation and the financial impact — and the team's leadership wrote us a letter of recommendation.",
-  "tech_notes": "Evaluated the practical feasibility of adopting Generative AI pipelines for a corporate graphic design division. Built and analyzed multi-tier implementation scenarios mapping out creative efficiency gains against technical overhead. Delivered definitive, data-driven recommendations that outlined the legal risk frameworks, practical organizational hurdles, and bottom-line financial implications of automated tooling workflows.",
+  "title": "Generative AI Business Case",
+  "short_desc": "A business case on whether and how a global design team should start using generative AI. It weighs costs, benefits and risks.",
+  "role": "Bachelor's thesis, written with Michael Wulff",
+  "problem": "The LEGO Group's Graphic Design Team wanted to know if generative AI could help its designers, and at what cost.",
+  "built": "We studied how generative AI could support the designers and compared different ways to introduce it. We weighed the time it could save against the cost and effort.",
+  "result": "The report gave clear recommendations on legal risks, challenges in the organisation and the financial impact. The team's leadership wrote us a letter of recommendation.",
+  "tech_notes": "We compared several implementation scenarios. For each one we weighed time saved for designers against cost and effort. The recommendations covered legal risk, challenges in the organisation and the financial impact.",
   "tags": [
-    "Business Case",
+    "Business case",
     "Generative AI",
-    "Feasibility Study",
-    "Financial Modelling",
-    "Strategic Innovation",
-    "Design Operations"
+    "Feasibility study",
+    "Financial modelling"
   ],
   "images": [
     "projects/project_genai_business_case/letter_of_recommendation.webp"

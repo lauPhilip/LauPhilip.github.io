@@ -1,16 +1,18 @@
 {
   "title": "AskEIVA: AI Support Assistant for EIVA",
-  "short_desc": "An AI assistant that helps EIVA's customer service team find answers fast, by searching the company's technical manuals and past support tickets.",
-  "blueprint_title": "What I did",
-  "blueprint_desc": "I first built a quick prototype in Python to prove the idea worked. I then rebuilt it as a robust, long-lasting application in C# and .NET, where the business logic, the database and the user interface are kept apart — making it easier to test, extend and hand over. The finished platform has a web interface for chatting with the assistant, configuring it and checking the quality of its answers.",
-  "tech_notes": "Successfully re-engineered a single-file Python prototype into a strictly decoupled C# Clean Architecture. By separating our core business logic from database boundaries, the system provides strict type-safety and background execution loops across four distinct layers (Domain, Application, Infrastructure with Weaviate vector operations, and a Blazor Interactive Server web interface).",
+  "short_desc": "An AI assistant built to help EIVA's customer service team find answers. It searches the company's technical manuals and past support tickets.",
+  "role": "Developer, together with EIVA",
+  "problem": "Answers to customer questions were spread across large technical manuals and old support tickets. Finding them by hand takes time.",
+  "built": "I first built a quick prototype in Python to prove the idea worked. Then I rebuilt it in C# and .NET. The business logic, the database and the user interface are kept apart, so the code is easier to test, extend and hand over. The web app lets staff chat with the assistant, configure it and check the quality of its answers.",
+  "result": "Handed over to EIVA's IT department for configuration and roll-out. The code is public on GitHub.",
+  "tech_notes": "I rewrote a single-file Python prototype as a C# solution with Clean Architecture in four layers. Domain holds the core types and rules. Application holds the use cases. Infrastructure talks to Weaviate Cloud for vector storage and search, and to the database. The web interface is Blazor Interactive Server. Long-running work runs as background services, outside the user's request. The trade-off is more structure up front, in return for strict typing and code that is safer to change and hand over. The app includes evaluation screens for checking answer quality.",
   "tags": [
     "C#",
     ".NET 10",
-    "Clean Architecture",
+    "Blazor",
+    "Weaviate",
     "GraphRAG",
-    "Weaviate Cloud",
-    "Blazor"
+    "Clean Architecture"
   ],
   "images": [
     "projects/project_ask_eiva/diagram_ask-eiva.webp",
@@ -29,11 +31,11 @@
   ],
   "links": [
     {
-      "label": "EIVA official site",
+      "label": "EIVA website",
       "url": "https://www.eiva.com/"
     },
     {
-      "label": "Github Repo",
+      "label": "GitHub repository",
       "url": "https://github.com/lauPhilip/AskEIVANet"
     }
   ]
