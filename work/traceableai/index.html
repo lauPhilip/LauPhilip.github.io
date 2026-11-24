@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TraceableAI: Literature Reviews With Checked Citations, Philip Lau</title>
+<meta name="description" content="Literature reviews written by AI, where every citation can be checked. For each cited sentence, it shows the passage in the paper that supports it, or says plainly that it found none.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E0E10" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://lauphilip.github.io/work/traceableai/">
+<meta property="og:url" content="https://lauphilip.github.io/work/traceableai/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Philip Lau">
+<meta property="og:title" content="TraceableAI: Literature Reviews With Checked Citations, Philip Lau">
+<meta property="og:description" content="Literature reviews written by AI, where every citation can be checked. For each cited sentence, it shows the passage in the paper that supports it, or says plainly that it found none.">
+<meta property="og:image" content="https://lauphilip.github.io/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/schibsted-grotesk-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/schibsted-grotesk-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/style.css?v=54131c0daf">
+<script>document.documentElement.className='js'</script>
+<meta name="goatcounter" content="lauphilip">
+<script src="/js/site.js?v=6ba2cd2ffa" defer></script>
+<script src="/js/ask.js?v=0d89569827" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="wrap header-inner">
+<a class="brand" href="/">Philip Lau</a>
+<nav class="site-nav" aria-label="Main">
+<a href="/work/" class="is-active">Work</a>
+<a href="/about/">About</a>
+<a href="/#contact">Contact</a>
+<button type="button" class="ask-trigger js-only" data-ask-open aria-haspopup="dialog"><svg aria-hidden="true" focusable="false" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span class="ask-trigger-label">Ask</span><span class="sr-only"> about my work</span></button>
+</nav>
+</div>
+</header>
+<main id="main" class="wrap project">
+<article>
+<div class="project-head">
+<a class="back-link" href="/work/">Back to all work</a>
+<h1 class="project-title">TraceableAI: Literature Reviews With Checked Citations</h1>
+<p class="project-lead">Literature reviews written by AI, where every citation can be checked. For each cited sentence, it shows the passage in the paper that supports it, or says plainly that it found none.</p>
+<ul class="project-links"><li><a href="https://au-btech-literature-review-agent.dk">Live site</a></li><li><a href="https://github.com/lauPhilip/au-btech-literature-review-agent">GitHub repository</a></li><li><a href="https://doi.org/10.5281/zenodo.24379094">Zenodo DOI</a></li><li><a href="https://indico.cern.ch/event/1622016/">OSSYM 2026</a></li></ul>
+</div>
+<dl class="facts"><div><dt>Where</dt><dd>Aarhus University</dd></div><div><dt>My role</dt><dd>Designer and developer, first author of the paper</dd></div><div><dt>Status</dt><dd>Ongoing</dd></div></dl>
+<div class="project-media"><img src="/projects/project_au-btech-literature-review/citation-check.webp" alt="TraceableAI flagging an unsupported citation" width="960" height="540" class="project-cover" fetchpriority="high" decoding="async"></div>
+<div class="story">
+<section class="story-block"><h2 class="h2-small">The problem</h2><p>A literature review reads the published research on a question and sums up what it says, citing each paper it relies on. Ask a language model to review the literature, and you get fluent text with citations that are often wrong, mismatched or invented. Researchers cannot trust a review they cannot check.</p></section>
+<section class="story-block"><h2 class="h2-small">What I built</h2><p>A web app that runs a full PRISMA 2020 systematic review. You type a research question and your criteria. It writes the review protocol before it searches, searches open scholarly databases, screens every record twice, reads the open-access full texts and groups the findings into themes. Then it writes the report and checks every citation against the paper it cites.</p></section>
+<section class="story-block"><h2 class="h2-small">The result</h2><p>Across 20 completed reviews, TraceableAI checked 1,732 citations. 74% of them were supported by their source, and 80% of the included studies were cited in the final text. Two screening agents agreed with a Cohen&#x27;s kappa of 0.81. The paper is accepted at OSSYM 2026, the 8th International Open Search Symposium at CODE University in Berlin. The tool is open source under Apache 2.0, live on its own website, and each release is archived with a DOI on Zenodo.</p></section>
+</div>
+<section class="tech" aria-labelledby="tech-title">
+<div class="tech-head">
+<h2 id="tech-title" class="h2-small">For engineers: how it works</h2>
+
+</div>
+
+<p class="tech-notes">ASP.NET Core and Blazor on .NET 10, in C#. The model is Mistral through its API, or a local model through Ollama. The code is grouped by review stage: Sources (arXiv, OpenAlex, Semantic Scholar, Crossref, and Scopus and IEEE Xplore with a key), Search, Screening, Evidence, Synthesis, Verification and Report. Every model answer is JSON that is validated in code. A citation verdict counts only when its supporting quote is found word for word in the paper. A sentence that claims more than its source is rewritten and checked again, and an unsupported citation is removed. Counts, the methods section and the PRISMA flow diagram are written by code from what the run did, never by the model. Screening runs twice with independent prompts, and agreement is reported as Cohen&#x27;s kappa. Each run keeps its protocol, raw database responses, every decision and every model call on file, fingerprinted with SHA-256 and downloadable as one archive with a LaTeX manuscript and BibTeX and RIS files. Text from papers is treated as data: hidden text is stripped and phrases that try to steer the model are flagged. Other tools can start a review through a REST API or an MCP server. The xUnit tests run offline against a scripted fake model.</p>
+<p class="tech-tags"><span class="sr-only">Technologies: </span>C#, .NET 10, Blazor, Mistral, PRISMA 2020, Citation checking, Open source</p>
+</section>
+<section class="gallery" aria-labelledby="gallery-title">
+<h2 id="gallery-title" class="h2-small">Images</h2>
+<ul class="gallery-grid"><li><a href="/projects/project_au-btech-literature-review/report.webp"><img src="/projects/project_au-btech-literature-review/report.webp" alt="TraceableAI: report" width="720" height="405" loading="lazy" decoding="async"></a></li></ul>
+</section>
+<nav class="project-nav" aria-label="More projects">
+<a class="all-link" href="/work/">All projects</a>
+<a class="next-link" href="/work/coursebot/"><span class="next-label">Next project</span><span class="next-title">Coursebot: AI Course Assistants for Teachers</span></a>
+</nav>
+</article>
+</main>
+<footer class="site-footer footer-slim">
+<div class="wrap footer-slim-inner">
+<div class="footer-slim-links">
+<a href="mailto:philip15@live.dk">philip15@live.dk</a>
+<a href="https://www.linkedin.com/in/philip--lau/">LinkedIn</a>
+<a href="https://github.com/lauPhilip">GitHub</a>
+</div>
+<p>© 2026 Philip Lau</p>
+</div>
+</footer>
+<dialog class="ask-panel" id="ask-panel" aria-labelledby="ask-panel-title" data-endpoint="https://ask-lau.philip15.workers.dev">
+<div class="ask-panel-head">
+<h2 id="ask-panel-title">Ask about my work</h2>
+<button type="button" class="icon-btn" data-ask-close aria-label="Close"><svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+</div>
+<div class="ask-log" id="ask-log" role="log" aria-live="polite" aria-relevant="additions">
+<div class="ask-intro">
+<p>The answer comes from the content on this site and links to where it found it.</p>
+<div class="chips"><button type="button" class="chip" data-ask-q="What did he build at LEGO?">What did he build at LEGO?</button><button type="button" class="chip" data-ask-q="Which programming languages does he use?">Which programming languages does he use?</button><button type="button" class="chip" data-ask-q="What is TraceableAI?">What is TraceableAI?</button></div>
+</div>
+</div>
+<form class="ask-panel-form" id="ask-panel-form" autocomplete="off">
+<label class="sr-only" for="ask-panel-input">Your question</label>
+<input id="ask-panel-input" name="q" type="text" maxlength="300" placeholder="Ask a question" data-placeholder-next="Ask another question">
+<button type="submit" class="btn btn-primary">Ask</button>
+</form>
+<p class="ask-note">Answers are generated from this site and can be wrong.</p>
+</dialog>
+</body>
+</html>

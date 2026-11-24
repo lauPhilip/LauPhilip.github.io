@@ -1,18 +1,17 @@
 {
   "title": "Coursebot: AI Course Assistants for Teachers",
-  "short_desc": "A platform where university teachers can set up their own AI chatbot for a course — without writing any code. Students can ask it questions, and it only answers from the course's own material.",
-  "blueprint_title": "How it works",
-  "blueprint_desc": "Teachers add their course material and create a bot for each course or lecture. The bot's answers are kept to that material, so students get guidance that matches what is actually taught. Teachers can also see what students are asking and how well the bot is helping — useful input for improving the teaching itself.",
-  "tech_notes": "Coursebot is a reference implementation for an Agentic Educational Ecosystem. It demonstrates how modular AI agents can be managed within a university framework to provide real-time, pedagogically sound guidance to students.  The platform provides a centralized hub for: 1: Staff-Led Bot Architecture: Non-technical creation of lecture-specific agents, 2: Knowledge Grounding: Ensuring AI responses are strictly anchored to verified course DNA, 3: Interaction Observability: Real-time analytics into student lexical patterns and bot efficacy. Built with Laravel (PHP) and Vue, styled with SCSS. Developed against SQLite locally; runs on PostgreSQL. The source code is currently private.",
+  "short_desc": "A platform where university teachers set up an AI chatbot for their course, without writing code. Students ask it questions, and it answers only from the course material.",
+  "problem": "General AI chatbots answer from anywhere, not from what is taught in the course. Teachers also cannot see what their students ask them.",
+  "built": "I build the frontend and backend, design the interface and test the platform. A colleague runs the server and database. Teachers add their course material and create a bot for each course or lecture. The bot only answers from that material, so students get guidance that matches the teaching. Teachers can see what students ask and how well the bot helps.",
+  "result": "In development for bachelor's and master's programmes. The source code is private.",
+  "tech_notes": "Laravel (PHP) backend with a Vue frontend, styled with SCSS. SQLite for local development and PostgreSQL in deployment. Teachers create one bot per course or lecture in a web interface, with no code. Answers are grounded in the uploaded course material with retrieval-augmented generation (RAG). An analytics view shows what students ask and how each bot performs. I build the frontend, backend, design and tests, and a colleague runs the server and database. The source code is private.",
   "tags": [
     "Laravel",
     "Vue",
     "PHP",
-    "SCSS",
     "PostgreSQL",
-    "SQLite (dev)",
-    "Generative AI",
-    "RAG"
+    "RAG",
+    "Generative AI"
   ],
   "images": [
     "projects/project_au-btech-course-bot/diagram_course-bot.webp",
@@ -20,5 +19,6 @@
     "projects/project_au-btech-course-bot/coursebot-error-broken.webp"
   ],
   "links": [],
-  "private": true
+  "private": true,
+  "role": "Main developer (frontend, backend, design and testing)"
 }

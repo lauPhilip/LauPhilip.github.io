@@ -1,14 +1,15 @@
 {
   "title": "Online Yoga Platform",
-  "short_desc": "A home yoga platform I built for my girlfriend: a video library with routines, plus a log to track progress over time.",
-  "blueprint_title": "Yoga Platform for my girlfriend",
-  "blueprint_desc": "Videos load quickly and play smoothly, routines are neatly organised, and every session is logged so progress is easy to follow — one place for both practice and training notes.",
-  "tech_notes": "Designed to host and pipeline high-definition media playback layouts with minimal loading latency. Built with decoupled database backends to easily log video progression states alongside custom performance subroutines, providing an integrated space for organizing both mental consistency and training logs.",
+  "short_desc": "A home yoga platform I built for my girlfriend. It has a video library with routines and a log to track progress over time.",
+  "role": "Personal project",
+  "problem": "My girlfriend wanted one place for her yoga routines and her training notes.",
+  "built": "A web app with a video library of routines and a log of every session. Videos load quickly and play smoothly.",
+  "result": "One place for both practice and training notes.",
+  "tech_notes": "A web app with a video library and a database that stores each logged session, so progress can be followed over time. The video pages are set up to load quickly.",
   "tags": [
-    "Web Architecture",
-    "Media Pipelines",
-    "Database Scripting",
-    "Frontend Design"
+    "Web development",
+    "Video",
+    "Database"
   ],
   "images": [
     "projects/project_yoga-platform/logo.webp"

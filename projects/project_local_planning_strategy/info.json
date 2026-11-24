@@ -1,19 +1,20 @@
 {
   "title": "Digitalization Strategy for Local Planning",
-  "short_desc": "A business case that replaced scattered, home-made tools and workarounds (\"shadow IT\") with one shared, company-approved system.",
-  "blueprint_title": "How it came together",
-  "blueprint_desc": "I interviewed the people involved, mapped how planning was really being done, built simple prototypes to test different ways of working, and estimated the financial impact. The resulting plan convinced management to adopt one unified IT system instead of the patchwork of local solutions.",
-  "tech_notes": "Conducted a deep-dive operational feasibility study and business case to centralize fragmented local planning workflows. Gathered diverse stakeholder requirements through targeted interviews, designed functional prototypes to validate alternative user journeys, and modeled financial impact scenarios. The resulting strategic roadmap successfully dismantled decentralized shadow IT processes and directly drove the executive adoption and deployment of a unified IT system architecture.",
+  "short_desc": "An internship business case at the LEGO Group. It looked at how to replace many separate Excel sheets in local planning with one shared planning tool.",
+  "problem": "Local planning was done in many different Excel sheets. Each planner worked in their own way, and much of the knowledge was in people's heads.",
+  "built": "I interviewed 7 local planners and mapped how planning was done in practice. I wrote a 60-page business proposal with the economics, the business case, user requirements and recommendations. I also built a rapid prototype in Power Apps, wrote a one-page brief for leadership and presented it to management.",
+  "result": "The LEGO Group later approved Kinaxis Maestro as a unified planning tool, a need my analysis helped document.",
+  "tech_notes": "Method: interviews with 7 local planners, a map of the current planning process across their Excel sheets, a rapid Power Apps prototype to test a shared way of working, and a 60-page business proposal covering economics, business case, user requirements and recommendations. The findings were condensed into a one-page brief and presented to management.",
   "tags": [
-    "Digitalization Strategy",
-    "Business Case",
-    "Stakeholder Management",
-    "Requirements Engineering",
-    "Prototyping",
-    "Shadow IT Elimination"
+    "Digitalization strategy",
+    "Business case",
+    "Requirements",
+    "Power Apps",
+    "Prototyping"
   ],
   "images": [
     "projects/project_local_planning_strategy/planningbrick.webp"
   ],
-  "links": []
+  "links": [],
+  "role": "Engineering intern, the LEGO Group (Mould Engineering Prototypes)"
 }

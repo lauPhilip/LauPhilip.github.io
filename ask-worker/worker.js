@@ -23,7 +23,6 @@
  *              PROVIDER "anthropic" + secret ANTHROPIC_API_KEY + MODEL"
  */
 
-const FILES = ['site', 'experience', 'education', 'volunteering', 'skills', 'publications', 'certifications', 'projects'];
 let cache = { at: 0, passages: null };
 const hits = new Map(); // best-effort per-IP rate limit (per Worker instance)
 
@@ -76,44 +75,21 @@ export default {
   },
 };
 
-// Turn the portfolio into short plain-text passages (small models do better with prose than JSON).
+// Load the passages that build.py writes to data/ask-index.json on the live site.
+// The same file powers the in-browser search, so the Worker never needs to know the JSON schemas.
 async function loadKnowledge(env) {
   if (cache.passages && Date.now() - cache.at < 3_600_000) return cache.passages;
   const base = (env.SITE_URL || 'https://lauphilip.github.io').replace(/\/$/, '');
-  const get = async (path) => (await fetch(`${base}/${path}`, { cf: { cacheTtl: 3600 } })).json();
-  const d = Object.fromEntries(await Promise.all(FILES.map(async (f) => [f, await get(`data/${f}.json`).catch(() => null)])));
-  const out = []; // { text, core }
-  const add = (text, core = false) => text && out.push({ text: String(text).replace(/\s+/g, ' ').trim(), core });
-  const s = d.site || {}; const c = s.contact || {};
-
-  add(`${s.name} is currently ${s.role}. ${s.availability_text || ''}. Degrees: ${(s.degrees || []).join('; ')}.`, true);
-  add(`About: ${s.bio}`, true);
-  add(`Contact: email ${c.email}, phone ${c.phone}, based in ${c.location}, LinkedIn ${c.linkedin}, GitHub ${c.github}.`, true);
-  add(`Languages: ${(s.languages || []).join(', ')}. Interests: ${(s.interests || []).join(', ')}.`);
-  (s.quick?.highlights || []).forEach((h) => add(`Highlight: ${h}`, true));
-  if (s.quick?.looking_for) add(`Roles he is looking for: ${s.quick.looking_for}.`, true);
-  (s.goals || []).forEach((g) => add(`Career goal (${g.horizon}): ${g.text}`));
-  (s.now || []).forEach((n) => add(`Right now - ${n.kicker}: ${n.title}. ${n.text}`));
-  if (s.featured) add(`Media: ${s.featured.title}. ${s.featured.kicker}. ${s.featured.text} ${s.featured.badge || ''}`);
-  (d.experience || []).forEach((j) => (j.points || []).forEach((p) =>
-    add(`Job: ${j.title}, ${j.org} (${j.period}). ${typeof p === 'string' ? p : `${p.text} ${(p.sub || []).join(' ')}`}`)));
-  (d.education || []).forEach((e) => add(`Education: ${e.title}, ${e.org}, ${e.period}, final grade ${e.grade}. ${(e.points || []).join(' ')} Courses include ${(e.courses || []).join(', ')}.`));
-  (d.volunteering || []).forEach((v) => add(`Volunteering: ${v.title}, ${v.org} (${v.period}). ${(v.points || []).join(' ')}`));
-  const sk = d.skills || {}; const groups = {};
-  (sk.tools || []).forEach((t) => (groups[t.group] ??= []).push(t.name));
-  Object.entries(groups).forEach(([g, n]) => add(`Skills (${g}): ${n.join(', ')}.`));
-  (sk.capabilities || []).forEach((cap) => cap.items.forEach((i) => add(`${cap.title} skill - ${i.name}: ${i.text}`)));
-  if (sk.learning) add(`Currently learning: ${sk.learning.join(', ')}. Next: ${(sk.bucket_list || []).join(', ')}.`);
-  (d.publications || []).forEach((p) => add(`${p.type} (${p.year}): ${p.title}. ${p.authors}. ${p.venue}. ${p.status || ''}`));
-  (d.certifications || []).forEach((x) => add(`Certification: ${x.title} from ${x.issuer} (${x.date}).`));
-  const projects = await Promise.all((d.projects || []).map(async (p) => ({ ...(await get(`projects/${p.id}/info.json`).catch(() => ({}))), ...p })));
-  projects.filter((p) => p.title).forEach((p) => {
-    add(`Project (${p.status}, ${p.category}): ${p.title}. ${p.short_desc} ${p.blueprint_desc || ''}`);
-    add(`Project ${p.title} - technologies: ${(p.tags || []).join(', ')}. ${p.tech_notes || ''}`);
-  });
-
-  cache = { at: Date.now(), passages: out };
-  return out;
+  const res = await fetch(`${base}/data/ask-index.json`, { cf: { cacheTtl: 3600 } });
+  if (!res.ok) throw new Error(`ask-index.json ${res.status}`);
+  const index = await res.json();
+  const CORE_KINDS = new Set(['About', 'Career goals', 'Highlights', 'Contact']);
+  const passages = (index.docs || []).map((d) => ({
+    text: `${d.k}: ${d.t}. ${d.x}`.replace(/\s+/g, ' ').trim(),
+    core: CORE_KINDS.has(d.k),
+  }));
+  cache = { at: Date.now(), passages };
+  return passages;
 }
 
 // Keep the prompt small: core facts + the passages that share the most words with the question.

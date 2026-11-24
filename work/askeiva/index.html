@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AskEIVA: AI Support Assistant for EIVA, Philip Lau</title>
+<meta name="description" content="An AI assistant built to help EIVA&#x27;s customer service team find answers. It searches the company&#x27;s technical manuals and past support tickets.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E0E10" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://lauphilip.github.io/work/askeiva/">
+<meta property="og:url" content="https://lauphilip.github.io/work/askeiva/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Philip Lau">
+<meta property="og:title" content="AskEIVA: AI Support Assistant for EIVA, Philip Lau">
+<meta property="og:description" content="An AI assistant built to help EIVA&#x27;s customer service team find answers. It searches the company&#x27;s technical manuals and past support tickets.">
+<meta property="og:image" content="https://lauphilip.github.io/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/schibsted-grotesk-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/schibsted-grotesk-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/style.css?v=54131c0daf">
+<script>document.documentElement.className='js'</script>
+<meta name="goatcounter" content="lauphilip">
+<script src="/js/site.js?v=6ba2cd2ffa" defer></script>
+<script src="/js/ask.js?v=0d89569827" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="wrap header-inner">
+<a class="brand" href="/">Philip Lau</a>
+<nav class="site-nav" aria-label="Main">
+<a href="/work/" class="is-active">Work</a>
+<a href="/about/">About</a>
+<a href="/#contact">Contact</a>
+<button type="button" class="ask-trigger js-only" data-ask-open aria-haspopup="dialog"><svg aria-hidden="true" focusable="false" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span class="ask-trigger-label">Ask</span><span class="sr-only"> about my work</span></button>
+</nav>
+</div>
+</header>
+<main id="main" class="wrap project">
+<article>
+<div class="project-head">
+<a class="back-link" href="/work/">Back to all work</a>
+<h1 class="project-title">AskEIVA: AI Support Assistant for EIVA</h1>
+<p class="project-lead">An AI assistant built to help EIVA&#x27;s customer service team find answers. It searches the company&#x27;s technical manuals and past support tickets.</p>
+<ul class="project-links"><li><a href="https://www.eiva.com/">EIVA website</a></li><li><a href="https://github.com/lauPhilip/AskEIVANet">GitHub repository</a></li></ul>
+</div>
+<dl class="facts"><div><dt>Where</dt><dd>Aarhus University</dd></div><div><dt>My role</dt><dd>Developer, together with EIVA</dd></div><div><dt>Status</dt><dd>Finished</dd></div></dl>
+<div class="project-media"><img src="/projects/project_ask_eiva/chat-0.webp" alt="AskEIVA chat screen" width="1600" height="770" class="project-cover" fetchpriority="high" decoding="async"></div>
+<div class="story">
+<section class="story-block"><h2 class="h2-small">The problem</h2><p>Answers to customer questions were spread across large technical manuals and old support tickets. Finding them by hand takes time.</p></section>
+<section class="story-block"><h2 class="h2-small">What I built</h2><p>I first built a quick prototype in Python to prove the idea worked. Then I rebuilt it in C# and .NET. The business logic, the database and the user interface are kept apart, so the code is easier to test, extend and hand over. The web app lets staff chat with the assistant, configure it and check the quality of its answers.</p></section>
+<section class="story-block"><h2 class="h2-small">The result</h2><p>Handed over to EIVA&#x27;s IT department for configuration and roll-out. The code is public on GitHub.</p></section>
+</div>
+<section class="tech" aria-labelledby="tech-title">
+<div class="tech-head">
+<h2 id="tech-title" class="h2-small">For engineers: how it works</h2>
+
+</div>
+
+<p class="tech-notes">I rewrote a single-file Python prototype as a C# solution with Clean Architecture in four layers. Domain holds the core types and rules. Application holds the use cases. Infrastructure talks to Weaviate Cloud for vector storage and search, and to the database. The web interface is Blazor Interactive Server. Long-running work runs as background services, outside the user&#x27;s request. The trade-off is more structure up front, in return for strict typing and code that is safer to change and hand over. On top of vector search, a language model reads the manuals and tickets and pulls out entities, such as a drone and an underwater operation, and links them through the words that relate them. That graph lets the assistant follow related topics, not only similar wording. The app includes evaluation screens for checking answer quality.</p>
+<p class="tech-tags"><span class="sr-only">Technologies: </span>C#, .NET 10, Blazor, Weaviate, GraphRAG, Clean Architecture</p>
+</section>
+<section class="gallery" aria-labelledby="gallery-title">
+<h2 id="gallery-title" class="h2-small">Images</h2>
+<ul class="gallery-grid"><li><a href="/projects/project_ask_eiva/diagram_ask-eiva.webp"><img src="/projects/project_ask_eiva/diagram_ask-eiva.webp" alt="AskEIVA: diagram ask eiva" width="2000" height="1393" loading="lazy" decoding="async"></a></li><li><a href="/projects/project_ask_eiva/chat-1.webp"><img src="/projects/project_ask_eiva/chat-1.webp" alt="AskEIVA: chat" width="1600" height="766" loading="lazy" decoding="async"></a></li><li><a href="/projects/project_ask_eiva/chat-2.webp"><img src="/projects/project_ask_eiva/chat-2.webp" alt="AskEIVA: chat" width="1600" height="764" loading="lazy" decoding="async"></a></li><li><a href="/projects/project_ask_eiva/configuration-0.webp"><img src="/projects/project_ask_eiva/configuration-0.webp" alt="AskEIVA: configuration" width="1600" height="765" loading="lazy" decoding="async"></a></li><li><a href="/projects/project_ask_eiva/configuration-1.webp"><img src="/projects/project_ask_eiva/configuration-1.webp" alt="AskEIVA: configuration" width="1600" height="768" loading="lazy" decoding="async"></a></li><li><a href="/projects/project_ask_eiva/configuration-2.webp"><img src="/projects/project_ask_eiva/configuration-2.webp" alt="AskEIVA: configuration" width="1600" height="767" loading="lazy" decoding="async"></a></li><li><a href="/projects/project_ask_eiva/eval-0.webp"><img src="/projects/project_ask_eiva/eval-0.webp" alt="AskEIVA: eval" width="1600" height="766" loading="lazy" decoding="async"></a></li><li><a href="/projects/project_ask_eiva/eval-1.webp"><img src="/projects/project_ask_eiva/eval-1.webp" alt="AskEIVA: eval" width="1600" height="763" loading="lazy" decoding="async"></a></li><li><a href="/projects/project_ask_eiva/graphrag.webp"><img src="/projects/project_ask_eiva/graphrag.webp" alt="AskEIVA: graphrag" width="1600" height="765" loading="lazy" decoding="async"></a></li><li><a href="/projects/project_ask_eiva/home.webp"><img src="/projects/project_ask_eiva/home.webp" alt="AskEIVA: home" width="1600" height="766" loading="lazy" decoding="async"></a></li><li><a href="/projects/project_ask_eiva/login.webp"><img src="/projects/project_ask_eiva/login.webp" alt="AskEIVA: login" width="1600" height="765" loading="lazy" decoding="async"></a></li><li><a href="/projects/project_ask_eiva/register.webp"><img src="/projects/project_ask_eiva/register.webp" alt="AskEIVA: register" width="1600" height="764" loading="lazy" decoding="async"></a></li></ul>
+</section>
+<nav class="project-nav" aria-label="More projects">
+<a class="all-link" href="/work/">All projects</a>
+<a class="next-link" href="/work/shrinkage-analysis/"><span class="next-label">Next project</span><span class="next-title">Shrinkage Analysis Request Tool</span></a>
+</nav>
+</article>
+</main>
+<footer class="site-footer footer-slim">
+<div class="wrap footer-slim-inner">
+<div class="footer-slim-links">
+<a href="mailto:philip15@live.dk">philip15@live.dk</a>
+<a href="https://www.linkedin.com/in/philip--lau/">LinkedIn</a>
+<a href="https://github.com/lauPhilip">GitHub</a>
+</div>
+<p>© 2026 Philip Lau</p>
+</div>
+</footer>
+<dialog class="ask-panel" id="ask-panel" aria-labelledby="ask-panel-title" data-endpoint="https://ask-lau.philip15.workers.dev">
+<div class="ask-panel-head">
+<h2 id="ask-panel-title">Ask about my work</h2>
+<button type="button" class="icon-btn" data-ask-close aria-label="Close"><svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+</div>
+<div class="ask-log" id="ask-log" role="log" aria-live="polite" aria-relevant="additions">
+<div class="ask-intro">
+<p>The answer comes from the content on this site and links to where it found it.</p>
+<div class="chips"><button type="button" class="chip" data-ask-q="What did he build at LEGO?">What did he build at LEGO?</button><button type="button" class="chip" data-ask-q="Which programming languages does he use?">Which programming languages does he use?</button><button type="button" class="chip" data-ask-q="What is TraceableAI?">What is TraceableAI?</button></div>
+</div>
+</div>
+<form class="ask-panel-form" id="ask-panel-form" autocomplete="off">
+<label class="sr-only" for="ask-panel-input">Your question</label>
+<input id="ask-panel-input" name="q" type="text" maxlength="300" placeholder="Ask a question" data-placeholder-next="Ask another question">
+<button type="submit" class="btn btn-primary">Ask</button>
+</form>
+<p class="ask-note">Answers are generated from this site and can be wrong.</p>
+</dialog>
+</body>
+</html>

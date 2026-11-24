@@ -1,0 +1,36 @@
+{
+  "title": "Open Door: A Classroom Game for Threat Modelling",
+  "short_desc": "A free browser game that teaches threat modelling. Student teams walk through a made-up company, spot what could go wrong, and then see if they saw the incident coming.",
+  "role": "Creator and developer",
+  "problem": "Threat modelling is hard to teach from slides. Students need to practise finding assets and threats in a setting that feels like a company.",
+  "built": "A team game for one class of 45 or 90 minutes. Teams walk around Nordknit, a made-up Danish clothing business, talk to staff, look closer at things like the Wi-Fi router, and stick notes where they see a risk. Then an incident plays out, such as a fake e-mail that changes the bank details, and each team votes on what the CEO should do. Students join with a code on the projector, with no accounts. The teacher runs the class from one page, can send hints, and ends the session, which deletes everything.",
+  "result": "Playable from start to finish with two scenarios, and live on the web. It has been tested with simulated classes and in browsers at six screen sizes. A pilot class is the next step. Built for the MSc in Engineering, Technology-Based Business Development, in Herning.",
+  "tech_notes": "TypeScript in three workspaces: a Svelte 5 app built with Vite, a Cloudflare Worker that hosts live sessions, and shared game rules and messages. Each session is a Durable Object that holds the game state and applies the rules; browsers connect to it over a WebSocket, and the projector page watches the same room without changing it. The office map is drawn in SVG inside Svelte. Scenarios are plain YAML files checked against a JSON schema, so teachers can write new ones without coding, and printable paper kits are built from the same files. Security follows the game's own method: rate limits on session creation and lookups, a per-connection message limit, origin checks, a random teacher key kept in the URL fragment, a content security policy, and deletion of all data when the session ends or after six hours. Tested with Vitest and Playwright, including accessibility checks with axe. Code under MIT, content under CC BY-SA 4.0, building on the CyPro method from Aarhus University.",
+  "tags": [
+    "TypeScript",
+    "Svelte",
+    "Cloudflare Workers",
+    "WebSockets",
+    "Threat modelling",
+    "Game-based learning",
+    "Open source"
+  ],
+  "images": [
+    "projects/project_au-btech-open-door/office-map.webp",
+    "projects/project_au-btech-open-door/room-view.webp"
+  ],
+  "links": [
+    {
+      "label": "Play the game",
+      "url": "https://open-door.aubtech.workers.dev/"
+    },
+    {
+      "label": "GitHub repository",
+      "url": "https://github.com/lauPhilip/au-btech-open-door"
+    },
+    {
+      "label": "Documentation",
+      "url": "https://lauphilip.github.io/au-btech-open-door/"
+    }
+  ]
+}

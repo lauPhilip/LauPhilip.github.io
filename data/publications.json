@@ -2,21 +2,31 @@
   {
     "year": "2026",
     "type": "Paper",
-    "title": "TraceableAI — a traceable, PRISMA-compliant agentic literature-review environment",
+    "title": "TraceableAI: An Open-Source Agentic Framework for PRISMA-Compliant Literature Synthesis",
     "authors": "Philip Lau, Nidhi",
-    "venue": "OSSYM 2026 · Open Search Symposium, CODE University Berlin",
-    "status": "Upcoming",
+    "venue": "Proceedings of the 8th International Open Search Symposium (OSSYM 2026), CODE University Berlin",
+    "status": "Accepted",
     "links": [
-      { "label": "Conference", "url": "https://indico.cern.ch/event/1622016/" },
-      { "label": "Code", "url": "https://github.com/lauPhilip/au-btech-literature-review-agent" }
+      {
+        "label": "Conference",
+        "url": "https://indico.cern.ch/event/1622016/"
+      },
+      {
+        "label": "Code",
+        "url": "https://github.com/lauPhilip/au-btech-literature-review-agent"
+      },
+      {
+        "label": "Software DOI",
+        "url": "https://doi.org/10.5281/zenodo.24379094"
+      }
     ]
   },
   {
     "year": "2026",
-    "type": "Workshop",
-    "title": "Architecting AI business cases with 33A AI Cards®",
+    "type": "Teaching",
+    "title": "Teaching master's students to build AI business cases with 33A AI Cards®",
     "authors": "Philip Lau",
-    "venue": "Aarhus University, BTECH — master's students",
+    "venue": "Aarhus University, BTECH, workshop for master's students",
     "links": []
   }
 ]

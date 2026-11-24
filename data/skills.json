@@ -1,74 +1,159 @@
 {
   "tools": [
-    { "name": "Python", "group": "Languages & frameworks", "icon": "devicon:python/python-original" },
-    { "name": "C#", "group": "Languages & frameworks", "icon": "devicon:csharp/csharp-original" },
-    { "name": "JavaScript", "group": "Languages & frameworks", "icon": "devicon:javascript/javascript-original" },
-    { "name": "PHP", "group": "Languages & frameworks", "icon": "devicon:php/php-original" },
-    { "name": "HTML", "group": "Languages & frameworks", "icon": "devicon:html5/html5-original" },
-    { "name": "CSS", "group": "Languages & frameworks", "icon": "devicon:css3/css3-original" },
-    { "name": "SCSS", "group": "Languages & frameworks", "icon": "devicon:sass/sass-original" },
-    { "name": "Laravel", "group": "Languages & frameworks", "icon": "devicon:laravel/laravel-original" },
-    { "name": "Vue", "group": "Languages & frameworks", "icon": "devicon:vuejs/vuejs-original" },
-    { "name": "MySQL", "group": "Data", "icon": "devicon:mysql/mysql-original" },
-    { "name": "SQLite", "group": "Data", "icon": "devicon:sqlite/sqlite-original" },
-    { "name": "PostgreSQL", "group": "Data", "icon": "devicon:postgresql/postgresql-original" },
-    { "name": "JSON", "group": "Data", "icon": "devicon:json/json-original" },
     {
-      "name": "JSONL",
-      "group": "Data",
-      "mono": "{}"
+      "name": "Python",
+      "group": "Languages"
     },
-    { "name": "YAML", "group": "Data", "icon": "devicon:yaml/yaml-original" },
-    { "name": "Markdown", "group": "Data", "icon": "devicon:markdown/markdown-original", "invert": true },
-    { "name": "Databricks", "group": "Data", "icon": "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/databricks/default.svg" },
-    { "name": "Weaviate", "group": "AI", "mono": "W" },
-    { "name": "Gemini", "group": "AI", "icon": "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/gemini/default.svg" },
-    { "name": "Mistral AI", "group": "AI", "icon": "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/mistral/default.svg" },
-    { "name": "Claude", "group": "AI", "icon": "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/claude/default.svg" },
-    { "name": "Streamlit", "group": "AI", "icon": "devicon:streamlit/streamlit-original" },
-    { "name": "Google Colab", "group": "AI", "icon": "devicon:googlecolab/googlecolab-original" },
-    { "name": "Power Apps", "group": "Microsoft", "icon": "https://img.icons8.com/fluency/48/microsoft-power-apps-2020.png" },
-    { "name": "Power Automate", "group": "Microsoft", "icon": "https://img.icons8.com/fluency/48/microsoft-power-automate-2020.png" },
-    { "name": "SharePoint", "group": "Microsoft", "icon": "https://img.icons8.com/fluency/48/microsoft-sharepoint-2019.png" },
-    { "name": "GitHub", "group": "Tools", "icon": "devicon:github/github-original", "invert": true },
-    { "name": "VS Code", "group": "Tools", "icon": "devicon:vscode/vscode-original" },
-    { "name": "Postman", "group": "Tools", "icon": "devicon:postman/postman-original" },
-    { "name": "REST APIs", "group": "Tools", "mono": "⇄" },
-    { "name": "Figma", "group": "Tools", "icon": "devicon:figma/figma-original" },
-    { "name": "Miro", "group": "Tools", "icon": "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/miro/default.svg" },
-    { "name": "Jira", "group": "Tools", "icon": "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/jira/default.svg" }
-  ],
-  "learning": [
-    "C#",
-    ".NET",
-    "TypeScript"
-  ],
-  "bucket_list": [
-    "Terraform",
-    "Bicep",
-    "Gherkin",
-    "React Native",
-    "Angular",
-    "Rust",
-    "Docker"
+    {
+      "name": "C#",
+      "group": "Languages"
+    },
+    {
+      "name": "JavaScript",
+      "group": "Languages"
+    },
+    {
+      "name": "PHP",
+      "group": "Languages"
+    },
+    {
+      "name": "TypeScript",
+      "group": "Languages"
+    },
+    {
+      "name": "SQL",
+      "group": "Languages"
+    },
+    {
+      "name": "HTML",
+      "group": "Languages"
+    },
+    {
+      "name": "CSS and SCSS",
+      "group": "Languages"
+    },
+    {
+      "name": ".NET",
+      "group": "Frameworks"
+    },
+    {
+      "name": "Blazor",
+      "group": "Frameworks"
+    },
+    {
+      "name": "Laravel",
+      "group": "Frameworks"
+    },
+    {
+      "name": "Vue",
+      "group": "Frameworks"
+    },
+    {
+      "name": "PyQt6",
+      "group": "Frameworks"
+    },
+    {
+      "name": "Svelte",
+      "group": "Frameworks"
+    },
+    {
+      "name": "PyTorch",
+      "group": "AI and data"
+    },
+    {
+      "name": "Ollama",
+      "group": "AI and data"
+    },
+    {
+      "name": "Mistral AI",
+      "group": "AI and data"
+    },
+    {
+      "name": "Weaviate",
+      "group": "AI and data"
+    },
+    {
+      "name": "Databricks",
+      "group": "AI and data"
+    },
+    {
+      "name": "PostgreSQL",
+      "group": "AI and data"
+    },
+    {
+      "name": "MySQL",
+      "group": "AI and data"
+    },
+    {
+      "name": "SQLite",
+      "group": "AI and data"
+    },
+    {
+      "name": "Power Apps",
+      "group": "Microsoft Power Platform"
+    },
+    {
+      "name": "Power Automate",
+      "group": "Microsoft Power Platform"
+    },
+    {
+      "name": "SharePoint",
+      "group": "Microsoft Power Platform"
+    },
+    {
+      "name": "Git and GitHub",
+      "group": "Tools"
+    },
+    {
+      "name": "Cloudflare Workers",
+      "group": "Tools"
+    },
+    {
+      "name": "REST APIs",
+      "group": "Tools"
+    }
   ],
   "capabilities": [
     {
       "title": "Technical",
       "items": [
-        { "name": "Generative AI", "text": "Building AI assistants that answer questions from an organisation's own documents and data." },
-        { "name": "Application automation", "text": "Custom business dashboards, workflow rules and low-code integrations on the Power Platform." },
-        { "name": "Cybersecurity basics", "text": "Spotting security weak points in applications early, using structured threat modelling." },
-        { "name": "Data & web", "text": "Building websites and web apps end to end — from the database to what the user sees." }
+        {
+          "name": "AI assistants",
+          "text": "Assistants that answer questions from an organisation's own documents, such as MIND at the LEGO Group and AskEIVA."
+        },
+        {
+          "name": "Automation",
+          "text": "Apps and automated workflows on the Power Platform, including 15+ apps and 50+ flows at the LEGO Group."
+        },
+        {
+          "name": "Security basics",
+          "text": "Structured threat modelling to find weak points early. I also teach it through Open Door, a classroom game."
+        },
+        {
+          "name": "Web development",
+          "text": "Web apps from the database to the user interface, such as Coursebot in Laravel and Vue."
+        }
       ]
     },
     {
-      "title": "Leadership & strategy",
+      "title": "Business and leadership",
       "items": [
-        { "name": "Bridging tech and business", "text": "Translating engineering constraints into value-driven strategy roadmaps." },
-        { "name": "Team leadership", "text": "Directing project workloads, handling handoffs and resolving interpersonal issues smoothly." },
-        { "name": "Stakeholder communication", "text": "Presenting architectural progress and aligning requirements across stakeholders." },
-        { "name": "Teaching", "text": "Explaining complex computing concepts step by step and running hands-on workshops." }
+        {
+          "name": "Business cases",
+          "text": "Weighing costs, benefits and risks of new technology, as in the generative AI business case for a LEGO design team."
+        },
+        {
+          "name": "Stakeholder work",
+          "text": "Agreed a release process for Power Platform apps with stakeholders, and managed a process split between two departments."
+        },
+        {
+          "name": "Leading people",
+          "text": "Supervises AI-focused MSc projects, currently three. Earlier led a tutor team and chaired IDA Event Herning."
+        },
+        {
+          "name": "Teaching",
+          "text": "Taught master's students to build AI business cases with 33A AI Cards®. Rated 4.9 / 5 by students in Web Technologies."
+        }
       ]
     }
   ]

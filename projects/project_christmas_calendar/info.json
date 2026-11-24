@@ -1,15 +1,14 @@
 {
-  "title": "Power Apps Christmas Advent Calendar",
-  "short_desc": "A digital Christmas calendar for colleagues, built in Power Apps: a new door opens each day in December with a quiz or a small game.",
-  "blueprint_title": "The idea",
-  "blueprint_desc": "Made to lift spirits and bring colleagues together in December. Each of the 24 doors unlocks on its own date — no peeking ahead — and behind each one is a quiz question or a mini-game.",
-  "tech_notes": "Designed and deployed a holiday engagement application inside Power Apps to boost community morale. Engineered custom conditional time-locking logic that evaluates the client system date to securely prevent users from previewing doors ahead of schedule. Programmed 24 distinct interface layouts embedding custom trivia pipelines, tracking logic, and responsive micro-minigames optimized for internal employee interactions.",
+  "title": "Power Apps Christmas Calendar",
+  "short_desc": "A digital Christmas calendar for colleagues, built in Power Apps. A new door opens each day in December with a quiz or a small game.",
+  "problem": "I wanted to lift spirits and bring colleagues together in December.",
+  "built": "Each of the 24 doors unlocks on its own date, and behind each one is a quiz question or a mini-game.",
+  "result": "A December calendar for colleagues with a new quiz or game each day.",
+  "tech_notes": "Each door checks the date on the user's device and stays locked until its day. There are 24 screens, each with its own quiz or mini-game, built in Power Apps.",
   "tags": [
     "Power Apps",
     "Gamification",
-    "UI/UX Design",
-    "Expression Logic",
-    "Employee Engagement"
+    "UI design"
   ],
   "images": [
     "projects/project_christmas_calendar/advent_grid.webp"
