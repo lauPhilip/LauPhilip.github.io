@@ -138,10 +138,11 @@
   /* ---------- loading the index ---------- */
   let indexPromise = null;
   let contact = {};
+  let profile = {};
   const loadIndex = () => {
     indexPromise ??= fetch('/data/ask-index.json')
       .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
-      .then((data) => { contact = data.contact || {}; return makeIndex(data.docs || []); })
+      .then((data) => { contact = data.contact || {}; profile = data.profile || {}; return makeIndex(data.docs || []); })
       .catch((err) => { indexPromise = null; throw err; });
     return indexPromise;
   };
@@ -206,6 +207,13 @@
     ask(q);
   }));
 
+  // A persistent status element, so screen readers hear when an answer arrives.
+  const live = document.createElement('p');
+  live.className = 'sr-only';
+  live.setAttribute('role', 'status');
+  panel.appendChild(live);
+  const announce = (msg) => { live.textContent = ''; setTimeout(() => { live.textContent = msg; }, 50); };
+
   function add(cls, html) {
     const el = document.createElement('div');
     el.className = cls;
@@ -214,6 +222,12 @@
     el.scrollIntoView({ block: 'nearest' });
     return el;
   }
+
+  // Broad questions about who Philip is ("what does he do", "in simple words").
+  const BROAD = /\b(who\s+(is|'s)\s+(he|philip|lau|this)|what\s+(does|do|is)\s+(he|philip|lau|you)\s+(do|work|doing)|what\s+is\s+his\s+(job|work)|tell\s+me\s+about\s+(him|philip|yourself)|introduce|in\s+(simple|plain|short)\s+(words|terms|english|language)|summar(y|i[sz]e)|about\s+(him|philip))\b/i;
+
+  const fixedSources = (list) => `<div class="sources"><p class="sources-label">Sources on this site</p><ul>${list.map(([h, s]) =>
+    `<li><a href="${esc(h)}">${esc(s)}</a></li>`).join('')}</ul></div>`;
 
   function sourcesHtml(hits) {
     const seen = new Set();
@@ -286,17 +300,23 @@
       html = `<p>The quickest way is email: <a href="mailto:${esc(contact.email)}">${esc(contact.email)}</a>. You can also call ${esc(contact.phone)} or connect on <a href="${esc(contact.linkedin)}">LinkedIn</a>. Philip is based in ${esc(contact.location)}.</p>${sourcesHtml(hits)}`;
     }
 
+    if (!html && BROAD.test(q) && (profile.lead || profile.text)) {
+      html = `<p>In Philip's own words:</p><p>${esc(profile.lead)}</p><p>${esc(profile.text)}</p>${fixedSources([['/', 'Home'], ['/about/', 'About']])}`;
+    }
+
     if (!html) {
       const top = hits[0]?.score || 0;
       if (!hits.length || top < 1.2) {
         html = '<p>I could not find that on this site. Try asking about his projects, skills, jobs or education, or <a href="/#contact">contact Philip directly</a>.</p>';
       } else {
-        html = extractive(q, hits).map((s) => `<p>${esc(s)}</p>`).join('') + sourcesHtml(hits);
+        html = `<p class="sources-label">Matching passages from this site</p>${extractive(q, hits).map((s) => `<p>${esc(s)}</p>`).join('')}${sourcesHtml(hits)}`;
       }
     }
 
     status.remove();
-    add('msg-answer', html);
+    const answer = add('msg-answer', html);
+    const n = answer.querySelectorAll('.sources li').length;
+    announce(n ? `Answer ready, ${n} source${n === 1 ? '' : 's'}` : 'Answer ready');
     input.placeholder = input.dataset.placeholderNext || input.placeholder;
     busy = false;
   }

@@ -4,6 +4,7 @@
     "current": true,
     "title": "Research Assistant",
     "org": "Aarhus University, Dept. of Business Development and Technology (BTECH)",
+    "summary": "I build AI tools for teaching and research at the university, supervise master's students and teach.",
     "points": [
       "Built AskEIVA with the company EIVA: an internal AI assistant that helps customer service find answers in large technical manuals and past support tickets.",
       "Designed and built TraceableAI, an open-source tool for AI literature reviews where every citation can be checked. The paper is accepted at OSSYM 2026 at CODE University, Berlin.",
@@ -11,7 +12,7 @@
         "text": "Supervise AI-focused MSc in Engineering projects, currently three:",
         "sub": [
           "Process diagrams generated from unstructured data, to support project management across separate systems and departments.",
-          "A multivocal literature review of current context-engineering methods and their impact on researchers and practitioners.",
+          "A review of both research papers and practitioner sources (blogs, talks, documentation) on current context-engineering methods, meaning how the information given to an AI model is selected and arranged, and their impact on researchers and practitioners.",
           "AI adoption and governance, with recommendations for the safe use of AI in a security firm."
         ]
       },
@@ -25,23 +26,25 @@
     "period": "Jan 2023 — Jan 2026",
     "title": "Student Worker, Digitalization",
     "org": "The LEGO Group, Mould Engineering Enabling & Technology",
+    "summary": "I worked part time alongside my studies, building software tools that made everyday work easier for the engineers who design LEGO moulds.",
     "points": [
       "As main developer, built MIND, an AI assistant used by 331 engineers at the LEGO Group to search their technical documentation. The proof of concept was estimated to save 240 hours.",
-      "Built 15+ business apps in Power Apps and 50+ automated workflows in Power Automate as a citizen developer.",
-      "Managed how apps were built, tested and released on the Power Platform, in the 10th largest environment at the LEGO Group.",
+      "Built 15+ business apps in Power Apps and 50+ automated workflows in Power Automate as a citizen developer, meaning someone outside the IT department who builds tools with Microsoft's low-code platform.",
+      "Managed how apps were built, tested and released on the Power Platform, in the LEGO Group's 10th largest environment (a shared workspace where a department's apps and workflows live).",
       "Planned and carried out the move of 50 automated workflows and 30 apps as part of a digital transition.",
       "Managed the split of a large form-processing process from one department into two.",
       "Served as Technical Product Owner for 50+ SharePoint sites in Mould Engineering for 10 months.",
-      "Documented rework quality for moulds under ISO 9001 for 10 months.",
+      "Documented the quality of mould repairs for 10 months, following the ISO 9001 quality-management standard.",
       "Built and scaled automated engineering newsletters, tailored to the topics each reader chose.",
       "Contributed to a machine-learning initiative that used image recognition to support mould designers.",
-      "Facilitated the TDC specialist community of 30–40 people."
+      "Facilitated the TDC specialist community, a network of 30–40 colleagues who met to share know-how."
     ]
   },
   {
     "period": "Jul 2024 — Dec 2024",
     "title": "Student Instructor, Web Technologies",
     "org": "Aarhus University",
+    "summary": "I taught a university course on how websites are built.",
     "points": [
       "Rated 4.9 / 5 by students on average for teaching the material.",
       "Taught undergraduate students HTML, CSS, JavaScript, PHP and MySQL."
@@ -51,10 +54,11 @@
     "period": "2022",
     "title": "Engineering Intern",
     "org": "The LEGO Group, Mould Engineering Prototypes",
+    "summary": "I studied how the team planned its work and suggested a better way to do it.",
     "points": [
       "Interviewed 7 local planners and mapped how local planning was done across many Excel sheets, each with its own way of working.",
       "Wrote a 60-page business proposal with the economics, business case, user requirements and recommendations, and built a rapid prototype in Power Apps.",
-      "Presented a one-page brief to management. The LEGO Group later approved Kinaxis Maestro as a unified planning tool, a need my analysis helped document."
+      "Presented a one-page brief to management. The LEGO Group later approved Kinaxis Maestro, a shared planning system, as a unified planning tool, a need my analysis helped document."
     ]
   }
 ]

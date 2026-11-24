@@ -223,6 +223,11 @@ input[type="text"]:focus-visible { outline-offset: 1px; }
 .hero-lead { font-size: clamp(20px, 2.2vw, 26px); line-height: 1.4; font-weight: 500; }
 .hero-body { font-size: 17px; line-height: 1.65; color: var(--text-3); }
 .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px; }
+@media (max-width: 639px) {
+  .hero { gap: 24px; padding-top: 28px; }
+  .hero-portrait { flex: 0 0 auto; width: 120px; max-width: 120px; aspect-ratio: 5 / 6; border-radius: 16px; }
+  .hero-text { gap: 16px; }
+}
 
 .home-section { padding-top: var(--gap-section); }
 .card-grid { list-style: none; padding: 0; margin-top: 32px; display: flex; flex-wrap: wrap; gap: 40px 32px; }

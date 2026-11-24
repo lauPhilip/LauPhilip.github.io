@@ -352,7 +352,7 @@ def ask_dialog(d: dict) -> str:
 <h2 id="ask-panel-title">{e(ask.get("title", "Ask about my work"))}</h2>
 <button type="button" class="icon-btn" data-ask-close aria-label="Close">{ICON_CLOSE}</button>
 </div>
-<div class="ask-log" id="ask-log">
+<div class="ask-log" id="ask-log" role="log" aria-live="polite" aria-relevant="additions">
 <div class="ask-intro">
 <p>{e(ask.get("intro", ""))}</p>
 <div class="chips">{chips}</div>
@@ -412,7 +412,9 @@ def thumb(p: dict, cls: str) -> str:
     clip = ""
     if p.get("clip"):
         clip = f' data-clip="/{e(p["clip"])}"'
-    return f'<div class="{cls}"{clip}>{img(cover, "")}</div>'
+    pos = p.get("cover_position")
+    extra = f'style="object-position: {e(pos)}"' if pos else ""
+    return f'<div class="{cls}"{clip}>{img(cover, "", extra=extra)}</div>'
 
 
 def home_page(d: dict) -> str:
@@ -593,7 +595,7 @@ def project_page(d: dict, p: dict, nxt: dict) -> str:
         tags = p.get("tags") or []
         tech = f"""<section class="tech" aria-labelledby="tech-title">
 <div class="tech-head">
-<h2 id="tech-title" class="h2-small">How it works</h2>
+<h2 id="tech-title" class="h2-small">For engineers: how it works</h2>
 {''.join(tech_parts)}
 </div>
 {steps_html}
@@ -669,6 +671,7 @@ def about_page(d: dict) -> str:
         jobs.append(f"""<div class="entry">
 <div class="entry-head"><h3>{e(j.get("title"))}, {e(org_head)}</h3><p class="entry-period">{e(period(j.get("period")))}</p></div>
 {f'<p class="entry-sub">{e(org_rest)}</p>' if org_rest else ""}
+{f'<p class="entry-text">{e(j["summary"])}</p>' if j.get("summary") else ""}
 <ul class="entry-points">{"".join(points)}</ul>
 </div>""")
 
@@ -838,7 +841,7 @@ def ask_index(d: dict) -> str:
         org_head = j.get("org", "").split(",")[0]
         head_ = f"{j.get('title')} at {org_head} ({period(j.get('period'))})"
         src = f"Experience at {org_head}"
-        add(head_, f"{j.get('title')}, {j.get('org')}, {period(j.get('period'))}.", "/about/#experience", "Experience", src, 0.8)
+        add(head_, f"{j.get('title')}, {j.get('org')}, {period(j.get('period'))}. {j.get('summary', '')}", "/about/#experience", "Experience", src, 0.8)
         for pt in j.get("points", []):
             text = pt if isinstance(pt, str) else f"{pt.get('text', '')} {' '.join(pt.get('sub', []))}"
             add(head_, text, "/about/#experience", "Experience", src)
@@ -882,6 +885,8 @@ def ask_index(d: dict) -> str:
 
     payload = {
         "contact": {k: c.get(k) for k in ("email", "phone", "location", "linkedin")},
+        "profile": {"lead": site.get("home", {}).get("hero_lead", site.get("headline", "")),
+                    "text": site.get("home", {}).get("hero_text", site.get("intro", ""))},
         "docs": docs,
     }
     return json.dumps(payload, ensure_ascii=False, separators=(",", ":")) + "\n"

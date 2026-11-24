@@ -1,11 +1,11 @@
 {
   "title": "MIND: AI Search Assistant for LEGO Engineers",
   "short_desc": "An AI assistant used by 331 engineers at the LEGO Group to search their technical documentation. Each answer shows the document it comes from.",
-  "role": "Main developer, master's thesis project",
+  "role": "Main developer, as a student worker at the LEGO Group (also my MSc thesis)",
   "problem": "Mould engineers lost time looking for answers in large libraries of internal standards and technical manuals.",
   "built": "In my master's thesis, I wrote most of the code and took MIND from prototype towards a product. It uses exact keyword search for technical terms and meaning-based search for everyday questions. It then picks the most relevant passages and writes a short answer with references to the source.",
   "result": "MIND is used by 331 engineers at the LEGO Group to search their technical documentation. It covers core documentation for element, mould development and mould construction. The proof of concept was estimated to save 240 hours.",
-  "tech_notes": "Retrieval is hybrid. BM25 keyword search finds exact technical terms, and dense vector search finds passages with the same meaning in different words. The results are merged, and a cross-encoder reranker orders them. A query-rewriting step improves the search query. The language model answers only from the top passages and adds inline references, so each answer links back to its source passage. The code, data, usage figures and evaluation results are under a non-disclosure agreement with the LEGO Group, so I cannot share them here. I am happy to explain the design and the evaluation method in an interview.",
+  "tech_notes": "Retrieval is hybrid. BM25 keyword search finds exact technical terms, and dense vector search finds passages with the same meaning in different words. The results are merged, and a cross-encoder reranker orders them. A query-rewriting step improves the search query. The language model answers only from the top passages and adds inline references, so each answer links back to its source passage. The measured results, the code and the evaluations are covered by a non-disclosure agreement with the LEGO Group, so I cannot share them here. I am happy to explain the design and the evaluation method in an interview.",
   "tags": [
     "RAG",
     "Hybrid retrieval",
@@ -25,7 +25,7 @@
     }
   ],
   "how_it_works": {
-    "intro": "For engineers. Each question passes through five steps before the answer reaches the user.",
+    "intro": "Each question passes through five steps before the answer reaches the user.",
     "steps": [
       {
         "name": "Question",
